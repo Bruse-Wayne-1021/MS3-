@@ -1,0 +1,6 @@
+@MS3_LMS_HostAddress = http://localhost:5255
+
+GET {{MS3_LMS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
