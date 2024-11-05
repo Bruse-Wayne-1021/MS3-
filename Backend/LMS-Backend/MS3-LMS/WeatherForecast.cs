@@ -1,4 +1,4 @@
-namespace MS3__LMS
+namespace MS3_LMS
 {
     public class WeatherForecast
     {
