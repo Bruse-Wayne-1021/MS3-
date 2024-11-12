@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using MS3_LMS.LMSDbcontext;
+
 namespace MS3_LMS
 {
     public class Program
@@ -14,6 +17,19 @@ namespace MS3_LMS
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddDbContext<LMSContext>(opt => opt
+            .UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
+
+
+            builder.Services.AddCors(opt =>
+            opt.AddPolicy(
+                name: "CorsOpenPolicy",
+                builder =>
+                {
+                    builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                }
+                ));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -23,6 +39,7 @@ namespace MS3_LMS
                 app.UseSwaggerUI();
             }
 
+            app.UseCors("CorsOpenPolicy");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
