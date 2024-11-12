@@ -20,4 +20,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="IService\" />
+    <Folder Include="IRepository\" />
+    <Folder Include="Models\ResponseModel\" />
+    <Folder Include="Models\RequestModel\" />
+    <Folder Include="Service\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
 </Project>

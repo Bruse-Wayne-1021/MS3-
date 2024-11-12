@@ -1,15 +1,18 @@
-﻿namespace MS3_LMS.Enity.User
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MS3_LMS.Enity.User
 {
     public class Role
     {
+        [Key]
         public Guid RoleID { get; set; }
-        public enum UserRole
+        public enum uRole
         {
             Admin,
             Member
         };
 
-        public UserRole UserAType {  get; set; }
+        public uRole UserAType {  get; set; }
 
         public ICollection<UserRole>? UserRoles { get; set; }
     }

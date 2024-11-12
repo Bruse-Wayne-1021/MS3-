@@ -1,9 +1,11 @@
 ﻿using MS3_LMS.Enity.User;
+using System.ComponentModel.DataAnnotations;
 
 namespace MS3_LMS.Enity.Core
 {
     public class BookLend
     {
+        [Key]
         public Guid LendId { get; set; }
         public string? Status { get; set; }
         public int LendDays { get; set; }

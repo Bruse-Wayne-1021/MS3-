@@ -1,9 +1,11 @@
 ﻿using MS3_LMS.Enity.Core;
+using System.ComponentModel.DataAnnotations;
 
 namespace MS3_LMS.Enity.Book
 {
     public class Book
     {
+        [Key]
         public Guid Bookid { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

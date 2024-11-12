@@ -32,5 +32,102 @@ namespace MS3_LMS.LMSDbcontext
         public DbSet<User> Users { get;set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet <UserRole>UserRoles { get; set; }
+
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+            modelBuilder.Entity<Member>()
+                .HasOne(m => m.Restriction)
+                .WithOne(r => r.Member)
+                .HasForeignKey<Restriction>(r => r.MemebID);
+
+            modelBuilder.Entity<Member>()
+                .HasMany(m => m.Ratings)
+                .WithOne(r => r.Member)
+                .HasForeignKey(r => r.MemebID);
+
+            modelBuilder.Entity<Member>()
+                .HasMany(m => m.Subscriptions)
+                .WithOne(s => s.Member)
+                .HasForeignKey(s => s.MemebID);
+
+            modelBuilder.Entity<Member>()
+                .HasMany(m => m.BookLends)
+                .WithOne(bl => bl.Member)
+                .HasForeignKey(bl => bl.MemebID);
+
+            //modelBuilder.Entity<Member>()
+            //    .HasMany(m => m.Notifications)
+            //    .WithOne(n => n.Member)
+            //    .HasForeignKey(n => n.ReceiveId);
+
+            modelBuilder.Entity<Member>()
+                .HasOne(m => m.User)
+                .WithOne(u => u.Member)
+                .HasForeignKey<Member>(m => m.UserId);
+
+            
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.OTPs)
+                .WithOne(o => o.User)
+                .HasForeignKey(o => o.UserId);
+
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.UserRoles)
+                .WithOne(ur => ur.User)
+                .HasForeignKey(ur => ur.UserId);
+
+            modelBuilder.Entity<UserRole>()
+                .HasOne(ur => ur.Role)
+                .WithMany(r => r.UserRoles)
+                .HasForeignKey(ur => ur.RoleID);
+
+            modelBuilder.Entity<UserRole>()
+                 .HasKey(ur => new { ur.UserId, ur.RoleID });
+
+
+            modelBuilder.Entity<Book>()
+                .HasMany(b => b.Ratings)
+                .WithOne(r => r.Book)
+                .HasForeignKey(r => r.Bookid);
+
+            modelBuilder.Entity<Book>()
+                .HasMany(b => b.BookLends)
+                .WithOne(bl => bl.Book)
+                .HasForeignKey(bl => bl.Bookid);
+
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Author)
+                .WithMany(a => a.Books)
+                .HasForeignKey(b => b.AuthorId);
+
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Publisher)
+                .WithMany(p => p.Books)
+                .HasForeignKey(b => b.PublisherId);
+
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Language)
+                .WithMany(l => l.Books)
+                .HasForeignKey(b => b.LanguageId);
+
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Image)
+                .WithOne(i => i.Book)
+                .HasForeignKey<Image>(i => i.Bookid);
+
+            
+            modelBuilder.Entity<Subscription>()
+                .HasMany(s => s.Payment)
+                .WithOne(p => p.Subscription)
+                .HasForeignKey(p => p.SubId);
+
+           
+            base.OnModelCreating(modelBuilder);
+        }
+
+
     }
 }

@@ -1,9 +1,11 @@
 ﻿using MS3_LMS.Enity.User;
+using System.ComponentModel.DataAnnotations;
 
 namespace MS3_LMS.Enity.Book
 {
     public class Rating
     {
+        [Key]
         public Guid RatingId { get; set; }
         public int? StarCount { get; set; }
         public string? FeedBack { get; set; }

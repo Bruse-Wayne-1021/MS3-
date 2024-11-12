@@ -1,7 +1,10 @@
-﻿namespace MS3_LMS.Enity.Book
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MS3_LMS.Enity.Book
 {
     public class Author
     {
+        [Key]
         public Guid AuthorId { get; set; }
         public string Name { get; set; }
         public string? ImageUrl { get; set; }

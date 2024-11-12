@@ -1,10 +1,14 @@
-﻿using MS3_LMS.Enity.Book;
+﻿using Microsoft.EntityFrameworkCore;
+using MS3_LMS.Enity.Book;
 using MS3_LMS.Enity.Core;
+using System.ComponentModel.DataAnnotations;
 
 namespace MS3_LMS.Enity.User
 {
+    [Index(nameof(Nic), IsUnique = true)]
     public class Member
     {
+        [Key]
         public Guid MemebID { get; set; }
         public string Nic { get; set; }
         public string? FirstName { get; set; }
