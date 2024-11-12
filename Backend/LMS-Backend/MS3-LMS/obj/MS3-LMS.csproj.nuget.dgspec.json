@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sajilan\\Desktop\\New folder\\MS3-Library-Management-System\\Backend\\LMS-BackEnd\\MS3-LMS\\MS3-LMS.csproj": {}
+    "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sajilan\\Desktop\\New folder\\MS3-Library-Management-System\\Backend\\LMS-BackEnd\\MS3-LMS\\MS3-LMS.csproj": {
+    "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sajilan\\Desktop\\New folder\\MS3-Library-Management-System\\Backend\\LMS-BackEnd\\MS3-LMS\\MS3-LMS.csproj",
+        "projectUniqueName": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
         "projectName": "MS3-LMS",
-        "projectPath": "C:\\Users\\Sajilan\\Desktop\\New folder\\MS3-Library-Management-System\\Backend\\LMS-BackEnd\\MS3-LMS\\MS3-LMS.csproj",
+        "projectPath": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
         "packagesPath": "C:\\Users\\Sajilan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sajilan\\Desktop\\New folder\\MS3-Library-Management-System\\Backend\\LMS-BackEnd\\MS3-LMS\\obj\\",
+        "outputPath": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sajilan\\AppData\\Roaming\\NuGet\\NuGet.Config",
