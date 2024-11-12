@@ -1,12 +1,326 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Sajilan\\Desktop\\New folder\\MS3-Library-Management-System\\Backend\\LMS-BackEnd\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\user\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\user\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\core\\paymemt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\core\\paymemt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\user\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\user\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\user\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\user\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\notification\\otp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\notification\\otp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\notification\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\notification\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\core\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\core\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\core\\booklend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\core\\booklend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\core\\subcription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\core\\subcription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\language.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\language.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\enity\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|c:\\users\\sajilan\\desktop\\ms3\\ms3-library-management-system\\backend\\lms-backend\\ms3-lms\\ms3-lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\ms3-lms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Paymemt.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Paymemt.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Paymemt.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Paymemt.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Core\\Paymemt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:05:53.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\UserRole.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\UserRole.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\User\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:04:38.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Role.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\Role.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Role.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\User\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:04:29.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\User.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\User.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\User.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\User\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:04:21.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Member.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\Member.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Member.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\User\\Member.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA/wBAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:04:11.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OTP.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Notification\\OTP.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Notification\\OTP.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Notification\\OTP.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Notification\\OTP.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:04:00.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Notification\\Notification.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Notification\\Notification.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Notification\\Notification.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Notification\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:03:52.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Restriction.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Restriction.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Restriction.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Restriction.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Core\\Restriction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:03:13.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookLend.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\BookLend.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\BookLend.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\BookLend.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Core\\BookLend.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:02:57.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Author.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Author.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Author.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:58:57.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Subcription.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:02:45.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Genre.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Genre.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Genre.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:02:12.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Language.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Language.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Language.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Language.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Language.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:01:59.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Rating.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Rating.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Rating.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Rating.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Rating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:01:36.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Image.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Image.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Image.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Image.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Image.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:59:42.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Publisher.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Publisher.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Publisher.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Publisher.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Publisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:59:33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Book.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Book.cs",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Book.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:58:24.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MS3-LMS",
+              "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
+              "RelativeDocumentMoniker": "MS3-LMS\\MS3-LMS.csproj",
+              "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
+              "RelativeToolTip": "MS3-LMS\\MS3-LMS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-12T07:54:48.599Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
