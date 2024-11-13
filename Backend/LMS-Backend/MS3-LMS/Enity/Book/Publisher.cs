@@ -11,7 +11,7 @@ namespace MS3_LMS.Enity.Book
         public DateTime PublishDate { get; set; }
         public string? Details { get; set; }
 
-        public virtual ICollection<Book>? Books { get; set; }
+        public  ICollection<Book>? Books { get; set; }
     }
 
 }

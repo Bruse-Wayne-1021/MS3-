@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MS3_LMS.Enity.Book
 {
@@ -7,8 +8,9 @@ namespace MS3_LMS.Enity.Book
         [Key]
         public Guid LanguageId { get; set; }
         public string TypeOfLanguage { get; set; }
+        [JsonIgnore]
 
-        public virtual ICollection<Book> Books { get; set; }
+        public  ICollection<Book>? Books { get; set; }
     }
 
 }

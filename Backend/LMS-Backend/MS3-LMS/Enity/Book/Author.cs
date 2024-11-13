@@ -10,7 +10,7 @@ namespace MS3_LMS.Enity.Book
         public string? ImageUrl { get; set; }
         public string? Bio { get; set; }
 
-        public virtual ICollection<Book>? Books { get; set; }
+        public  ICollection<Book>? Books { get; set; }
     }
 
 }
