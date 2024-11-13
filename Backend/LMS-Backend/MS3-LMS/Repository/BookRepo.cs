@@ -86,7 +86,6 @@ namespace MS3_LMS.Repository
             }
         }
 
-
         public async Task<Book>GetBookByid(Guid id)
         {
             try
@@ -114,7 +113,69 @@ namespace MS3_LMS.Repository
         }
 
 
+        public async Task<IReadOnlyList<Book>>FilterByGenre(string Genre)
+        {
+            try
+            {
+                var data = _context.Books.Include(x => x.Genre)
+                    .Include(i=>i.Image)
+                    .Include(l=>l.Language)
+                    .Include(l=>l.Author)
+                    .Include(p=>p.Publisher)
+                    .AsNoTracking()
+                    .AsQueryable();
 
+                if (!string.IsNullOrWhiteSpace(Genre))
+                {
+                    data=data.Where(g=>g.Genre.BookGenre==Genre);
+
+                };
+                return await data.ToListAsync();
+            }
+            catch(Exception Ex)
+            {
+                throw new Exception("Can not filter by Genre");
+            }
+        }
+
+        public async Task<IReadOnlyList<Book>>FilterByLanguage(string Language)
+        {
+            try
+            {
+                var data = _context.Books.Include(l => l.Language)
+                    .Include(i => i.Image)
+                    .Include(l => l.Genre)
+                    .Include(l => l.Author)
+                    .Include(p => p.Publisher)
+                    .AsNoTracking().AsQueryable();
+                if (!string.IsNullOrWhiteSpace(Language))
+                {
+                    data = data.Where(l => l.Language.TypeOfLanguage==Language);
+                }
+                return await data.ToListAsync();
+            }
+            catch(Exception Ex)
+            {
+                throw new Exception("can not filter Book by Language");
+            }
+        }
+
+        public async Task<IReadOnlyList<Book>>BasedOnBookType(Book.type booktype)
+        {
+            try
+            {
+                var data = await _context.Set<Book>().AsNoTracking()
+                    .Where(b => b.BookType == booktype).ToListAsync();
+
+                return data;
+            }
+            catch(Exception Ex)
+            {
+                throw new Exception("Can not Filter ");
+            }
+        }
+
+        
 
 
     }
