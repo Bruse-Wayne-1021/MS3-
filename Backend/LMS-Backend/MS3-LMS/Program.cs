@@ -1,6 +1,10 @@
 
 using Microsoft.EntityFrameworkCore;
+using MS3_LMS.IRepository;
+using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
+using MS3_LMS.Repository;
+using MS3_LMS.Service;
 
 namespace MS3_LMS
 {
@@ -29,6 +33,25 @@ namespace MS3_LMS
                     builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
                 }
                 ));
+
+            builder.Services.AddControllers()
+             .AddJsonOptions(options =>
+             {
+                 options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+                  options.JsonSerializerOptions.MaxDepth = 64; 
+                 });
+
+
+            var builders = WebApplication.CreateBuilder(args);
+             builders.Logging.ClearProviders();
+            builders.Logging.AddConsole();
+            builders.Logging.AddDebug();
+
+            //var app= builder.Build();
+
+            builder.Services.AddScoped<IBookRepository,BookRepo>();
+            builder.Services.AddScoped<IBookService,BookService>();
+
 
             var app = builder.Build();
 

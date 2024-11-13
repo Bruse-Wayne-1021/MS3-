@@ -52,11 +52,14 @@ namespace MS3_LMS.Migrations
                     b.Property<Guid>("AuthorId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("BookType")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("GenreId")
+                    b.Property<Guid>("GenreId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ISBN")
@@ -64,9 +67,6 @@ namespace MS3_LMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsAvailable")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsEbook")
                         .HasColumnType("bit");
 
                     b.Property<Guid>("LanguageId")
@@ -104,7 +104,7 @@ namespace MS3_LMS.Migrations
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Genre", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("GenreId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -116,7 +116,7 @@ namespace MS3_LMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("GenreId");
 
                     b.ToTable("Genres");
                 });
@@ -476,9 +476,11 @@ namespace MS3_LMS.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MS3_LMS.Enity.Book.Genre", null)
+                    b.HasOne("MS3_LMS.Enity.Book.Genre", "Genre")
                         .WithMany("Books")
-                        .HasForeignKey("GenreId");
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("MS3_LMS.Enity.Book.Language", "Language")
                         .WithMany("Books")
@@ -493,6 +495,8 @@ namespace MS3_LMS.Migrations
                         .IsRequired();
 
                     b.Navigation("Author");
+
+                    b.Navigation("Genre");
 
                     b.Navigation("Language");
 
@@ -513,7 +517,7 @@ namespace MS3_LMS.Migrations
             modelBuilder.Entity("MS3_LMS.Enity.Book.Rating", b =>
                 {
                     b.HasOne("MS3_LMS.Enity.Book.Book", "Book")
-                        .WithMany("Ratings")
+                        .WithMany()
                         .HasForeignKey("Bookid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -532,7 +536,7 @@ namespace MS3_LMS.Migrations
             modelBuilder.Entity("MS3_LMS.Enity.Core.BookLend", b =>
                 {
                     b.HasOne("MS3_LMS.Enity.Book.Book", "Book")
-                        .WithMany("BookLends")
+                        .WithMany()
                         .HasForeignKey("Bookid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -629,11 +633,7 @@ namespace MS3_LMS.Migrations
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Book", b =>
                 {
-                    b.Navigation("BookLends");
-
                     b.Navigation("Image");
-
-                    b.Navigation("Ratings");
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Genre", b =>

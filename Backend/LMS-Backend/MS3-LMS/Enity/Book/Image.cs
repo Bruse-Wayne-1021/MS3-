@@ -10,7 +10,7 @@ namespace MS3_LMS.Enity.Book
         public string? Image2Path { get; set; }
         public Guid Bookid { get; set; }
 
-        public virtual Book? Book { get; set; }
+        public  Book? Book { get; set; }
     }
 
 }

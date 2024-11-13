@@ -17,16 +17,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="IService\" />
-    <Folder Include="IRepository\" />
+    <Folder Include="Migrations\" />
     <Folder Include="Models\ResponseModel\" />
-    <Folder Include="Models\RequestModel\" />
-    <Folder Include="Service\" />
-    <Folder Include="Repository\" />
   </ItemGroup>
 
 </Project>
