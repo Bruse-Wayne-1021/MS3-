@@ -18,7 +18,7 @@ namespace MS3_LMS.Controllers
         private readonly LMSContext _context;
         private readonly IBookService _bookService;
 
-        public BooksController(LMSContext context,IBookService bookService)
+        public BooksController(LMSContext context, IBookService bookService)
         {
             _context = context;
             _bookService = bookService;
@@ -26,11 +26,11 @@ namespace MS3_LMS.Controllers
 
         // GET: api/Books
         [HttpGet]
-       public async Task<IActionResult> GetallBooks()
+        public async Task<IActionResult> GetallBooks()
         {
             var data = await _bookService.GetBooksAsync();
 
-            if(data == null)
+            if (data == null)
             {
                 return NotFound();
             }
@@ -88,7 +88,7 @@ namespace MS3_LMS.Controllers
         [HttpPost]
         public async Task<ActionResult<Book>> CreateBookAsync(Book book)
         {
-             var data=await _bookService.CreateBookAsyn(book);
+            var data = await _bookService.CreateBookAsyn(book);
             return Ok(data);
             //return CreatedAtAction("GetBook", new { id = book.Bookid }, book);
         }
@@ -107,7 +107,26 @@ namespace MS3_LMS.Controllers
         {
             return _context.Books.Any(e => e.Bookid == id);
         }
+        [HttpGet("Genre")]
+        public async Task<IActionResult> FilterBookByGenre(string Genre)
+        {
+            var book = await _bookService.FilterByGenre(Genre);
+            return Ok(book);
+        }
 
+        [HttpGet("Languageatype")]
+        public async Task<IActionResult> SortByLanguage(string Language)
+        {
+            var book=await _bookService.FilterByLanguage(Language);
+            return Ok(book);
+        }
+
+        [HttpGet("BookType")]
+        public async Task<IActionResult>FilterByBookType(Book.type bookType)
+        {
+            var data=await _bookService.BasedOnBookType(bookType);
+            return Ok(data);
+        }
         
     }
 }

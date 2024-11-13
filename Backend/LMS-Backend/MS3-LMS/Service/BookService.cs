@@ -13,9 +13,9 @@ namespace MS3_LMS.Service
             _bookRepository = bookRepository;
         }
 
-            
 
-        public async Task<Book>CreateBookAsyn(Book book)
+
+        public async Task<Book> CreateBookAsyn(Book book)
         {
             return await _bookRepository.CreateBookAsync(book);
         }
@@ -25,14 +25,29 @@ namespace MS3_LMS.Service
             return await _bookRepository.GetAllBooksAsync();
         }
 
-        public async Task<bool>DeleteBook(Guid Id)
+        public async Task<bool> DeleteBook(Guid Id)
         {
             return await _bookRepository.DeleteBookByid(Id);
         }
 
-        public async Task<Book>GetBookId(Guid id)
+        public async Task<Book> GetBookId(Guid id)
         {
             return await _bookRepository.GetBookByid(id);
+        }
+
+        public async Task<IReadOnlyList<Book>>FilterByGenre(string Genre)
+        {
+            return await _bookRepository.FilterByGenre(Genre);
+
+        }
+         public async Task<IReadOnlyList<Book>> FilterByLanguage(string Language)
+        {
+            return await _bookRepository.FilterByLanguage(Language);
+        }
+        
+        public async Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype)
+        {
+            return await _bookRepository.BasedOnBookType(booktype);
         }
     }
 }
