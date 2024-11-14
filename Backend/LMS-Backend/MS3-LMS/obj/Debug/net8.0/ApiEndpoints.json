@@ -147,6 +147,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.MemberController",
+    "Method": "NewMember",
+    "RelativePath": "api/Member/new-member",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.MemberRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.MemberController",
+    "Method": "CreateNewMember",
+    "RelativePath": "api/Member/NewMember",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.MemberRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

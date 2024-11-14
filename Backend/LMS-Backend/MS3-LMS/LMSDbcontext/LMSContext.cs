@@ -130,7 +130,13 @@ namespace MS3_LMS.LMSDbcontext
                 .WithOne(p => p.Subscription)
                 .HasForeignKey(p => p.SubId);
 
-           
+
+            modelBuilder.Entity<Role>().HasData(
+       new Role { RoleID = Guid.NewGuid(), UserAType = "Member" },
+       new Role { RoleID = Guid.NewGuid(), UserAType = "Admin" }
+   );
+
+
             base.OnModelCreating(modelBuilder);
         }
 
