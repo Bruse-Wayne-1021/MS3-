@@ -7,7 +7,17 @@ namespace MS3_LMS.Enity.Core
     {
         [Key]
         public Guid LendId { get; set; }
-        public string? Status { get; set; }
+
+        public enum State
+        {
+           Favaurite,
+           Request,
+           Accept,
+           Decline,
+           Waiting
+
+        }
+        public State Status { get; set; }
         public int LendDays { get; set; }
         public DateTime? ReturnDate { get; set; }
         public DateTime? ApprovedDate { get; set; }
