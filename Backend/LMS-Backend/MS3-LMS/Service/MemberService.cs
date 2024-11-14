@@ -35,7 +35,7 @@ namespace MS3_LMS.Service
                 ImageUrl = memberRequestModel.ImageUrl,
                 IsVerify = false,
                 //UserId = Guid.NewGuid(),
-                PhoneNumber = memberRequestModel.PhoneNumber,
+                //PhoneNumber = memberRequestModel.PhoneNumber,
             };
 
             await _memberRepository.CreateNewUser(member);
