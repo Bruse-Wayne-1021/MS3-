@@ -4,6 +4,7 @@ using MS3_LMS.LMSDbcontext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    partial class LMSContextModelSnapshot : ModelSnapshot
+    [Migration("20241114054429_fke")]
+    partial class fke
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -430,18 +433,6 @@ namespace MS3_LMS.Migrations
                     b.HasKey("RoleID");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            RoleID = new Guid("5e3e5d3e-5966-4913-9a48-d90cb281fd3f"),
-                            UserAType = "Member"
-                        },
-                        new
-                        {
-                            RoleID = new Guid("78fa6f2a-2b98-4d90-b0df-b91bcd1f3069"),
-                            UserAType = "Admin"
-                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.User.User", b =>
@@ -454,10 +445,11 @@ namespace MS3_LMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("IsConfirmEmail")
+                    b.Property<bool>("IsConfirmEmail")
                         .HasColumnType("bit");
 
                     b.Property<string>("PasswordHash")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");

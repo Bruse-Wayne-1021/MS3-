@@ -7,9 +7,10 @@ namespace MS3_LMS.Enity.User
     {
         [Key]
         public Guid UserId { get; set; }
+        [Required]
         public string Email { get; set; }
-        public bool IsConfirmEmail { get; set; }
-        public string PasswordHash { get; set; }
+        public bool? IsConfirmEmail { get; set; }
+        public string? PasswordHash { get; set; }
 
         
         public  Member? Member { get; set; }

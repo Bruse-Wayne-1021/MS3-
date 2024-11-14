@@ -1,4 +1,5 @@
 
+using Microsoft.Build.Execution;
 using Microsoft.EntityFrameworkCore;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
@@ -51,9 +52,19 @@ namespace MS3_LMS
 
             builder.Services.AddScoped<IBookRepository,BookRepo>();
             builder.Services.AddScoped<IBookService,BookService>();
+            builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+            builder.Services.AddScoped<IMemberService, MemberService>();
+            
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
+            builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+
+            
 
 
             var app = builder.Build();
+
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
