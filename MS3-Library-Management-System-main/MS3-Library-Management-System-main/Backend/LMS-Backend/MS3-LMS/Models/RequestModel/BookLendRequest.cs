@@ -1,4 +1,5 @@
 ﻿using Mono.TextTemplating;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.IRepository;
 
 namespace MS3_LMS.Models.RequestModel
@@ -6,7 +7,7 @@ namespace MS3_LMS.Models.RequestModel
     public class BookLendRequest
     {
         
-        public State Status { get; set; }
+        public  BookLend.State  Status { get; set; }
         public int LendDays { get; set; }
         public DateTime? ReturnDate { get; set; }
         public DateTime? ApprovedDate { get; set; }

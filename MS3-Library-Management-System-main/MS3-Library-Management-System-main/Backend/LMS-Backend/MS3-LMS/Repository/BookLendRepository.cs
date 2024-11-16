@@ -1,4 +1,7 @@
-﻿using MS3_LMS.Enity.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using MS3_LMS.Enity.Book;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
 using MS3_LMS.Models.RequestModel;
@@ -27,5 +30,42 @@ namespace MS3_LMS.Repository
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task<List<BookLend>>GetAllRequestWithDeatails()
+        {
+            var data=await _DbContext.BookLends.Include(b=>b.Book).Include(b=>b.Book.Image).Include(M=>M.Member).ToListAsync();
+            return data;
+        }
+
+
+        public async Task<List<BookLend>> GetEnumBaseRecords(BookLend.State state)
+        {
+            try
+            {
+                var data = await _DbContext.BookLends.Where(s => s.Status == state).Include(d => d.Book)
+                    .Include(m => m.Member).ToListAsync();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        
+
+        public async Task<BookLend>UpdateState(BookLend bookLend)
+        {
+            try
+            {
+                 _DbContext.BookLends.Update(bookLend);
+               await _DbContext.SaveChangesAsync();
+                return bookLend;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

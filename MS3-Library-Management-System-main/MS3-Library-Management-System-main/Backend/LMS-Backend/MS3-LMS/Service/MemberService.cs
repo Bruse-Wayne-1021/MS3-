@@ -1,4 +1,6 @@
-﻿using Microsoft.Identity.Client;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.Identity.Client;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
@@ -102,7 +104,7 @@ namespace MS3_LMS.Service
 
 
 
-        public async Task <MemberResponse>GetMemberByNic(string Nic)
+        public async Task <MemberResponse>GetMemberByNic(Guid Nic)
         {
             try
             {
@@ -120,6 +122,7 @@ namespace MS3_LMS.Service
                     Email = member.Email,
                     PhoneNumber = member.PhoneNumber,
                     UserGender = member.UserGender
+
                 };
                 return response;
             }
@@ -127,6 +130,93 @@ namespace MS3_LMS.Service
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public async Task<List<BookLendResponse>>GetRecordsById(Guid id ,BookLend.State state)
+        {
+            try
+            {
+                var data = await _memberRepository.GetMemberBorrowedBook(id, state);
+                if(data == null)
+                {
+                    throw new Exception("Records Not Found");
+                }
+                var response = data.Select(s => new BookLendResponse
+                {
+                    Title=s.Book.Name,
+                    Image1Path=s.Book.Image?.Image1Path,
+                    Image2Path=s.Book.Image?.Image2Path
+
+                }).ToList();
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<MemberResponse>EditMember(Guid id,MemberResponse memberResponse)
+        {
+            try
+            {
+                var data = await _memberRepository.GetMemberById(id);
+                if(data == null)
+                {
+                    throw new Exception();
+                }
+                
+                data.FirstName = memberResponse.FirstName;
+                data.LastName = memberResponse.LastName;
+                data.Email = memberResponse.Email;
+                data.UserGender = memberResponse.UserGender;
+                data.ImageUrl = memberResponse.ImageUrl;
+
+               var updateduser= await _memberRepository.UpdateMemberDetails(data);
+
+                var response = new MemberResponse
+                {
+                    
+                    FirstName = updateduser.FirstName,
+                    LastName = updateduser.LastName,
+                    Email = updateduser.Email,
+                    UserGender = updateduser.UserGender,
+                    ImageUrl = updateduser.ImageUrl,
+
+                };
+                return response;
+               
+                
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        public async Task <bool>DeleteMember(Guid id)
+        {
+            try
+            {
+                var membr = await _memberRepository.GetMemberById(id);
+                if (membr == null)
+                {
+                    throw new Exception();
+                }
+                await _memberRepository.DeleteMemerByid(membr);
+                return true;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
         }
 
 

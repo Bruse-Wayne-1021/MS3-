@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
@@ -18,6 +19,8 @@ namespace MS3_LMS.Controllers
         {
             _memberservice = memberservice;
         }
+
+
 
 
         [HttpPost("NewMember")]
@@ -52,7 +55,7 @@ namespace MS3_LMS.Controllers
 
         [HttpGet]
         [Route("Get Member by id")]
-        public async Task<IActionResult>getAllMembers(string Nic)
+        public async Task<IActionResult>getAllMembers(Guid Nic)
         {
             try
             {
@@ -88,7 +91,26 @@ namespace MS3_LMS.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult>GetRecordsByid(Guid id,BookLend.State state)
+        {
+            var data=await _memberservice.GetRecordsById(id,state);
+            return Ok(data);
+        }
 
+        [HttpPut]
+        public async Task<IActionResult>UpdateMember(Guid id,MemberResponse model) 
+        {
+            var data=await _memberservice.EditMember(id,model);
+            return Ok(data);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult<bool>>DeleteMember(Guid id)
+        {
+            await _memberservice.DeleteMember(id);
+            return true;
+        }
     }
 
 }
