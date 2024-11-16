@@ -101,11 +101,7 @@ namespace MS3_LMS.Service
         {
             try
             {
-                var member = await _lMSContext.BookLends.FindAsync(id);
-                if (member == null)
-                {
-                    throw new KeyNotFoundException("Member not found");
-                }
+                var member = await _lMSContext.BookLends.FindAsync(id) ?? throw new KeyNotFoundException("Member not found");
                 member.Status = state;
 
                 var res = await _bookLendRepository.UpdateState(member);
