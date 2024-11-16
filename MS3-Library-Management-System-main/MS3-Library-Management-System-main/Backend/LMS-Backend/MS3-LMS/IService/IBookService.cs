@@ -11,5 +11,6 @@ namespace MS3_LMS.IService
         Task<IReadOnlyList<Book>> FilterByLanguage(string Language);
         Task<IReadOnlyList<Book>> FilterByGenre(string Genre);
         Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype);
+
     }
 }

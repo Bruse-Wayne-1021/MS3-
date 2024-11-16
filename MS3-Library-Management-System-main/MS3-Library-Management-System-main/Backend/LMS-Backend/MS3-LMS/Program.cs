@@ -54,19 +54,15 @@ namespace MS3_LMS
             builder.Services.AddScoped<IBookService,BookService>();
             builder.Services.AddScoped<IMemberRepository, MemberRepository>();
             builder.Services.AddScoped<IMemberService, MemberService>();
-            
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+            builder.Services .AddScoped<IBookLendRepository, BookLendRepository>();
+            builder.Services.AddScoped<IBookLendService, BookLendService>();
 
             
-
-
             var app = builder.Build();
-
-
-
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {

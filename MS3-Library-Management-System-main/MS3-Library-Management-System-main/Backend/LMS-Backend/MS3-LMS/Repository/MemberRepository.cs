@@ -1,7 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis.Elfie.Model;
+using Microsoft.EntityFrameworkCore;
+using MS3_LMS.Enity.Book;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
+using System.Security.Cryptography;
 
 namespace MS3_LMS.Repository
 {
@@ -59,4 +63,86 @@ namespace MS3_LMS.Repository
                 throw new Exception(ex.Message);
             }
         }
-}   }
+
+        public async Task<Member> GetMemberById(Guid MemberId)
+        {
+            try
+            {
+                var data = await _context.Members.FindAsync(MemberId);
+                if(data == null)
+                {
+                    throw new KeyNotFoundException("Member Not Found");
+                }
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<List<BookLend>> GetMemberBorrowedBook(Guid id, BookLend.State state)
+        {
+            try
+            {
+                
+                var data = await _context.BookLends
+                    .Where(bl => bl.MemebID == id && bl.Status == state)
+                    .Include(bl => bl.Book) 
+                    .Include(bl => bl.Book.Image) 
+                    .ToListAsync();
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error fetching borrowed books: {ex.Message}");
+            }
+        }
+
+
+        public async Task<Member>UpdateMemberDetails( Member member)
+        {
+            try
+            {
+                 _context.Members.Update(member);
+                await _context.SaveChangesAsync();
+                return member;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task DeleteMemerByid(Member member)
+        {
+            try
+            {
+                if(member == null)
+                {
+                    throw new ArgumentNullException("no member delete");
+                }
+                _context.Members.Remove(member);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+           
+        }
+
+      
+
+
+        
+
+
+
+
+
+
+
+    }
+}
