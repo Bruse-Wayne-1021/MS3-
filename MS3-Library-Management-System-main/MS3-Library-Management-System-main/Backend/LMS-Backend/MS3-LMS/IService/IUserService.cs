@@ -4,6 +4,7 @@ namespace MS3_LMS.IService
 {
     public interface IUserService
     {
-        Task NewAdmin(MemberRequestModel memberRequestModel);
+        Task NewAdmin(UserRequestModel userRequestModel);
+        
     }
 }

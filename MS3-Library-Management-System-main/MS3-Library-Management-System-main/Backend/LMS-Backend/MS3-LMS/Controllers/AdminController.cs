@@ -18,11 +18,11 @@ namespace MS3_LMS.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>DefineAdmin(MemberRequestModel memberRequestModel)
+        public async Task<IActionResult>DefineAdmin(UserRequestModel userRequestModel)
         {
-            await _userSerVice.NewAdmin(memberRequestModel);
+            await _userSerVice.NewAdmin(userRequestModel);
 
-            return CreatedAtAction (nameof(DefineAdmin),new { id=memberRequestModel.Nic} ,memberRequestModel);
+            return CreatedAtAction (nameof(DefineAdmin),new { id=userRequestModel.Email} ,userRequestModel);
         }
     }
 

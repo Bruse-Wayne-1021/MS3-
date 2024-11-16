@@ -2,6 +2,7 @@
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
+using System.Security.Permissions;
 
 namespace MS3_LMS.Service
 {
@@ -23,40 +24,46 @@ namespace MS3_LMS.Service
             _configuration = configuration;
         }
 
-        public async Task NewAdmin(MemberRequestModel memberRequestModel)
+        public async Task NewAdmin(UserRequestModel userRequestModel)
         {
             try
             {
-                var user = new User
+                var admin = new User
                 {
-                    Email = memberRequestModel.Email,
-                    IsConfirmEmail = false,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(memberRequestModel.Password),
+                    Email = userRequestModel.Email,
+                    IsConfirmEmail = true,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRequestModel.password),
                 
                 };
-                await _userRepository.CreteAdmin(user);
+                await _userRepository.CreteAdmin(admin);
 
 
-                var admin = new Member
-                {
-                    Nic = memberRequestModel.Nic,
-                    Email = memberRequestModel.Email,
-                    FirstName = memberRequestModel.FirstName,
-                    LastName = memberRequestModel.LastName,
-                    PhoneNumber = memberRequestModel.PhoneNumber,
-                    ImageUrl = memberRequestModel.ImageUrl,
-                    UserGender= memberRequestModel.UserGender,
-                    UserId=user.UserId
-                };
+                //var admin = new Member
+                //{
+                //    Nic = memberRequestModel.Nic,
+                //    Email = memberRequestModel.Email,
+                //    FirstName = memberRequestModel.FirstName,
+                //    LastName = memberRequestModel.LastName,
+                //    PhoneNumber = memberRequestModel.PhoneNumber,
+                //    ImageUrl = memberRequestModel.ImageUrl,
+                //    UserGender= memberRequestModel.UserGender,
+                //    UserId=user.UserId
+                //};
 
-                await _memberRepository.CreateNewUser(admin);
+                //await _memberRepository.CreateNewUser(admin);
 
-                await _roleService.AssignAdmin(user.UserId);
+                await _roleService.AssignAdmin(admin.UserId);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
+
+        
+
+        
+
+
     }
 }
