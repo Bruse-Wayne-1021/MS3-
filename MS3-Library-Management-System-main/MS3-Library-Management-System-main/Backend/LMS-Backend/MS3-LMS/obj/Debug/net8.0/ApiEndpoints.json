@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "memberRequestModel",
-        "Type": "MS3_LMS.Models.RequestModel.MemberRequestModel",
+        "Name": "userRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.UserRequestModel",
         "IsRequired": true
       }
     ],

@@ -35,9 +35,24 @@ namespace MS3_LMS.Repository
 
         }
 
-        
+        public async Task<List<Role>> GetAllMembers()
+        {
+            try
+            {
+                var role = await _lMSContext.Roles.Where(r => r.UserAType == "Member").ToListAsync();
+                return role;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
+
+        }
     }
 
-    
+
 }
+
+    
+

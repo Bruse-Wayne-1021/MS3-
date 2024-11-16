@@ -1,4 +1,5 @@
-﻿using MS3_LMS.IRepository;
+﻿using MS3_LMS.Enity.User;
+using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using System.Drawing.Printing;
 
@@ -30,6 +31,8 @@ namespace MS3_LMS.Service
                 await _roleRepository.AssignRoleTouser(AdminID,role.RoleID);
             }
         }
+
+      
 
 
     }

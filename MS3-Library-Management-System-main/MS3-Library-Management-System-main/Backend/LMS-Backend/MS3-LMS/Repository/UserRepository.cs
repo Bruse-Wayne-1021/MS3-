@@ -26,13 +26,14 @@ namespace MS3_LMS.Repository
             await _Context.SaveChangesAsync();
         }
 
-
-
         public async Task CreteAdmin(User user)
         {
             await _Context.Users.AddAsync(user);
             await _Context.SaveChangesAsync();
         }
+
+
+
 
 
     }
