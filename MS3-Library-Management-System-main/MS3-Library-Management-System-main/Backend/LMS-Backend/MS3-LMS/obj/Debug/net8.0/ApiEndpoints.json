@@ -227,27 +227,6 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.MemberController",
-    "Method": "GetRecordsByid",
-    "RelativePath": "api/Member",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "state",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.MemberController",
     "Method": "UpdateMember",
     "RelativePath": "api/Member",
     "HttpMethod": "PUT",
@@ -321,6 +300,27 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.MemberController",
+    "Method": "GetRecordsByid",
+    "RelativePath": "api/Member/get member by id based state",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "state",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.MemberController",
     "Method": "NewMember",
     "RelativePath": "api/Member/new-member",
     "HttpMethod": "POST",
@@ -337,16 +337,21 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.MemberController",
-    "Method": "CreateNewMember",
-    "RelativePath": "api/Member/NewMember",
-    "HttpMethod": "POST",
+    "Method": "UpdateIsverifyState",
+    "RelativePath": "api/Member/update isverify",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "memberRequestModel",
-        "Type": "MS3_LMS.Models.RequestModel.MemberRequestModel",
-        "IsRequired": true
+        "Name": "MemberId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "isverify",
+        "Type": "System.Boolean",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -219,6 +219,29 @@ namespace MS3_LMS.Service
 
         }
 
+        public async Task<string> UpdateIsverify(Guid Memberid ,bool isverify)
+        {
+            try
+            {
+                var data = await _memberRepository.GetMemberById(Memberid);
+                if (data == null)
+                {
+                    throw new Exception();
+                }
+                data.IsVerify = isverify;
+
+                await _memberRepository.UpdateMemberDetails(data);
+
+                return isverify ? "member verfify success full" : "member is not verify ";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+
 
     }
 }

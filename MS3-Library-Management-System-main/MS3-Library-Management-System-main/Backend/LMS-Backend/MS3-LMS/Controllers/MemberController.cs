@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using MS3_LMS.Enity.Core;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IService;
@@ -23,14 +25,14 @@ namespace MS3_LMS.Controllers
 
 
 
-        [HttpPost("NewMember")]
-        public async Task<ActionResult> CreateNewMember(MemberRequestModel memberRequestModel)
-        {
-            await _memberservice.CreateNewUser(memberRequestModel);
+        //[HttpPost("NewMember")]
+        //public async Task<ActionResult> CreateNewMember(MemberRequestModel memberRequestModel)
+        //{
+        //    await _memberservice.CreateNewUser(memberRequestModel);
 
             
-            return CreatedAtAction(nameof(CreateNewMember), new { id = memberRequestModel.Nic }, memberRequestModel);
-        }
+        //    return CreatedAtAction(nameof(CreateNewMember), new { id = memberRequestModel.Nic }, memberRequestModel);
+        //}
         
         [HttpPost]
         [Route("new-member")]
@@ -91,7 +93,7 @@ namespace MS3_LMS.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("get member by id based state")]
         public async Task<IActionResult>GetRecordsByid(Guid id,BookLend.State state)
         {
             var data=await _memberservice.GetRecordsById(id,state);
@@ -110,6 +112,20 @@ namespace MS3_LMS.Controllers
         {
             await _memberservice.DeleteMember(id);
             return true;
+        }
+
+        [HttpPut("update isverify")]
+        public async Task<IActionResult>UpdateIsverifyState(Guid MemberId,bool isverify)
+        {
+            try
+            {
+              var data=  await _memberservice.UpdateIsverify(MemberId, isverify);
+                return Ok(new { message = data });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 
