@@ -132,9 +132,9 @@ namespace MS3_LMS.LMSDbcontext
 
 
             modelBuilder.Entity<Role>().HasData(
-       new Role { RoleID = Guid.NewGuid(), UserAType = "Member" },
-       new Role { RoleID = Guid.NewGuid(), UserAType = "Admin" }
-   );
+                 new Role { RoleID = Guid.NewGuid(), UserAType = "Member" },
+                 new Role { RoleID = Guid.NewGuid(), UserAType = "Admin" }
+                  );
 
 
             base.OnModelCreating(modelBuilder);

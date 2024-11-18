@@ -7,5 +7,6 @@ namespace MS3_LMS.IRepository
         Task createMemeber(Member member);
         Task createUser(User user);
         Task CreteAdmin(User user);
+        Task<User> LoginAsync(string email, string password);
     }
 }

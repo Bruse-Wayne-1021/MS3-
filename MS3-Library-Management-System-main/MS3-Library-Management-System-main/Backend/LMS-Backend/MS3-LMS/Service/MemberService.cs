@@ -54,8 +54,6 @@ namespace MS3_LMS.Service
                 IsConfirmEmail = false,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(memberRequestModel.Password)
 
-
-
             };
             await _userRepository.createUser(user);
 
@@ -243,5 +241,9 @@ namespace MS3_LMS.Service
 
 
 
+
+
+
     }
+
 }
