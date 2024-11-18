@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\MS3-LMS.props" />
-</Project>
