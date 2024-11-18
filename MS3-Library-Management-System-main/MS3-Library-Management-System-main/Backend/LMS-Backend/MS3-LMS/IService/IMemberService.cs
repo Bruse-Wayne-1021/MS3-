@@ -14,5 +14,6 @@ namespace MS3_LMS.IService
         Task<List<BookLendResponse>> GetRecordsById(Guid id, BookLend.State state);
         Task<MemberResponse> EditMember(Guid id, MemberResponse memberResponse);
         Task<bool> DeleteMember(Guid id);
+        Task<string> UpdateIsverify(Guid Memberid, bool isverify);
     }
 }
