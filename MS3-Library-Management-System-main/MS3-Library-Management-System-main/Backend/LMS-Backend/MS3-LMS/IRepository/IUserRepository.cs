@@ -8,5 +8,6 @@ namespace MS3_LMS.IRepository
         Task createUser(User user);
         Task CreteAdmin(User user);
         Task<User> LoginAsync(string email, string password);
+        Task<Member> GetMemberByUSerId(Guid UserId);
     }
 }

@@ -8,6 +8,7 @@ namespace MS3_LMS.IService
     {
         Task NewAdmin(UserRequestModel userRequestModel);
         Task<LoginResponseModel> login(string Email, string pasword);
+        Task<MemberResponse> GetByUserID(Guid userId);
 
 
     }

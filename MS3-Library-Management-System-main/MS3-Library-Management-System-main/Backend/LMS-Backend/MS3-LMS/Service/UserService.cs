@@ -139,6 +139,28 @@ namespace MS3_LMS.Service
 
 
 
+        public async Task<MemberResponse>GetByUserID(Guid userId)
+        {
+            try
+            {
+                var data = await _userRepository.GetMemberByUSerId(userId);
+                if (data == null)
+                {
+                    throw new Exception("Member Not Found");
+                }
+                var response = new MemberResponse
+                {
+                    MemberID = data.MemebID
+
+
+                };
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
 
 

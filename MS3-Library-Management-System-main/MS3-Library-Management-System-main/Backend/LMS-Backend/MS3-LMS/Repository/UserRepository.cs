@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography;
 
 namespace MS3_LMS.Repository
@@ -48,6 +49,24 @@ namespace MS3_LMS.Repository
 
 
         }
+
+        public async Task<Member>GetMemberByUSerId(Guid UserId)
+        {
+            try
+            {
+                var data = await _Context.Members.FindAsync(UserId);
+                if (data == null)
+                {
+                    throw new Exception();
+                }
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
 
 
 

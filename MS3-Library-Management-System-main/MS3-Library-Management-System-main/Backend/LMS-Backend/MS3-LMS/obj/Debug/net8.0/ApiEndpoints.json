@@ -373,6 +373,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.UserController",
+    "Method": "GetByUSerId",
+    "RelativePath": "api/User/Get by member by user id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
