@@ -1,7 +1,9 @@
 ﻿using Microsoft.Build.Framework;
+using Microsoft.EntityFrameworkCore;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
+using System.Security.Cryptography;
 
 namespace MS3_LMS.Repository
 {
@@ -33,6 +35,19 @@ namespace MS3_LMS.Repository
         }
 
 
+        public async Task<User> LoginAsync(string email, string password)
+        {
+            var user = await _Context.Users.Include(s => s.UserRoles).ThenInclude(r => r.Role).FirstOrDefaultAsync(u => u.Email == email);
+
+            if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+            {
+                return null;
+            }
+
+            return user;
+
+
+        }
 
 
 

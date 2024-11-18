@@ -1,8 +1,14 @@
-﻿using MS3_LMS.Enity.User;
+﻿using Microsoft.IdentityModel.Tokens;
+using MS3_LMS.Enity.User;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Security.Permissions;
+using System.Text;
+
 
 namespace MS3_LMS.Service
 {
@@ -14,6 +20,10 @@ namespace MS3_LMS.Service
         private readonly IRoleService _roleService;
         private readonly IMemberRepository _memberRepository;
         private readonly IConfiguration _configuration;
+      
+
+
+
 
         public UserService(IUserRepository userRepository, IRoleRepository roleRepository, IRoleService roleService,IMemberRepository memberRepository, IConfiguration configuration)
         {
@@ -63,11 +73,74 @@ namespace MS3_LMS.Service
 
         }
 
-        
+        public async Task<LoginResponseModel>login(string Email,string pasword)
+        {
+            try
+            {
+                var user = await _userRepository.LoginAsync(Email, pasword);
+                if (user == null)
+                {
+                    throw new UnauthorizedAccessException("Invalid Email and Password");
+                }
 
-        
+                var roles = user.UserRoles.Select(ur => ur.Role.UserAType).ToList();
+                var token=createToken(user,roles);
 
-        
+                return new LoginResponseModel
+                {
+                    UserId = user.UserId,
+                    Email = user.Email,
+                    Roles = roles,
+                    Token= token
+                };
+
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+
+
+        public string createToken(User user, List<string> Roles)
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creadentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+
+            var claims = new List<Claim>
+            {
+               new Claim (JwtRegisteredClaimNames.Sub,user.Email),
+
+               new Claim(JwtRegisteredClaimNames.Jti,Guid .NewGuid().ToString()),
+               new Claim (ClaimTypes.NameIdentifier,user.UserId.ToString()),
+               new Claim (ClaimTypes.Email,user.Email)
+
+            }; 
+
+            foreach (var role in Roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                 expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:TokenExpiryInMinutes"])),
+                signingCredentials: creadentials
+
+             );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+
+
+
+
 
 
     }
