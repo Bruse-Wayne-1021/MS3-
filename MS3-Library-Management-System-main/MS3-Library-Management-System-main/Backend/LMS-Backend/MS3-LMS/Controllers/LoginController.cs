@@ -31,37 +31,7 @@ namespace MS3_LMS.Controllers
         }
 
 
-        private string createToken(User user,List<string>Roles)
-        {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var creadentials=new SigningCredentials(key ,SecurityAlgorithms.HmacSha256);
-
-
-            var claims = new List<Claim>
-            {
-               new Claim (JwtRegisteredClaimNames.Sub,user.Email),
-               new Claim(JwtRegisteredClaimNames.Jti,Guid .NewGuid().ToString()),
-               new Claim (ClaimTypes.NameIdentifier,user.UserId.ToString()),
-               new Claim (ClaimTypes.Email,user.Email)
-
-            };
-
-            foreach(var role in Roles)
-            {
-                claims.Add(new Claim(ClaimTypes.Role, role));
-            }
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims:claims,
-                 expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:TokenExpiryInMinutes"])),
-                signingCredentials: creadentials
-
-             );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+       
     }
 
     
