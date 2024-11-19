@@ -375,7 +375,7 @@
   {
     "ContainingType": "MS3_LMS.Controllers.UserController",
     "Method": "GetByUSerId",
-    "RelativePath": "api/User/Get by member by user id",
+    "RelativePath": "api/User/{userID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -383,7 +383,7 @@
       {
         "Name": "userID",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

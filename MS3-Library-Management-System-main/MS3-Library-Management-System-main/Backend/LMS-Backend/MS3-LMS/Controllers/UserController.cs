@@ -17,24 +17,31 @@ namespace MS3_LMS.Controllers
             _userService = userService;
         }
 
-        [HttpGet("Get by member by user id")]
-
-        public async Task<IActionResult>GetByUSerId(Guid userID)
+        [HttpGet("{userID}")]
+        public async Task<IActionResult> GetByUSerId(Guid userID)
         {
+            if (userID == Guid.Empty)
+            {
+                return BadRequest("User ID is invalid.");
+            }
+
             try
             {
-                var data = await _userService.GetByUserID(userID);
-                if (data == null)
+                var user = await _userService.GetByUserID(userID);
+                if (user == null)
                 {
-                    return BadRequest("Member not found");
+                    return NotFound($"User with ID {userID} not found.");
                 }
-                return Ok(data);
+
+                return Ok(user);
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+               
+                return StatusCode(500, "An internal server error occurred.");
             }
         }
+
     }
 
 

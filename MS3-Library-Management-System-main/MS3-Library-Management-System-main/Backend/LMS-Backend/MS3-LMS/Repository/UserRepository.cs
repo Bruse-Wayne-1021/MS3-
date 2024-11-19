@@ -38,23 +38,28 @@ namespace MS3_LMS.Repository
 
         public async Task<User> LoginAsync(string email, string password)
         {
-            var user = await _Context.Users.Include(s => s.UserRoles).ThenInclude(r => r.Role).FirstOrDefaultAsync(u => u.Email == email);
-
-            if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+            try
             {
-                return null;
+                var user = await _Context.Users.Include(s => s.UserRoles).ThenInclude(r => r.Role).FirstOrDefaultAsync(u => u.Email == email);
+
+                if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+                {
+                    return null;
+                }
+
+                return user;
             }
-
-            return user;
-
-
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<Member>GetMemberByUSerId(Guid UserId)
         {
             try
             {
-                var data = await _Context.Members.FindAsync(UserId);
+                var data = await _Context.Members.FirstOrDefaultAsync(m=>m.UserId==UserId);
                 if (data == null)
                 {
                     throw new Exception();
