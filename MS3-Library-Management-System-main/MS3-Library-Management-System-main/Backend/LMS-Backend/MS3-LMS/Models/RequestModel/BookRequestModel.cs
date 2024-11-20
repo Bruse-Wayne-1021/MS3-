@@ -2,6 +2,8 @@
 {
     public class BookRequestModel
     {
+        public string Name { get; set; }
+       
 
     }
 }

@@ -67,5 +67,26 @@ namespace MS3_LMS.Repository
             }
         }
 
+
+        public async Task<BookLend>UpdateReturnDate(Guid Memberid,DateTime ReturnDate)
+        {
+            try
+            {
+                var data = await _DbContext.BookLends.FirstOrDefaultAsync(b => b.MemebID == Memberid);
+                if(data == null)
+                {
+                    return null;
+                }
+                data.ReturnDate = ReturnDate;
+                _DbContext.BookLends.Update(data);
+                await _DbContext.SaveChangesAsync();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

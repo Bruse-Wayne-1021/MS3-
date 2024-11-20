@@ -23,8 +23,6 @@ namespace MS3_LMS.Service
       
 
 
-
-
         public UserService(IUserRepository userRepository, IRoleRepository roleRepository, IRoleService roleService,IMemberRepository memberRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
@@ -88,9 +86,7 @@ namespace MS3_LMS.Service
 
                 return new LoginResponseModel
                 {
-                    UserId = user.UserId,
-                    Email = user.Email,
-                    Roles = roles,
+                  
                     Token= token
                 };
 

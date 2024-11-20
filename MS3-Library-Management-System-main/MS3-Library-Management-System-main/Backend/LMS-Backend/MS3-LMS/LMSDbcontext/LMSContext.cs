@@ -88,15 +88,15 @@ namespace MS3_LMS.LMSDbcontext
                  .HasKey(ur => new { ur.UserId, ur.RoleID });
 
 
-            //modelBuilder.Entity<Book>()
-            //    .HasMany(b => b.Ratings)
-            //    .WithOne(r => r.Book)
-            //    .HasForeignKey(r => r.Bookid);
+            modelBuilder.Entity<Book>()
+                .HasMany(b => b.Ratings)
+                .WithOne(r => r.Book)
+                .HasForeignKey(r => r.Bookid);
 
-            //modelBuilder.Entity<Book>()
-            //    .HasMany(b => b.BookLends)
-            //    .WithOne(bl => bl.Book)
-            //    .HasForeignKey(bl => bl.Bookid);
+            modelBuilder.Entity<Book>()
+                .HasMany(b => b.BookLends)
+                .WithOne(bl => bl.Book)
+                .HasForeignKey(bl => bl.Bookid);
 
             modelBuilder.Entity<Book>()
                 .HasOne(b=>b.Genre)

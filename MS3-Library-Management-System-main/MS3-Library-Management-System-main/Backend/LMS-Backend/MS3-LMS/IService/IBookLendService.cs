@@ -11,5 +11,6 @@ namespace MS3_LMS.IService
         Task<List<BookLendResponse>> GetBookLendResponsesAsync();
         Task<List<BookLendResponse>> EnumBasedResponse(BookLend.State state);
         Task<BookLend> UpdateRecord(Guid id, BookLend.State state);
+        Task<bool>UpdatereturnDate(Guid memberID,DateTime returnDate);
     }
 }

@@ -8,6 +8,7 @@ namespace MS3_LMS.IRepository
         Task<List<BookLend>> GetAllRequestWithDeatails();
         Task<List<BookLend>> GetEnumBaseRecords(BookLend.State state);
         Task<BookLend> UpdateState(BookLend bookLend);
+        Task<BookLend> UpdateReturnDate(Guid Memberid, DateTime ReturnDate);
 
 
     }

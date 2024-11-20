@@ -74,6 +74,8 @@ namespace MS3_LMS.Controllers
         }
 
 
+
+
         [HttpPut]
         public async Task<IActionResult>UpdateState(Guid id, BookLend.State state)
         {
@@ -92,6 +94,25 @@ namespace MS3_LMS.Controllers
             }
         }
 
+        [HttpPut("{memberid}/return-date")]
+        public async Task<IActionResult>UpdateReturnDate(Guid MemberId, DateTime date)
+        {
+            try
+            {
+                var data = await _bookLendService.UpdatereturnDate(MemberId, date);
+                if (data)
+                {
+                    return Ok("return date updateed");
+                }
+                return Ok("return date can,t update");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+        
         
 
         
