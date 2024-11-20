@@ -64,6 +64,27 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooklendController",
+    "Method": "UpdateReturnDate",
+    "RelativePath": "api/Booklend/{memberid}/return-date",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MemberId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooklendController",
     "Method": "GetRecords",
     "RelativePath": "api/Booklend/Booklend/Status/{state}",
     "HttpMethod": "GET",
@@ -387,26 +408,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MS3_LMS.WeatherForecast, MS3-LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

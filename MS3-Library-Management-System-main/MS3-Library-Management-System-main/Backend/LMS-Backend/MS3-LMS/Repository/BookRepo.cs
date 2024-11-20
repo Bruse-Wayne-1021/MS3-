@@ -48,10 +48,12 @@ namespace MS3_LMS.Repository
             {
                 
                 var books = await _context.Books
-                    //.Include(b => b.Author)
+                    .Include(b => b.Author)
                     .Include(b => b.Genre)
-                    //.Include(b => b.Publisher)
+                    .Include(b => b.Publisher)
                     .Include(i=>i.Image)
+                    .Include(b=>b.BookLends)
+                    .Include(r=>r.Ratings)
                     .AsNoTracking()
                     .ToListAsync();
 

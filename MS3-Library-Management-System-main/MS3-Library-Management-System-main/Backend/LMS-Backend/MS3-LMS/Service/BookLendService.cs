@@ -1,4 +1,5 @@
-﻿using MS3_LMS.Enity.Core;
+﻿using Microsoft.EntityFrameworkCore;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
@@ -16,6 +17,10 @@ namespace MS3_LMS.Service
         {
             _bookLendRepository = bookLendRepository;
             _lMSContext = lMSContext;
+        }
+
+        public BookLendService()
+        {
         }
 
         public async Task<BookLend> BookRequest(BookLendRequest bookLendRequest)
@@ -114,8 +119,23 @@ namespace MS3_LMS.Service
 
         }
 
+        public async Task<bool> UpdatereturnDate(Guid memberID, DateTime returnDate)
+        {
+            try
+            {
+                var data = await _bookLendRepository.UpdateReturnDate(memberID, returnDate);
+                return data != null;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
 
-       
+
+
+
+
     }
 }

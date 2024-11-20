@@ -32,8 +32,8 @@ namespace MS3_LMS.Enity.Book
         public  Image? Image { get; set; }
         public Genre? Genre { get; set; }
 
-        //public  ICollection<Rating>? Ratings { get; set; }
-        //public  ICollection<BookLend>? BookLends { get; set; }
+        public  ICollection<Rating>? Ratings { get; set; }
+        public  ICollection<BookLend>? BookLends { get; set; }
     }
 
 }

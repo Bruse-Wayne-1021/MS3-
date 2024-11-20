@@ -4,6 +4,7 @@ using MS3_LMS.LMSDbcontext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    partial class LMSContextModelSnapshot : ModelSnapshot
+    [Migration("20241120094555_ggttyy")]
+    partial class ggttyy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -434,12 +437,12 @@ namespace MS3_LMS.Migrations
                     b.HasData(
                         new
                         {
-                            RoleID = new Guid("e63b7597-fb0d-43c6-8704-011843bc8b5c"),
+                            RoleID = new Guid("377b6a0f-6528-4b04-b0a5-c91e001c2ad9"),
                             UserAType = "Member"
                         },
                         new
                         {
-                            RoleID = new Guid("9e33a0ee-1e91-4a2f-bf64-5202a01ed957"),
+                            RoleID = new Guid("c524b999-c864-4454-acaf-c613fbca6fbe"),
                             UserAType = "Admin"
                         });
                 });
