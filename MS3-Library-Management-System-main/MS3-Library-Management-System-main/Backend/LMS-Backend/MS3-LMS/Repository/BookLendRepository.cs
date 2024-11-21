@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using MS3_LMS.Enity.Book;
 using MS3_LMS.Enity.Core;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
 using MS3_LMS.Models.RequestModel;
+using NuGet.Protocol.Plugins;
 
 namespace MS3_LMS.Repository
 {
@@ -68,18 +70,75 @@ namespace MS3_LMS.Repository
         }
 
 
-        public async Task<BookLend>UpdateReturnDate(Guid Memberid,DateTime ReturnDate)
+       
+
+
+        public async Task<BookLend>updatedate(Guid Id,DateTime date,string datetype)
         {
             try
             {
-                var data = await _DbContext.BookLends.FirstOrDefaultAsync(b => b.MemebID == Memberid);
+                var data = await _DbContext.BookLends.FirstOrDefaultAsync(g => g.MemebID == Id);
                 if(data == null)
                 {
                     return null;
                 }
-                data.ReturnDate = ReturnDate;
+
+                switch (datetype.ToLower())
+                {
+                    case "return":
+                        data.ReturnDate = date;
+                        break;
+
+                    case "approve":
+                        data.ApprovedDate = date;
+                        break;
+
+                    case "collect":
+                        data.CollectDate= date;
+                        break;
+
+                    default:
+                        throw new ArgumentException("invalid  date type ");
+
+                };
                 _DbContext.BookLends.Update(data);
                 await _DbContext.SaveChangesAsync();
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<List<BookLend>> OverDueAsync()
+        {
+            try
+            {
+                var data = await _DbContext.BookLends.Where(O => O.CollectDate.HasValue && O.CollectDate < DateTime.Now)
+                    .Include(I => I.Book)
+                    .Include(b => b.Member)
+                    .ToListAsync();
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<List<BookLend>> GetDueDateBooks()
+        {
+            try
+            {
+                var today = DateTime.Now;
+
+                var data = await _DbContext.BookLends.Where(b => b.CollectDate.HasValue && EF.Functions.DateDiffDay(b.CollectDate, today) == 6)
+                    .Include(I => I.Book)
+                    .Include(b => b.Member)
+                    .ToListAsync();
                 return data;
             }
             catch (Exception ex)
@@ -87,6 +146,10 @@ namespace MS3_LMS.Repository
                 throw new Exception(ex.Message);
             }
         }
+
+
+
+
 
     }
 }

@@ -64,27 +64,6 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooklendController",
-    "Method": "UpdateReturnDate",
-    "RelativePath": "api/Booklend/{memberid}/return-date",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "MemberId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "date",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.BooklendController",
     "Method": "GetRecords",
     "RelativePath": "api/Booklend/Booklend/Status/{state}",
     "HttpMethod": "GET",
@@ -95,6 +74,32 @@
         "Name": "state",
         "Type": "System.String",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooklendController",
+    "Method": "UpdateDate",
+    "RelativePath": "api/Booklend/updateDate",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MemberID",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Datetype",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -391,6 +396,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.NotificationController",
+    "Method": "SendOverDueWarning",
+    "RelativePath": "api/Notification/OverDueNotification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
