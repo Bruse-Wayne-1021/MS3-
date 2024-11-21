@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MS3_LMS.Enity.Notification
 {
-    public class Notification
+    public class Notification 
     {
         [Key]
         public Guid NotificationId { get; set; }

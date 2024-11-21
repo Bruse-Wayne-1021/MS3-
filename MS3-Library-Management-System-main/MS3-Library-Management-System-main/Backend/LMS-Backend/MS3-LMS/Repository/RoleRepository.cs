@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using Microsoft.Identity.Client;
 using MS3_LMS.Enity.User;
 using MS3_LMS.IRepository;
@@ -48,6 +49,19 @@ namespace MS3_LMS.Repository
             }
 
 
+        }
+
+        public async Task<List<Role>> GetAllAdmin()
+        {
+            try
+            {
+                var details = await _lMSContext.Roles.Where(a => a.UserAType == "Admin").ToListAsync();
+                return details;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 

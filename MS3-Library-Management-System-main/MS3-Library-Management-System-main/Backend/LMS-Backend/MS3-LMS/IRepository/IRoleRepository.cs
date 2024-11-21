@@ -6,5 +6,6 @@ namespace MS3_LMS.IRepository
     {
         Task AssignRoleTouser(Guid uerid, Guid roleId);
         Task<Role> GetRoleByNameAsync(string Usertype);
+        Task<List<Role>> GetAllAdmin();
     }
 }

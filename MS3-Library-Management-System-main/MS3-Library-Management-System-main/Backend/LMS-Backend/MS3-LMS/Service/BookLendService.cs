@@ -1,5 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Build.Framework;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using MS3_LMS.Enity.Core;
+using MS3_LMS.Enity.Notification;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
@@ -12,11 +15,16 @@ namespace MS3_LMS.Service
     {
         private readonly IBookLendRepository _bookLendRepository;
         private readonly LMSContext _lMSContext;
+        private readonly INotificationRepository _notificationRepository;
+        private readonly IRoleRepository _roleRepository;
 
-        public BookLendService(IBookLendRepository bookLendRepository ,LMSContext lMSContext)
+        public BookLendService(IBookLendRepository bookLendRepository ,LMSContext lMSContext,INotificationRepository notificationRepository,IRoleRepository roleRepository)
         {
             _bookLendRepository = bookLendRepository;
             _lMSContext = lMSContext;
+            _notificationRepository = notificationRepository;
+            _roleRepository = roleRepository;
+
         }
 
         public BookLendService()
@@ -119,22 +127,107 @@ namespace MS3_LMS.Service
 
         }
 
-        public async Task<bool> UpdatereturnDate(Guid memberID, DateTime returnDate)
+        //public async Task<bool> UpdatereturnDate(Guid memberID, DateTime returnDate)
+        //{
+        //    try
+        //    {
+        //        var data = await _bookLendRepository.UpdateReturnDate(memberID, returnDate);
+        //        return data != null;
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+        //}
+
+
+       
+
+        public async Task<bool>UpdateDates(Guid Memberid,DateTime date,string? dateType)
         {
             try
             {
-                var data = await _bookLendRepository.UpdateReturnDate(memberID, returnDate);
-                return data != null;
+                var data = await _bookLendRepository.updatedate(Memberid, date, dateType);
+                return data !=null;
+
             }
             catch(Exception ex)
+            {
+                throw new Exception();
+            }
+        }
+
+
+        public async Task SendNotification()
+        {
+            try
+            {
+                var message = await _bookLendRepository.GetDueDateBooks();
+                
+                
+
+                foreach(var booklend in message)
+                {
+                    var memberNotification = new Notification
+                    {
+                        NotificationId = Guid.NewGuid(),
+                        Type = "over Due reminder",
+                        Title = "Book Return Reminder",
+                        Body = $"your book `{booklend.Book.Name}` Is due  for return tommorrow.",
+                        ViewStatus = false,
+                        ReceiveId = booklend.MemebID
+                    };
+                    await _notificationRepository.AddNotification(memberNotification);
+
+
+
+                    //var AdminNotification=new Notification
+                    //{
+                    //    NotificationId=Guid.NewGuid(),
+                    //    Type="OverDue Reminder",
+                    //    Title="Over Due Alert",
+                    //    Body=$"Book `{booklend.Book.Name}` Borrowed By `{booklend.Member.FirstName} is  6 Days OverDue`",
+                    //    ViewStatus = false,
+                    //    ReceiveId=
+                        
+                    //}
+
+                }
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
 
 
+        public async Task<List<NotificationResponseModel>> sentNotification(Guid memberId)
+        {
+            try
+            {
+                var data = await _notificationRepository.GetNotificationAsync(memberId);
+                var response = data.Select(data => new NotificationResponseModel
+                {
+                    Type = data.Type,
+                    Title = data.Title,
+                    Body = data.Body,
+
+                }).ToList();
+                return response;
 
 
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        
+
+        
 
 
     }

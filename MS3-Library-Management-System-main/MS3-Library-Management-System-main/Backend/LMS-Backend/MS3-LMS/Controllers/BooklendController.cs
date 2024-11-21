@@ -4,6 +4,7 @@ using MS3_LMS.Enity.Core;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
 using MS3_LMS.Models.ResponeModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MS3_LMS.Controllers
 {
@@ -94,17 +95,19 @@ namespace MS3_LMS.Controllers
             }
         }
 
-        [HttpPut("{memberid}/return-date")]
-        public async Task<IActionResult>UpdateReturnDate(Guid MemberId, DateTime date)
+        
+
+        [HttpPut("updateDate")]
+        public async Task<IActionResult>UpdateDate(Guid MemberID,DateTime Date,string Datetype)
         {
             try
             {
-                var data = await _bookLendService.UpdatereturnDate(MemberId, date);
+                var data = await _bookLendService.UpdateDates(MemberID, Date, Datetype);
                 if (data)
                 {
-                    return Ok("return date updateed");
+                    return Ok("date is updated");
                 }
-                return Ok("return date can,t update");
+                return Ok("date is did not updated");
             }
             catch (Exception ex)
             {
@@ -112,6 +115,8 @@ namespace MS3_LMS.Controllers
             }
 
         }
+
+         
         
         
 

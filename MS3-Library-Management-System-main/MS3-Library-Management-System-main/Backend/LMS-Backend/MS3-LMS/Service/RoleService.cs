@@ -32,6 +32,18 @@ namespace MS3_LMS.Service
             }
         }
 
+
+        public async Task<List<Role>> AdminDetails()
+        {
+            return await _roleRepository.GetAllAdmin();
+        }
+
+
+
+
+
+
+
       
 
 

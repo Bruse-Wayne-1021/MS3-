@@ -86,6 +86,8 @@ namespace MS3_LMS
             builder.Services.AddScoped<IRoleRepository, RoleRepository>();
             builder.Services .AddScoped<IBookLendRepository, BookLendRepository>();
             builder.Services.AddScoped<IBookLendService, BookLendService>();
+            builder.Services.AddScoped<INotificationRepository, Notification>();
+
 
             
             var app = builder.Build();
