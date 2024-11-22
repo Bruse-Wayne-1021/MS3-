@@ -409,6 +409,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.NotificationController",
+    "Method": "SentNotification",
+    "RelativePath": "api/Notification/SentNotifi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MemberID",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.UserController",
     "Method": "GetByUSerId",
     "RelativePath": "api/User/{userID}",

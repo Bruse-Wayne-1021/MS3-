@@ -30,5 +30,23 @@ namespace MS3_LMS.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+
+        [HttpGet("SentNotifi")]
+        public async Task<IActionResult> SentNotification(Guid MemberID)
+        {
+            try
+            {
+                var data = await _bookLendService.sentNotification(MemberID);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+
     }
 }
