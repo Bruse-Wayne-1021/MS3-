@@ -284,6 +284,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.ImageController",
+    "Method": "NewImage",
+    "RelativePath": "api/Image/AddNewImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "imageRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.ImageRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.LanguageController",
+    "Method": "GetAllLanguage",
+    "RelativePath": "api/Language/AllLanguage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/login",
@@ -365,7 +391,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Nic",
+        "Name": "memberid",
         "Type": "System.Guid",
         "IsRequired": false
       }
