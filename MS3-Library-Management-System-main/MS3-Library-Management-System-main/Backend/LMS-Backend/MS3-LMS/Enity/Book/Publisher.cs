@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace MS3_LMS.Enity.Book
 {
@@ -10,7 +11,7 @@ namespace MS3_LMS.Enity.Book
         public string Description { get; set; }
         public DateTime PublishDate { get; set; }
         public string? Details { get; set; }
-
+        
         public  ICollection<Book>? Books { get; set; }
     }
 

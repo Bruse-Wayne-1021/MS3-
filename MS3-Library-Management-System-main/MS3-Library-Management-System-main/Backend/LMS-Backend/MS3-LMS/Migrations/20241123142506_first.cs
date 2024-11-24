@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace MS3_LMS.Migrations
 {
     /// <inheritdoc />
-    public partial class seconf : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -86,7 +88,7 @@ namespace MS3_LMS.Migrations
                 columns: table => new
                 {
                     RoleID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserAType = table.Column<int>(type: "int", nullable: false)
+                    UserAType = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -99,8 +101,8 @@ namespace MS3_LMS.Migrations
                 {
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsConfirmEmail = table.Column<bool>(type: "bit", nullable: false),
-                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    IsConfirmEmail = table.Column<bool>(type: "bit", nullable: true),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -249,7 +251,7 @@ namespace MS3_LMS.Migrations
                 columns: table => new
                 {
                     LendId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false),
                     LendDays = table.Column<int>(type: "int", nullable: false),
                     ReturnDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ApprovedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -361,6 +363,25 @@ namespace MS3_LMS.Migrations
                         principalTable: "Subscriptions",
                         principalColumn: "SubId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Languages",
+                columns: new[] { "LanguageId", "TypeOfLanguage" },
+                values: new object[,]
+                {
+                    { new Guid("7abb5247-0e9b-4ee8-b994-49672600b93c"), "English" },
+                    { new Guid("a3b56432-87e5-4588-92d3-8cf153de8fc7"), "Tamil" },
+                    { new Guid("b8418e1e-0f5f-4b5f-b547-68a92ef99da5"), "Singalam" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "RoleID", "UserAType" },
+                values: new object[,]
+                {
+                    { new Guid("645a938d-059a-4494-a3dc-9b980e8fcb2f"), "Member" },
+                    { new Guid("c158ec16-79e6-407a-ad0b-605609ea8623"), "Admin" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
-using NuGet.Protocol.Plugins;
 
 namespace MS3_LMS.Repository
 {
-    public class Notification: INotificationRepository
+    public class Notification : INotificationRepository
     {
         private readonly LMSContext _context;
 
@@ -21,9 +20,9 @@ namespace MS3_LMS.Repository
 
             try
             {
-                 await _context.Notifications.AddAsync(notification);
+                await _context.Notifications.AddAsync(notification);
                 await _context.SaveChangesAsync();
-                
+
             }
             catch (Exception ex)
             {
@@ -40,7 +39,7 @@ namespace MS3_LMS.Repository
                 var data = await _context.Notifications
                     .Where(i => i.ReceiveId == MemberID && (i.ViewStatus == false || i.ViewStatus == null))
                     .ToListAsync();
-                if (data == null  || !data.Any())
+                if (data == null || !data.Any())
                 {
                     return new List<MS3_LMS.Enity.Notification.Notification>();
                 }
@@ -49,7 +48,7 @@ namespace MS3_LMS.Repository
             }
             catch (Exception ex)
             {
-               
+
                 throw new Exception($"Error fetching notifications: {ex.Message}");
             }
         }

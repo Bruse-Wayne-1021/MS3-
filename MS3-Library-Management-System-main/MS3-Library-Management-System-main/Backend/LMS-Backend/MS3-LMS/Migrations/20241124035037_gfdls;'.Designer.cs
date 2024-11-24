@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    [Migration("20241113171953_en")]
-    partial class en
+    [Migration("20241124035037_gfdls;'")]
+    partial class gfdls
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,6 +122,80 @@ namespace MS3_LMS.Migrations
                     b.HasKey("GenreId");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = new Guid("8dc68f63-01e8-45a9-a151-40c692cf9f8a"),
+                            BookGenre = "Fiction",
+                            Description = "Fictional stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("f2dc42e5-bb99-4e36-9eec-0d72d896a9d6"),
+                            BookGenre = "Non Fiction",
+                            Description = "Non-fictional content"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("65e520d0-19cb-41d1-b678-9cb3d7b93b82"),
+                            BookGenre = "Science Fiction",
+                            Description = "Sci-fi stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("a83af87d-d138-4d9f-aaed-d91970e05858"),
+                            BookGenre = "Mystery",
+                            Description = "Mystery novels"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("656f62f9-128e-43d4-9216-ef202e92b556"),
+                            BookGenre = "Thriller",
+                            Description = "Thrilling stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("a329e607-3734-496c-a8d2-5856c4eaa8d2"),
+                            BookGenre = "Romance Novel",
+                            Description = "Romantic tales"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("af1cd0bc-90db-4f32-9f79-efa2503a417c"),
+                            BookGenre = "Biography",
+                            Description = "Life stories of individuals"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("38e446c9-871b-40bc-851e-1ecfa3cf1c7d"),
+                            BookGenre = "Humor",
+                            Description = "Funny and comedic stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("e919d6e7-06b5-4c70-96e3-c4cf7a6977dc"),
+                            BookGenre = "Fairy Tale",
+                            Description = "Fairy tales and folklore"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("03f4e6f8-4614-4518-b67f-c9809b974484"),
+                            BookGenre = "Graphic Novel",
+                            Description = "Stories told through illustrations"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("57234aae-b51b-4c41-b3a3-7f1bf3604da2"),
+                            BookGenre = "True Crime",
+                            Description = "Real-life crime stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("62da66b0-f180-49ec-8297-5128404c0430"),
+                            BookGenre = "Magical Realism",
+                            Description = "Stories blending magic and realism"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Image", b =>
@@ -160,6 +234,23 @@ namespace MS3_LMS.Migrations
                     b.HasKey("LanguageId");
 
                     b.ToTable("Languages");
+
+                    b.HasData(
+                        new
+                        {
+                            LanguageId = new Guid("116b2190-d970-4473-80e3-1366b34eaaff"),
+                            TypeOfLanguage = "English"
+                        },
+                        new
+                        {
+                            LanguageId = new Guid("4808d238-be15-41a2-b084-e44678814fd3"),
+                            TypeOfLanguage = "Tamil"
+                        },
+                        new
+                        {
+                            LanguageId = new Guid("5d34d9a7-93ff-4c27-862b-acb59100cc19"),
+                            TypeOfLanguage = "Singalam"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Publisher", b =>
@@ -426,12 +517,25 @@ namespace MS3_LMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("UserAType")
-                        .HasColumnType("int");
+                    b.Property<string>("UserAType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RoleID");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleID = new Guid("0a7e65ce-1a16-42d6-b1eb-9772aae5a2bc"),
+                            UserAType = "Member"
+                        },
+                        new
+                        {
+                            RoleID = new Guid("1d4d9918-736c-4a0b-87de-4fdaddaf2af8"),
+                            UserAType = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.User.User", b =>
@@ -444,11 +548,10 @@ namespace MS3_LMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsConfirmEmail")
+                    b.Property<bool?>("IsConfirmEmail")
                         .HasColumnType("bit");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");

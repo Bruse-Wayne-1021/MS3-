@@ -16,31 +16,15 @@ namespace MS3_LMS.Repository
             _logger=logger;
         }
 
-
-        public async Task<Book>CreateBookAsync(Book book)
+        public async Task<Book>PostNewBOok(Book book)
         {
-            if (book == null)
-            {
-                throw new ArgumentNullException(nameof(book),"The Book object Can Not be null");
-            }
-
-            try
-            {
-                var data = await _context.Books.AddAsync(book);
-                await _context.SaveChangesAsync();
-
-                return data.Entity;
-            }
-            catch (DbUpdateException ex)
-            {
-                throw new Exception("An Eror Occured While creating Book ",ex);
-            }
-
-            catch(Exception ex)
-            {
-                throw new Exception("An UnExpected error", ex);
-            }
+            var data=await _context.Books.AddAsync(book);
+            await _context.SaveChangesAsync();
+            return data.Entity;
         }
+        
+
+
 
         public async Task<IReadOnlyList<Book>> GetAllBooksAsync()
         {
@@ -52,8 +36,9 @@ namespace MS3_LMS.Repository
                     .Include(b => b.Genre)
                     .Include(b => b.Publisher)
                     .Include(i=>i.Image)
-                    .Include(b=>b.BookLends)
-                    .Include(r=>r.Ratings)
+                    .Include(l=>l.Language)
+                    //.Include(b=>b.BookLends)
+                    //.Include(r=>r.Ratings)
                     .AsNoTracking()
                     .ToListAsync();
 
@@ -65,6 +50,9 @@ namespace MS3_LMS.Repository
                 throw new Exception("An error occurred while retrieving books.", ex);
             }
         }
+
+
+       
 
         public async Task<bool>DeleteBookByid(Guid Id)
         {

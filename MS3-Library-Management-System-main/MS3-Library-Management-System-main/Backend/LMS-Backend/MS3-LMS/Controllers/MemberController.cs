@@ -57,11 +57,11 @@ namespace MS3_LMS.Controllers
 
         [HttpGet]
         [Route("Get Member by id")]
-        public async Task<IActionResult>getAllMembers(Guid Nic)
+        public async Task<IActionResult>getAllMembers(Guid memberid)
         {
             try
             {
-                var member = await _memberservice.GetMemberByNic(Nic);
+                var member = await _memberservice.GetMemberByNic(memberid);
                 if(member == null)
                 {
                     return BadRequest(ModelState);

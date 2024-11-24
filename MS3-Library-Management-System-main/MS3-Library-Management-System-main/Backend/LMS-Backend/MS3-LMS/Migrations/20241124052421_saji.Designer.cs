@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    [Migration("20241113041507_dkof")]
-    partial class dkof
+    [Migration("20241124052421_saji")]
+    partial class saji
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -238,8 +238,8 @@ namespace MS3_LMS.Migrations
                     b.Property<DateTime?>("ReturnDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("LendId");
 
@@ -426,12 +426,25 @@ namespace MS3_LMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("UserAType")
-                        .HasColumnType("int");
+                    b.Property<string>("UserAType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RoleID");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleID = new Guid("87ca4ff1-6c2b-4b9d-bd49-7d048e7d6397"),
+                            UserAType = "Member"
+                        },
+                        new
+                        {
+                            RoleID = new Guid("0b75c448-b97e-40ec-bd72-e5571f085e7d"),
+                            UserAType = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.User.User", b =>
@@ -444,11 +457,10 @@ namespace MS3_LMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsConfirmEmail")
+                    b.Property<bool?>("IsConfirmEmail")
                         .HasColumnType("bit");
 
                     b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");

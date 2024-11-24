@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Build.Execution;
+using Microsoft.CodeAnalysis.Host;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using MS3_LMS.IRepository;
@@ -75,6 +76,7 @@ namespace MS3_LMS
             builders.Logging.AddDebug();
 
             //var app= builder.Build();
+            
 
             builder.Services.AddScoped<IBookRepository,BookRepo>();
             builder.Services.AddScoped<IBookService,BookService>();
@@ -84,9 +86,15 @@ namespace MS3_LMS
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IRoleService, RoleService>();
             builder.Services.AddScoped<IRoleRepository, RoleRepository>();
-            builder.Services .AddScoped<IBookLendRepository, BookLendRepository>();
+            builder.Services.AddScoped<IBookLendRepository, BookLendRepository>();
             builder.Services.AddScoped<IBookLendService, BookLendService>();
             builder.Services.AddScoped<INotificationRepository, Notification>();
+            builder.Services.AddScoped<IAuthorService, AuthorService>();
+            builder.Services.AddScoped<IAothorRepository ,MS3_LMS.Repository.Author >();
+            builder.Services.AddScoped<IPublisherRepository,PublisherRepository>();
+            builder.Services.AddScoped<IPublisherService,PublisherService>();
+            builder.Services.AddScoped<IGenreRepository,GenreRepository>();
+            builder.Services.AddScoped<IGenreService,GenreService>();
 
 
             

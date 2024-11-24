@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    [Migration("20241114195036_eplpkg")]
-    partial class eplpkg
+    [Migration("20241123142506_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -160,6 +160,23 @@ namespace MS3_LMS.Migrations
                     b.HasKey("LanguageId");
 
                     b.ToTable("Languages");
+
+                    b.HasData(
+                        new
+                        {
+                            LanguageId = new Guid("7abb5247-0e9b-4ee8-b994-49672600b93c"),
+                            TypeOfLanguage = "English"
+                        },
+                        new
+                        {
+                            LanguageId = new Guid("a3b56432-87e5-4588-92d3-8cf153de8fc7"),
+                            TypeOfLanguage = "Tamil"
+                        },
+                        new
+                        {
+                            LanguageId = new Guid("b8418e1e-0f5f-4b5f-b547-68a92ef99da5"),
+                            TypeOfLanguage = "Singalam"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Publisher", b =>
@@ -437,12 +454,12 @@ namespace MS3_LMS.Migrations
                     b.HasData(
                         new
                         {
-                            RoleID = new Guid("b0bf0bca-ab6d-457a-af1d-fc38f1f6b0e3"),
+                            RoleID = new Guid("645a938d-059a-4494-a3dc-9b980e8fcb2f"),
                             UserAType = "Member"
                         },
                         new
                         {
-                            RoleID = new Guid("4f2bc581-074f-4fe1-853e-65d7d690f19a"),
+                            RoleID = new Guid("c158ec16-79e6-407a-ad0b-605609ea8623"),
                             UserAType = "Admin"
                         });
                 });

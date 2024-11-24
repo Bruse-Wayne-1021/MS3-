@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    [Migration("20241120094650_kgjf")]
-    partial class kgjf
+    [Migration("20241124035734_sa")]
+    partial class sa
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,6 +122,80 @@ namespace MS3_LMS.Migrations
                     b.HasKey("GenreId");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            GenreId = new Guid("d2d984ca-e9e5-4f19-843a-af84038e478e"),
+                            BookGenre = "Fiction",
+                            Description = "Fictional stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("5d007263-2aa7-47c0-9937-e3b33894626b"),
+                            BookGenre = "Non Fiction",
+                            Description = "Non-fictional content"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("3f168993-7242-4328-9926-122ef880f96d"),
+                            BookGenre = "Science Fiction",
+                            Description = "Sci-fi stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("55d8b93b-6a40-482f-b4f5-cb3eac3084ba"),
+                            BookGenre = "Mystery",
+                            Description = "Mystery novels"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("a3a22915-2eba-437f-978e-52db8c59c09f"),
+                            BookGenre = "Thriller",
+                            Description = "Thrilling stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("ed5c61cb-ecc9-4f83-adc6-c417af283a75"),
+                            BookGenre = "Romance Novel",
+                            Description = "Romantic tales"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("a37b13a0-3d80-4e29-a973-3a618cb8c34b"),
+                            BookGenre = "Biography",
+                            Description = "Life stories of individuals"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("f1b8e840-6ef1-4df8-9a4d-53dab8466dcf"),
+                            BookGenre = "Humor",
+                            Description = "Funny and comedic stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("0e9ff416-2224-4955-9775-014cee0e0ce8"),
+                            BookGenre = "Fairy Tale",
+                            Description = "Fairy tales and folklore"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("31537a84-e1d7-4502-92bd-9f2d97da77df"),
+                            BookGenre = "Graphic Novel",
+                            Description = "Stories told through illustrations"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("95bc47da-7f54-4456-acb0-4c72741a13db"),
+                            BookGenre = "True Crime",
+                            Description = "Real-life crime stories"
+                        },
+                        new
+                        {
+                            GenreId = new Guid("a1309a1b-3197-4198-9275-c565a6b244dd"),
+                            BookGenre = "Magical Realism",
+                            Description = "Stories blending magic and realism"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Image", b =>
@@ -160,6 +234,23 @@ namespace MS3_LMS.Migrations
                     b.HasKey("LanguageId");
 
                     b.ToTable("Languages");
+
+                    b.HasData(
+                        new
+                        {
+                            LanguageId = new Guid("53811111-1a00-4d66-9afb-dbe29da53890"),
+                            TypeOfLanguage = "English"
+                        },
+                        new
+                        {
+                            LanguageId = new Guid("21e7d543-5f89-447c-8bbe-c9e7fec4c09a"),
+                            TypeOfLanguage = "Tamil"
+                        },
+                        new
+                        {
+                            LanguageId = new Guid("6ee60eaa-7a4b-4880-8f84-0304e11b4eeb"),
+                            TypeOfLanguage = "Singalam"
+                        });
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Publisher", b =>
@@ -437,12 +528,12 @@ namespace MS3_LMS.Migrations
                     b.HasData(
                         new
                         {
-                            RoleID = new Guid("e63b7597-fb0d-43c6-8704-011843bc8b5c"),
+                            RoleID = new Guid("ecbc1f34-a32a-44e5-acf5-ab883677dc6b"),
                             UserAType = "Member"
                         },
                         new
                         {
-                            RoleID = new Guid("9e33a0ee-1e91-4a2f-bf64-5202a01ed957"),
+                            RoleID = new Guid("f45a04ac-2950-48b0-8d30-7edd9c3c9ae7"),
                             UserAType = "Admin"
                         });
                 });
@@ -532,7 +623,7 @@ namespace MS3_LMS.Migrations
             modelBuilder.Entity("MS3_LMS.Enity.Book.Rating", b =>
                 {
                     b.HasOne("MS3_LMS.Enity.Book.Book", "Book")
-                        .WithMany("Ratings")
+                        .WithMany()
                         .HasForeignKey("Bookid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -551,7 +642,7 @@ namespace MS3_LMS.Migrations
             modelBuilder.Entity("MS3_LMS.Enity.Core.BookLend", b =>
                 {
                     b.HasOne("MS3_LMS.Enity.Book.Book", "Book")
-                        .WithMany("BookLends")
+                        .WithMany()
                         .HasForeignKey("Bookid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -648,11 +739,7 @@ namespace MS3_LMS.Migrations
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Book", b =>
                 {
-                    b.Navigation("BookLends");
-
                     b.Navigation("Image");
-
-                    b.Navigation("Ratings");
                 });
 
             modelBuilder.Entity("MS3_LMS.Enity.Book.Genre", b =>
