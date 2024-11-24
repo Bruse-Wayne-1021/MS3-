@@ -88,15 +88,15 @@ namespace MS3_LMS.LMSDbcontext
                  .HasKey(ur => new { ur.UserId, ur.RoleID });
 
 
-            modelBuilder.Entity<Book>()
-                .HasMany(b => b.Ratings)
-                .WithOne(r => r.Book)
-                .HasForeignKey(r => r.Bookid);
+            //modelBuilder.Entity<Book>()
+            //    .HasMany(b => b.Ratings)
+            //    .WithOne(r => r.Book)
+            //    .HasForeignKey(r => r.Bookid);
 
-            modelBuilder.Entity<Book>()
-                .HasMany(b => b.BookLends)
-                .WithOne(bl => bl.Book)
-                .HasForeignKey(bl => bl.Bookid);
+            //modelBuilder.Entity<Book>()
+            //    .HasMany(b => b.BookLends)
+            //    .WithOne(bl => bl.Book)
+            //    .HasForeignKey(bl => bl.Bookid);
 
             modelBuilder.Entity<Book>()
                 .HasOne(b=>b.Genre)
@@ -135,6 +135,29 @@ namespace MS3_LMS.LMSDbcontext
                  new Role { RoleID = Guid.NewGuid(), UserAType = "Member" },
                  new Role { RoleID = Guid.NewGuid(), UserAType = "Admin" }
                   );
+
+
+            modelBuilder.Entity<Language>().HasData(
+                new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "English" }, 
+                new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "Tamil" },
+                new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "Singalam" }
+                );
+
+            modelBuilder.Entity<Genre>().HasData(
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Fiction", Description = "Fictional stories" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Non Fiction", Description = "Non-fictional content" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Science Fiction", Description = "Sci-fi stories" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Mystery", Description = "Mystery novels" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Thriller", Description = "Thrilling stories" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Romance Novel", Description = "Romantic tales" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Biography", Description = "Life stories of individuals" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Humor", Description = "Funny and comedic stories" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Fairy Tale", Description = "Fairy tales and folklore" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Graphic Novel", Description = "Stories told through illustrations" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "True Crime", Description = "Real-life crime stories" },
+                new Genre { GenreId = Guid.NewGuid(), BookGenre = "Magical Realism", Description = "Stories blending magic and realism" }
+            );
+
 
 
             base.OnModelCreating(modelBuilder);

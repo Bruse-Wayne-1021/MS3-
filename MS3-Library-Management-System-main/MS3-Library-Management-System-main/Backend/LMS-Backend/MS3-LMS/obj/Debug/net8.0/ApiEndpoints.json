@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.AuthorController",
+    "Method": "PostNewAuthor",
+    "RelativePath": "api/Author/NewAuthor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.AuthorRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.BooklendController",
     "Method": "BooklendRequest",
     "RelativePath": "api/Booklend",
@@ -116,29 +132,19 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooksController",
-    "Method": "CreateBookAsync",
+    "Method": "CreateBook",
     "RelativePath": "api/Books",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "book",
-        "Type": "MS3_LMS.Enity.Book.Book",
+        "Name": "request",
+        "Type": "MS3_LMS.Models.Request.CreateBookRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "MS3_LMS.Enity.Book.Book",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooksController",
@@ -249,6 +255,32 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.GenreController",
+    "Method": "PostGenre",
+    "RelativePath": "api/Genre",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MS3_LMS.Models.RequestModel.GenreRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.GenreController",
+    "Method": "AllGenres",
+    "RelativePath": "api/Genre/getAllGenres",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -420,6 +452,22 @@
         "Name": "MemberID",
         "Type": "System.Guid",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.PubisherController",
+    "Method": "postPublisher",
+    "RelativePath": "api/Pubisher/NewPublisher",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "publisherRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.PublisherRequestModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using MS3_LMS.Enity.Book;
 using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
+using MS3_LMS.Models.Request;
+using MS3_LMS.Models.RequestModel;
 
 namespace MS3_LMS.Controllers
 {
@@ -17,11 +19,14 @@ namespace MS3_LMS.Controllers
     {
         private readonly LMSContext _context;
         private readonly IBookService _bookService;
+        private readonly ILogger<BooksController> _logger;
 
-        public BooksController(LMSContext context, IBookService bookService)
+        public BooksController(LMSContext context, IBookService bookService, ILogger<BooksController> logger)
         {
             _context = context;
             _bookService = bookService;
+            _logger = logger;
+
         }
 
         // GET: api/Books
@@ -85,13 +90,68 @@ namespace MS3_LMS.Controllers
 
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Book>> CreateBookAsync(Book book)
-        {
-            var data = await _bookService.CreateBookAsyn(book);
-            return Ok(data);
-            //return CreatedAtAction("GetBook", new { id = book.Bookid }, book);
-        }
+        //[HttpPost]
+        //public async Task<ActionResult> CreateBookAsync(BookRequestModel bookRequestModel)
+        //{
+        //    try
+        //    {
+        //        if (bookRequestModel == null)
+        //        {
+        //            _logger.LogError("Received null book request model.");
+        //            return BadRequest(new { Message = "The book request model cannot be null." });
+        //        }
+
+   
+        //        if (string.IsNullOrWhiteSpace(bookRequestModel.Name))
+        //        {
+        //            _logger.LogError("Validation failed: Book name is required.");
+        //            return BadRequest(new { Message = "Validation failed: Book name is required." });
+        //        }
+
+        //        if (string.IsNullOrWhiteSpace(bookRequestModel.ISBN))
+        //        {
+        //            _logger.LogError("Validation failed: ISBN is required.");
+        //            return BadRequest(new { Message = "Validation failed: ISBN is required." });
+        //        }
+
+        //        if (bookRequestModel.AuthorId == Guid.Empty)
+        //        {
+        //            _logger.LogError("Validation failed: AuthorId is required.");
+        //            return BadRequest(new { Message = "Validation failed: AuthorId is required." });
+        //        }
+
+        //        if (bookRequestModel.PublisherId == Guid.Empty)
+        //        {
+        //            _logger.LogError("Validation failed: PublisherId is required.");
+        //            return BadRequest(new { Message = "Validation failed: PublisherId is required." });
+        //        }
+
+        //        if (bookRequestModel.LanguageId == Guid.Empty)
+        //        {
+        //            _logger.LogError("Validation failed: LanguageId is required.");
+        //            return BadRequest(new { Message = "Validation failed: LanguageId is required." });
+        //        }
+
+        //        if (bookRequestModel.GenreId == Guid.Empty)
+        //        {
+        //            _logger.LogError("Validation failed: GenreId is required.");
+        //            return BadRequest(new { Message = "Validation failed: GenreId is required." });
+        //        }
+
+        //        _logger.LogInformation("Validation passed for book request model.");
+        //        await _bookService.CreateBookAsyn(bookRequestModel);
+
+        //        return Ok(bookRequestModel);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError("Error in CreateBookAsync: {Message}", ex.Message);
+        //        return StatusCode(500, new { Message = "Error creating the book.", Details = ex.Message });
+        //    }
+        //}
+
+
+
 
         // DELETE: api/Books/5
         [HttpDelete("{id}")]
@@ -114,6 +174,7 @@ namespace MS3_LMS.Controllers
             return Ok(book);
         }
 
+
         [HttpGet("Languageatype")]
         public async Task<IActionResult> SortByLanguage(string Language)
         {
@@ -121,12 +182,53 @@ namespace MS3_LMS.Controllers
             return Ok(book);
         }
 
+
         [HttpGet("BookType")]
         public async Task<IActionResult>FilterByBookType(Book.type bookType)
         {
             var data=await _bookService.BasedOnBookType(bookType);
             return Ok(data);
         }
-        
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBook([FromBody] CreateBookRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var newBook = new Book
+            {
+                Bookid = Guid.NewGuid(),
+                Name = request.Name,
+                Description = request.Description,
+                ISBN = request.ISBN,
+                PageCount = request.PageCount,
+                IsAvailable = request.IsAvailable,
+                BookType = (Book.type)request.BookType,
+                URL = request.URL,
+                Quantity = request.Quantity,
+                AuthorId = request.AuthorId,
+                PublisherId = request.PublisherId,
+                LanguageId = request.LanguageId,
+                GenreId = request.GenreId
+            };
+
+            try
+            {
+                var createdBook = await _bookService.CreateBook(newBook);
+                return Ok(createdBook);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Error creating the book", details = ex.Message });
+            }
+        }
+
+
+
+
+
     }
 }
