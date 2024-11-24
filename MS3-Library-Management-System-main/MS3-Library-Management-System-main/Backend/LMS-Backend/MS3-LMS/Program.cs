@@ -95,6 +95,10 @@ namespace MS3_LMS
             builder.Services.AddScoped<IPublisherService,PublisherService>();
             builder.Services.AddScoped<IGenreRepository,GenreRepository>();
             builder.Services.AddScoped<IGenreService,GenreService>();
+            builder.Services.AddScoped<MS3_LMS.IService.ILanguageService, MS3_LMS.Service.LanguageService>();
+            builder.Services.AddScoped<ILanguageRepository, LanguageRepository>();
+            builder.Services.AddScoped<IImageRepository, ImageRepository>();
+            builder.Services.AddScoped<IImageService, ImageService>();
 
 
             
