@@ -150,20 +150,20 @@ namespace MS3_LMS.Repository
             }
         }
 
-        public async Task<IReadOnlyList<Book>>BasedOnBookType(Book.type booktype)
-        {
-            try
-            {
-                var data = await _context.Set<Book>().AsNoTracking()
-                    .Where(b => b.BookType == booktype).ToListAsync();
+        //public async Task<IReadOnlyList<Book>>BasedOnBookType(Book.type booktype)
+        //{
+        //    try
+        //    {
+        //        var data = await _context.Set<Book>().AsNoTracking()
+        //            .Where(b => b.BookType == booktype).ToListAsync();
 
-                return data;
-            }
-            catch(Exception Ex)
-            {
-                throw new Exception("Can not Filter ");
-            }
-        }
+        //        return data;
+        //    }
+        //    catch(Exception Ex)
+        //    {
+        //        throw new Exception("Can not Filter ");
+        //    }
+        //}
 
         
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 
 namespace MS3_LMS.Controllers
 {
@@ -21,6 +22,20 @@ namespace MS3_LMS.Controllers
         {
            await _authorService.PostNewAuthor(authorRequestModel);
             return Ok(authorRequestModel);
+        }
+
+        [HttpGet("AllAuthors")]
+        public async Task<IActionResult>AllAuthors()
+        {
+            try
+            {
+                var data = await _authorService.GelAuthors();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

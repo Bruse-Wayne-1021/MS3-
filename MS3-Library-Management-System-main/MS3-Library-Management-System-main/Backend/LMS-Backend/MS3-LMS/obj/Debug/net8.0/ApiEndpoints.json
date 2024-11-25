@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.AuthorController",
+    "Method": "AllAuthors",
+    "RelativePath": "api/Author/AllAuthors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.AuthorController",
     "Method": "PostNewAuthor",
     "RelativePath": "api/Author/NewAuthor",
     "HttpMethod": "POST",
@@ -205,22 +215,6 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.BooksController",
-    "Method": "FilterByBookType",
-    "RelativePath": "api/Books/BookType",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "bookType",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -480,6 +474,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.PubisherController",
+    "Method": "AllPublishers",
+    "RelativePath": "api/Pubisher/AllPublisher",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

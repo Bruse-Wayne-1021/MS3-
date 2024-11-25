@@ -2,6 +2,7 @@
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 
 namespace MS3_LMS.Service
 {
@@ -20,13 +21,34 @@ namespace MS3_LMS.Service
             {
                 var pub = new Publisher
                 {
-                    Name = publisherRequestModel.Name,
+                    Name = publisherRequestModel.PublisherName,
                     Description = publisherRequestModel.Description,
                     Details = publisherRequestModel.Details,
-                    PublishDate = publisherRequestModel.PublishDate,
+                   
                 };
                 await _publisherRepository.PostPublisher(pub);
 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<List<PublisherResponseMOdel>> GetAllPublishers()
+        {
+            try
+            {
+                var data = await _publisherRepository.GetAllpublisger();
+
+                var response = data.Select(s => new PublisherResponseMOdel
+                {
+                    PublisherId = s.PublisherId,
+                    PublisherName = s.Name,
+                    Description = s.Description,
+                    Details = s.Details,
+                }).ToList();
+                return response;
             }
             catch (Exception ex)
             {

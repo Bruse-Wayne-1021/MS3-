@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 
 namespace MS3_LMS.Controllers
 {
@@ -27,6 +28,20 @@ namespace MS3_LMS.Controllers
             catch (Exception ex)
             {
                 throw new Exception();
+            }
+        }
+
+        [HttpGet("AllPublisher")]
+        public async Task<IActionResult> AllPublishers()
+        {
+            try
+            {
+                var data = await _publisherService.GetAllPublishers();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }

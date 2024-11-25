@@ -20,12 +20,7 @@ namespace MS3_LMS.Models.Request
 
         public bool IsAvailable { get; set; }
 
-        [Required(ErrorMessage = "Book type is required.")]
-       
-        public MS3_LMS.Enity.Book.Book.type BookType { get; set; }
-
-        [Url(ErrorMessage = "The URL field must be a valid URL.")]
-        public string? URL { get; set; }
+      
 
         [Range(1, int.MaxValue, ErrorMessage = "Quantity must be at least 1.")]
         public int Quantity { get; set; }
@@ -42,6 +37,12 @@ namespace MS3_LMS.Models.Request
         [Required(ErrorMessage = "Genre ID is required.")]
         public Guid GenreId { get; set; }
 
-       
+
+        //public string? Image1Path { get; set; }
+        public string? Image2Path { get; set; }
+        
+        public DateTime PublishDate { get; set; }
+
+
     }
 }

@@ -74,10 +74,10 @@ namespace MS3_LMS.Service
             return await _bookRepository.FilterByLanguage(Language);
         }
         
-        public async Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype)
-        {
-            return await _bookRepository.BasedOnBookType(booktype);
-        }
+        //public async Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype)
+        //{
+        //    return await _bookRepository.BasedOnBookType(booktype);
+        //}
 
         public async Task<Book>CreateBook(Book book)
         {
