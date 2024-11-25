@@ -10,6 +10,7 @@ using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
 using MS3_LMS.Models.Request;
 using MS3_LMS.Models.RequestModel;
+using NuGet.Packaging.Signing;
 
 namespace MS3_LMS.Controllers
 {
@@ -20,12 +21,14 @@ namespace MS3_LMS.Controllers
         private readonly LMSContext _context;
         private readonly IBookService _bookService;
         private readonly ILogger<BooksController> _logger;
+       
 
         public BooksController(LMSContext context, IBookService bookService, ILogger<BooksController> logger)
         {
             _context = context;
             _bookService = bookService;
             _logger = logger;
+           
 
         }
 
@@ -183,20 +186,33 @@ namespace MS3_LMS.Controllers
         }
 
 
-        [HttpGet("BookType")]
-        public async Task<IActionResult>FilterByBookType(Book.type bookType)
-        {
-            var data=await _bookService.BasedOnBookType(bookType);
-            return Ok(data);
-        }
+        //[HttpGet("BookType")]
+        //public async Task<IActionResult>FilterByBookType(Book.type bookType)
+        //{
+        //    var data=await _bookService.BasedOnBookType(bookType);
+        //    return Ok(data);
+        //}
 
         [HttpPost]
         public async Task<IActionResult> CreateBook([FromBody] CreateBookRequest request)
         {
+           
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
+            var publisher=await _context.Publishers.FindAsync(request.PublisherId);
+            if (publisher == null)
+            {
+                return  NotFound(new {message="Publisher not found"});
+            }
+
+            if(publisher.PublishDate!=request.PublishDate)
+            {
+                publisher.PublishDate = request.PublishDate;
+            }
+         
 
             var newBook = new Book
             {
@@ -206,8 +222,6 @@ namespace MS3_LMS.Controllers
                 ISBN = request.ISBN,
                 PageCount = request.PageCount,
                 IsAvailable = request.IsAvailable,
-                BookType = (Book.type)request.BookType,
-                URL = request.URL,
                 Quantity = request.Quantity,
                 AuthorId = request.AuthorId,
                 PublisherId = request.PublisherId,
@@ -215,16 +229,55 @@ namespace MS3_LMS.Controllers
                 GenreId = request.GenreId
             };
 
+           
+            var images = new List<Image>();
+
+            //if (!string.IsNullOrEmpty(request.Image1Path))
+            //{
+            //    images.Add(new Image
+            //    {
+            //        ID = Guid.NewGuid(),
+            //        Image1Path = request.Image1Path,
+            //        Bookid = newBook.Bookid
+            //    });
+            //}
+
+            
+
+
+            if (!string.IsNullOrEmpty(request.Image2Path))
+            {
+                images.Add(new Image
+                {
+                    ID = Guid.NewGuid(),
+                    Image2Path = request.Image2Path, 
+                    Bookid = newBook.Bookid
+                });
+            }
+
             try
             {
-                var createdBook = await _bookService.CreateBook(newBook);
-                return Ok(createdBook);
+                
+                await _context.Books.AddAsync(newBook);
+
+
+                if (images.Any())
+                {
+                    await _context.Images.AddRangeAsync(images);
+                }
+
+               
+                await _context.SaveChangesAsync();
+
+                return Ok(new { message = "Book created successfully", book = newBook });
             }
             catch (Exception ex)
             {
+               
                 return StatusCode(500, new { message = "Error creating the book", details = ex.Message });
             }
         }
+
 
 
 

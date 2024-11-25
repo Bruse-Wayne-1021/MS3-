@@ -2,6 +2,7 @@
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 
 namespace MS3_LMS.Service
 {
@@ -22,7 +23,7 @@ namespace MS3_LMS.Service
             {
                 var author = new Author
                 {
-                    Name = authorRequestModel.Name,
+                    Name = authorRequestModel.AuthorName,
                     ImageUrl = authorRequestModel.ImageUrl,
                     Bio = authorRequestModel.Bio,
                 };
@@ -34,7 +35,31 @@ namespace MS3_LMS.Service
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+            }   
+        }
+
+        public async Task<List<AuthorResponseModel>> GelAuthors()
+        {
+            try
+            {
+                var dats = await _aothorRepository.GetAllAuthor();
+
+                var response = dats.Select(s => new AuthorResponseModel
+                {
+                    AuthorId = s.AuthorId,
+                    AuthorName = s.Name,
+                    Bio = s.Bio,
+                    ImageUrl = s.ImageUrl,
+                }).ToList();
+                return response;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }
+
+    
 }
+

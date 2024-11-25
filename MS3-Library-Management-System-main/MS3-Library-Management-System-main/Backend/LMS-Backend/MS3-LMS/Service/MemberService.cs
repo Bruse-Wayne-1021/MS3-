@@ -237,18 +237,7 @@ namespace MS3_LMS.Service
                 throw new Exception(ex.Message);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
     }
 

@@ -1,4 +1,5 @@
-﻿using MS3_LMS.IRepository;
+﻿using Microsoft.EntityFrameworkCore;
+using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
 
 namespace MS3_LMS.Repository
@@ -26,5 +27,22 @@ namespace MS3_LMS.Repository
                 throw new Exception(ex.Message);
             }
         }
+        public async Task<List<MS3_LMS.Enity.Book.Author>> GetAllAuthor()
+        {
+            try
+            {
+                
+                var data = await _context.Authors.ToListAsync();
+
+                
+                return data;
+            }
+            catch (Exception ex)
+            {
+               
+                throw new Exception($"Error fetching authors: {ex.Message}", ex);
+            }
+        }
+
     }
 }
