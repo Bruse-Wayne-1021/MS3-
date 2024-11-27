@@ -75,14 +75,12 @@ namespace MS3_LMS.Repository
         }
 
 
-       
-
-
+      
         public async Task<BookLend>updatedate(Guid Id,DateTime date,string datetype)
         {
             try
             {
-                var data = await _DbContext.BookLends.FirstOrDefaultAsync(g => g.MemebID == Id);
+                var data = await _DbContext.BookLends.FindAsync(Id);
                 if(data == null)
                 {
                     return null;
@@ -159,14 +157,14 @@ namespace MS3_LMS.Repository
             {
                 var data = await _DbContext.BookLends
                     .Include(b => b.Book)
-                    .ThenInclude(i => i.Image) // Ensure nested include
+                    .ThenInclude(i => i.Image) 
                     .Where(b => b.MemebID == memberId && b.Status == state)
                     .ToListAsync();
                 return data;
             }
             catch (Exception)
             {
-                throw; // Rethrow the original exception for better stack trace
+                throw; 
             }
         }
 
