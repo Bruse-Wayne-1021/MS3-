@@ -37,11 +37,11 @@ namespace MS3_LMS.Service
             {
                 var request = new BookLend
                 {
-                    Status = bookLendRequest.Status,
-                    LendDays = bookLendRequest.LendDays,
-                    ReturnDate = bookLendRequest.ReturnDate,
-                    ApprovedDate = bookLendRequest.ApprovedDate,
-                    CollectDate = bookLendRequest.CollectDate,
+                    Status=bookLendRequest.State,
+                    //LendDays = bookLendRequest.LendDays,
+                    //ReturnDate = bookLendRequest.ReturnDate,
+                    //ApprovedDate = bookLendRequest.ApprovedDate,
+                    //CollectDate = bookLendRequest.CollectDate,
                     Bookid = bookLendRequest.Bookid,
                     MemebID = bookLendRequest.MemebID
 
@@ -92,6 +92,8 @@ namespace MS3_LMS.Service
                 var data = await _bookLendRepository.GetEnumBaseRecords(state);
                 var response = data.Select(data => new BookLendResponse
                 {
+
+                    LendId= data.LendId,
                     Status = data.Status,
                     LendDays = data.LendDays,
                     ReturnDate = data.ReturnDate,
@@ -100,7 +102,8 @@ namespace MS3_LMS.Service
                     Title = data.Book.Name,
                     MemberName = data.Member.FirstName,
                     Lastname = data.Member.FirstName,
-                    Nic = data.Member.Nic
+                    Nic = data.Member.Nic,
+                    Image2Path=data.Book.Image?.Image2Path,
                 }).ToList();
                 return response;
             }

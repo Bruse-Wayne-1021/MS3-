@@ -4,7 +4,7 @@ namespace MS3_LMS.Models.ResponeModel
 {
     public class BookLendResponse
     {
-
+        public Guid LendId { get; set; }
         public BookLend.State Status { get; set; }
         public int LendDays { get; set; }
         public DateTime? ReturnDate { get; set; }

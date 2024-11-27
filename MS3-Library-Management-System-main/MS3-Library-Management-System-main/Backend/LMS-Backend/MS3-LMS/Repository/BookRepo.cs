@@ -80,7 +80,9 @@ namespace MS3_LMS.Repository
         {
             try
             {
-                   var book=await _context.Books.FindAsync(id);
+                   var book=await _context.Books.Include(g=>g.Genre).Include(i=>i.Image)
+                    .Include(p=>p.Publisher).Include(a=>a.Author).Include(l=>l.Language).FirstOrDefaultAsync(b=>b.Bookid==id);
+                   
 
                 if (book == null)
                 {
