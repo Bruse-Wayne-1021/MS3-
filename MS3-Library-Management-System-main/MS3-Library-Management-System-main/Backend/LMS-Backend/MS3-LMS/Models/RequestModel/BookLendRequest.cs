@@ -6,12 +6,8 @@ namespace MS3_LMS.Models.RequestModel
 {
     public class BookLendRequest
     {
-        
-        public  BookLend.State  Status { get; set; }
-        public int LendDays { get; set; }
-        public DateTime? ReturnDate { get; set; }
-        public DateTime? ApprovedDate { get; set; }
-        public DateTime? CollectDate { get; set; }
+
+        public MS3_LMS.Enity.Core.BookLend.State State { get; set; }
         public Guid Bookid { get; set; }
         public Guid MemebID { get; set; }
     }

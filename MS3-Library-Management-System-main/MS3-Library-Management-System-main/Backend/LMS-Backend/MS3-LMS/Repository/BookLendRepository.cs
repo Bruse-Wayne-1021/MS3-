@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Identity.Client;
 using MS3_LMS.Enity.Book;
 using MS3_LMS.Enity.Core;
@@ -13,10 +14,12 @@ namespace MS3_LMS.Repository
     public class BookLendRepository: IBookLendRepository
     {
         private readonly LMSContext _DbContext;
+        private readonly ILogger<BookLendRepository> _Logger;   
 
-        public BookLendRepository(LMSContext dbContext)
+        public BookLendRepository(LMSContext dbContext, ILogger<BookLendRepository> logger)
         {
             _DbContext = dbContext;
+            _Logger = logger;
         }
 
         public async Task<BookLend>RequestBook(BookLend bookLend)
@@ -29,7 +32,9 @@ namespace MS3_LMS.Repository
             }
             catch (Exception ex)
             {
+                _Logger.LogError(ex.Message);
                 throw new Exception(ex.Message);
+
             }
         }
 
@@ -45,7 +50,7 @@ namespace MS3_LMS.Repository
             try
             {
                 var data = await _DbContext.BookLends.Where(s => s.Status == state).Include(d => d.Book)
-                    .Include(m => m.Member).ToListAsync();
+                    .Include(m => m.Member).Include(i=>i.Book.Image).ToListAsync();
                 return data;
             }
             catch (Exception ex)

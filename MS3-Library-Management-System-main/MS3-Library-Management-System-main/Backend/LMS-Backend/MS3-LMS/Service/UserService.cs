@@ -135,7 +135,7 @@ namespace MS3_LMS.Service
 
 
 
-        public async Task<MemberResponse>GetByUserID(Guid userId)
+        public async Task<MS3_LMS.Models.RequestModel.MemberIDRequestModel>GetByUserID(Guid userId)
         {
             try
             {
@@ -144,9 +144,9 @@ namespace MS3_LMS.Service
                 {
                     throw new Exception("Member Not Found");
                 }
-                var response = new MemberResponse
+                var response = new MemberIDRequestModel
                 {
-                    MemberID = data.MemebID
+                    MemberID=data.MemebID
 
 
                 };
