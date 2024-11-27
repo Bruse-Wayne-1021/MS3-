@@ -228,9 +228,31 @@ namespace MS3_LMS.Service
 
         }
 
-        
+        public async Task<List<BookLendResponse>> GetDetailsByMemberId(Guid memberId, BookLend.State state)
+        {
+            try
+            {
+                var data = await _bookLendRepository.GetDetailsByMembe(memberId, state);
 
-        
+                var response = data
+                    .Where(s => s.Book != null && s.Book.Image != null) // Avoid null references
+                    .Select(s => new BookLendResponse
+                    {
+                        LendId = s.LendId,
+                        ApprovedDate = s.ApprovedDate,
+                        Title = s.Book.Name ?? "Unknown Title", // Default value if null
+                        Image2Path = s.Book.Image.Image2Path ?? "No Image Available" // Default value if null
+                    })
+                    .ToList();
+
+                return response;
+            }
+            catch (Exception)
+            {
+                throw; // Rethrow the original exception
+            }
+        }
+
 
 
     }

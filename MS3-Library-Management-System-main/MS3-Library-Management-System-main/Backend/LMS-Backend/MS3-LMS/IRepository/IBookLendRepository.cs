@@ -12,6 +12,8 @@ namespace MS3_LMS.IRepository
         Task<BookLend> updatedate(Guid Id, DateTime date, string datetype);
         Task<List<BookLend>> GetDueDateBooks();
 
+        Task<List<BookLend>> GetDetailsByMembe(Guid memberId, BookLend.State state);
+
 
     }
 }

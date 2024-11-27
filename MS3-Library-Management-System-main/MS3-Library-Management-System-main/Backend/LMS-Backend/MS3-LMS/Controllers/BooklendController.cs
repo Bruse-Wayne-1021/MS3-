@@ -116,6 +116,25 @@ namespace MS3_LMS.Controllers
 
         }
 
+
+        [HttpGet("GetRecervedBook")]
+        public async Task <IActionResult>GetReservedBook(Guid MemberID,BookLend.State state)
+        {
+            try
+            {
+                var data = await _bookLendService.GetDetailsByMemberId(MemberID, state);
+                if(data == null)
+                {
+                    return BadRequest("Book not found");
+                }
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
          
         
         
