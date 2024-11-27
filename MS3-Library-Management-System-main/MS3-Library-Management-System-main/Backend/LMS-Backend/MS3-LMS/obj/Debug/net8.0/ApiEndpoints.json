@@ -106,6 +106,27 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooklendController",
+    "Method": "GetReservedBook",
+    "RelativePath": "api/Booklend/GetRecervedBook",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "MemberID",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "state",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooklendController",
     "Method": "UpdateDate",
     "RelativePath": "api/Booklend/updateDate",
     "HttpMethod": "PUT",

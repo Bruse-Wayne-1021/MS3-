@@ -16,5 +16,7 @@ namespace MS3_LMS.IService
         Task<bool> UpdateDates(Guid Memberid, DateTime date, string? dateType);
         Task SendNotification();
         Task<List<NotificationResponseModel>> sentNotification(Guid memberId);
+
+        Task<List<BookLendResponse>> GetDetailsByMemberId(Guid memberId, BookLend.State state);
     }
 }

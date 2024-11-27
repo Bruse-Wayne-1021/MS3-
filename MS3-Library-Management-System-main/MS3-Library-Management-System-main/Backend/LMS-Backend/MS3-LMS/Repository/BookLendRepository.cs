@@ -153,6 +153,26 @@ namespace MS3_LMS.Repository
         }
 
 
+        public async Task<List<BookLend>> GetDetailsByMembe(Guid memberId, BookLend.State state)
+        {
+            try
+            {
+                var data = await _DbContext.BookLends
+                    .Include(b => b.Book)
+                    .ThenInclude(i => i.Image) // Ensure nested include
+                    .Where(b => b.MemebID == memberId && b.Status == state)
+                    .ToListAsync();
+                return data;
+            }
+            catch (Exception)
+            {
+                throw; // Rethrow the original exception for better stack trace
+            }
+        }
+
+
+
+
 
 
 
