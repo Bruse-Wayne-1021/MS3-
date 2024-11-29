@@ -31,10 +31,8 @@ namespace MS3_LMS.Repository
         {
             try
             {
-                
-                var data = await _context.Authors.ToListAsync();
 
-                
+                var data = await _context.Authors.ToListAsync();
                 return data;
             }
             catch (Exception ex)
