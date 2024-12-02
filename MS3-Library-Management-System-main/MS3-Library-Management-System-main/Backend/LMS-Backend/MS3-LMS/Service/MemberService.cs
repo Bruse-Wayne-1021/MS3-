@@ -89,7 +89,9 @@ namespace MS3_LMS.Service
                     LastName = member.LastName,
                     Email = member.Email,
                     PhoneNumber = member.PhoneNumber,
-                    UserGender = member.UserGender
+                    UserGender = member.UserGender,
+                    IsVerify=member.IsVerify 
+                    
                 }).ToList();
 
                 return memberResponses;
@@ -119,7 +121,8 @@ namespace MS3_LMS.Service
                     LastName = member.LastName,
                     Email = member.Email,
                     PhoneNumber = member.PhoneNumber,
-                    UserGender = member.UserGender
+                    UserGender = member.UserGender,
+                    IsVerify=member.IsVerify
 
                 };
                 return response;

@@ -7,6 +7,7 @@ namespace MS3_LMS.Enity.Book
     {
         [Key]
         public Guid RatingId { get; set; }
+        [Range(1, 5, ErrorMessage = "Star count must be between 1 and 5.")]
         public int? StarCount { get; set; }
         public string? FeedBack { get; set; }
         public Guid MemebID { get; set; }

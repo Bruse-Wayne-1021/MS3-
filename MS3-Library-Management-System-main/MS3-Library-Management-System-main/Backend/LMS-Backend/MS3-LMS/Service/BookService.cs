@@ -83,5 +83,10 @@ namespace MS3_LMS.Service
         {
             return await _bookRepository.PostNewBOok(book);
         }
+
+        public async Task<IReadOnlyList<Book>>FilterByAuthor(Guid author)
+        {
+            return await _bookRepository.FilterByAuthor(author);
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace MS3_LMS.IService
         Task<IReadOnlyList<Book>> FilterByGenre(string Genre);
         //Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype);
          Task<Book> CreateBook(Book book);
+        Task<IReadOnlyList<Book>> FilterByAuthor(Guid author);
 
     }
 }

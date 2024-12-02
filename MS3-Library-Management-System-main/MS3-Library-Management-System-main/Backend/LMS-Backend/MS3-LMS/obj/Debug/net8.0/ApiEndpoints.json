@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.AuthorController",
+    "Method": "GetAllBooksByAuthors",
+    "RelativePath": "api/Author/GetAuthorsBook",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorID",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.AuthorController",
     "Method": "PostNewAuthor",
     "RelativePath": "api/Author/NewAuthor",
     "HttpMethod": "POST",
@@ -251,6 +267,22 @@
       {
         "Name": "Genre",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "FilterByauthor",
+    "RelativePath": "api/Books/GetAuthorBooks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Author",
+        "Type": "System.Guid",
         "IsRequired": false
       }
     ],
@@ -518,6 +550,22 @@
       {
         "Name": "publisherRequestModel",
         "Type": "MS3_LMS.Models.RequestModel.PublisherRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.RatingController",
+    "Method": "Rating",
+    "RelativePath": "api/Rating",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ratingRequestModel",
+        "Type": "MS3_LMS.Models.RequestModel.RatingRequestModel",
         "IsRequired": true
       }
     ],

@@ -58,6 +58,24 @@ namespace MS3_LMS.Service
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task<List<AuthorBooksResponse>>GetAuthorsBooksById(Guid id)
+        {
+            try
+            {
+                var data = await _aothorRepository.GetAuthorBooksByID(id);
+
+                var response = data.Select(s => new AuthorBooksResponse
+                {
+                    BookId = s.Bookid
+                }).ToList();
+                return response;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 
     

@@ -12,10 +12,13 @@ namespace MS3_LMS.Models.ResponeModel
         public DateTime? CollectDate { get; set; }
         public string Title { get; set; }
         public string? MemberName { get; set; }
+        public Guid MemberId { get; set; }
         public string? Lastname { get; set; }
         public string? Nic { get; set; }
         public string? Image1Path { get; set; }
         public string? Image2Path { get; set; }
+        public bool? IsVerify { get; set; }
+        public Guid BookId { get; set; }
 
     }
 }

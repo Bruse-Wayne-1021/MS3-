@@ -37,5 +37,24 @@ namespace MS3_LMS.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("GetAuthorsBook")]
+        public async Task<IActionResult>GetAllBooksByAuthors(Guid authorID)
+        {
+            try
+            {
+                var data = await _authorService.GetAuthorsBooksById(authorID);
+                if(data == null)
+                {
+                    return BadRequest("No books Available");
+
+                }
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

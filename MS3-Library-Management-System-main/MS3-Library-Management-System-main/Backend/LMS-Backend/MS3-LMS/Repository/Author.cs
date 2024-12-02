@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MS3_LMS.Enity.Book;
+using MS3_LMS.Enity.Core;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
 
@@ -43,6 +45,32 @@ namespace MS3_LMS.Repository
                 throw new Exception($"Error fetching authors: {ex.Message}", ex);
             }
         }
+
+        public async Task<List<Book>>GetAuthorBooksByID(Guid id)
+        {
+            try
+            {
+                var data = await _context.Books.
+                    Include(i => i.Genre).
+                    Include(i => i.Image).
+                    Include(p => p.Publisher).
+                    Where(a=>a.AuthorId==id).
+                    ToListAsync();
+                if(data == null)
+                {
+                    throw new Exception();
+                }
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+
+
 
     }
 }

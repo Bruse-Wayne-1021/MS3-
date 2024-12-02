@@ -4,6 +4,7 @@ using MS3_LMS.LMSDbcontext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MS3_LMS.Migrations
 {
     [DbContext(typeof(LMSContext))]
-    partial class LMSContextModelSnapshot : ModelSnapshot
+    [Migration("20241130050536_rating")]
+    partial class rating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,73 +119,73 @@ namespace MS3_LMS.Migrations
                     b.HasData(
                         new
                         {
-                            GenreId = new Guid("de22de14-bfe4-4808-95c1-24ea032c5ebc"),
+                            GenreId = new Guid("f41f00ec-a132-4923-8b28-685f19422439"),
                             BookGenre = "Fiction",
                             Description = "Fictional stories"
                         },
                         new
                         {
-                            GenreId = new Guid("446c4173-7ada-4298-82f7-c1285f1659ff"),
+                            GenreId = new Guid("e0d063a0-243e-4b5c-ae76-c37cfbae7c40"),
                             BookGenre = "Non Fiction",
                             Description = "Non-fictional content"
                         },
                         new
                         {
-                            GenreId = new Guid("4b63d960-fa87-4b30-9eb2-0adc31e41127"),
+                            GenreId = new Guid("b8b20a9b-ccb6-4fbe-99d0-f5e539ad22af"),
                             BookGenre = "Science Fiction",
                             Description = "Sci-fi stories"
                         },
                         new
                         {
-                            GenreId = new Guid("edc4577d-1907-4a46-890b-30fa32e2d0e1"),
+                            GenreId = new Guid("53acdf02-b38f-4a22-8c07-bfff2786b428"),
                             BookGenre = "Mystery",
                             Description = "Mystery novels"
                         },
                         new
                         {
-                            GenreId = new Guid("d13289f4-5dd7-4b74-b675-69278a89478a"),
+                            GenreId = new Guid("4e046214-f7f0-4e88-ad9b-e38bf93d73f3"),
                             BookGenre = "Thriller",
                             Description = "Thrilling stories"
                         },
                         new
                         {
-                            GenreId = new Guid("81182548-48c7-445a-97ce-195d835e0eb2"),
+                            GenreId = new Guid("9adcbde6-60d9-48ff-ad5e-e285c673dd33"),
                             BookGenre = "Romance Novel",
                             Description = "Romantic tales"
                         },
                         new
                         {
-                            GenreId = new Guid("1c6e4e56-e189-4639-92bf-54853a0d91aa"),
+                            GenreId = new Guid("21a5e81c-bdab-442f-ace9-fbbb9dbbcabf"),
                             BookGenre = "Biography",
                             Description = "Life stories of individuals"
                         },
                         new
                         {
-                            GenreId = new Guid("6532555c-d40e-4fd6-95cb-08c368281240"),
+                            GenreId = new Guid("e3ac0985-d24e-4579-9536-1713cdb894c7"),
                             BookGenre = "Humor",
                             Description = "Funny and comedic stories"
                         },
                         new
                         {
-                            GenreId = new Guid("581969bd-ea56-4b96-9368-f8466a88935b"),
+                            GenreId = new Guid("51496588-cfc9-43e7-bae8-506e24a60e72"),
                             BookGenre = "Fairy Tale",
                             Description = "Fairy tales and folklore"
                         },
                         new
                         {
-                            GenreId = new Guid("7039050c-9ca4-4cab-90ba-4362c7a6cec9"),
+                            GenreId = new Guid("779d9b6a-1243-4dbe-bdc8-01e6d87c3975"),
                             BookGenre = "Graphic Novel",
                             Description = "Stories told through illustrations"
                         },
                         new
                         {
-                            GenreId = new Guid("ea5c065b-91a5-4b73-b388-8fa614da261b"),
+                            GenreId = new Guid("7eaba18d-7d9d-414d-b36b-ea11c1992793"),
                             BookGenre = "True Crime",
                             Description = "Real-life crime stories"
                         },
                         new
                         {
-                            GenreId = new Guid("1621b0e9-5a63-4ceb-b910-e9e27b6a23ef"),
+                            GenreId = new Guid("746dcda6-884a-4839-a003-fdb4d851db7a"),
                             BookGenre = "Magical Realism",
                             Description = "Stories blending magic and realism"
                         });
@@ -228,17 +231,17 @@ namespace MS3_LMS.Migrations
                     b.HasData(
                         new
                         {
-                            LanguageId = new Guid("73226e67-486b-484b-9b93-df4405a8dd9f"),
+                            LanguageId = new Guid("6cf3125e-2859-4a7b-8691-04a43e627ab7"),
                             TypeOfLanguage = "English"
                         },
                         new
                         {
-                            LanguageId = new Guid("541fc50f-cc7e-4178-8ddc-e20c620cc6d2"),
+                            LanguageId = new Guid("9c6d89b6-6b64-4439-86fc-8c6127bdd1f5"),
                             TypeOfLanguage = "Tamil"
                         },
                         new
                         {
-                            LanguageId = new Guid("c9c7c3f0-996d-49c5-9905-3d9174222a5a"),
+                            LanguageId = new Guid("00b8b685-4b68-4469-a523-d3b25b574da6"),
                             TypeOfLanguage = "Singalam"
                         });
                 });
@@ -518,12 +521,12 @@ namespace MS3_LMS.Migrations
                     b.HasData(
                         new
                         {
-                            RoleID = new Guid("239d5ce1-16ad-4b7a-ad68-83f1f35def28"),
+                            RoleID = new Guid("bf28158b-c8ce-496a-99b4-4d8b217f4469"),
                             UserAType = "Member"
                         },
                         new
                         {
-                            RoleID = new Guid("43b7d1be-799e-4f6c-ac50-eb7bcecb0eb0"),
+                            RoleID = new Guid("d6c9241f-77f4-49ab-9dc0-d2901986f90d"),
                             UserAType = "Admin"
                         });
                 });

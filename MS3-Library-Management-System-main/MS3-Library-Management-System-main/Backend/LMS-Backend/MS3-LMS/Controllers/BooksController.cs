@@ -177,6 +177,12 @@ namespace MS3_LMS.Controllers
             return Ok(book);
         }
 
+        [HttpGet("GetAuthorBooks")]
+        public async Task<IActionResult>FilterByauthor(Guid Author)
+        {
+            var data=await _bookService.FilterByAuthor(Author);
+            return Ok(data);
+        }
 
         [HttpGet("Languageatype")]
         public async Task<IActionResult> SortByLanguage(string Language)
@@ -242,7 +248,7 @@ namespace MS3_LMS.Controllers
             //    });
             //}
 
-            
+
 
 
             if (!string.IsNullOrEmpty(request.Image2Path))
@@ -251,6 +257,7 @@ namespace MS3_LMS.Controllers
                 {
                     ID = Guid.NewGuid(),
                     Image2Path = request.Image2Path, 
+                    Image1Path= request.Image1Path,
                     Bookid = newBook.Bookid
                 });
             }
@@ -277,6 +284,7 @@ namespace MS3_LMS.Controllers
                 return StatusCode(500, new { message = "Error creating the book", details = ex.Message });
             }
         }
+
 
 
 

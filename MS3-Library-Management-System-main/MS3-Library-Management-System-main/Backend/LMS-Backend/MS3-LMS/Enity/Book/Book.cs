@@ -19,6 +19,7 @@ namespace MS3_LMS.Enity.Book
             Both
         };
         //public type BookType { get; set; }
+
         //public string URL { get; set; }
         public int Quantity { get; set; }
         public Guid AuthorId { get; set; }
@@ -31,8 +32,9 @@ namespace MS3_LMS.Enity.Book
         public  Language? Language { get; set; }
         public  Image? Image { get; set; }
         public Genre? Genre { get; set; }
+       
 
-        //public  ICollection<Rating>? Ratings { get; set; }
+        public  ICollection<Rating>? Ratings { get; set; }
        // public  ICollection<BookLend>? BookLends { get; set; }
     }
 
