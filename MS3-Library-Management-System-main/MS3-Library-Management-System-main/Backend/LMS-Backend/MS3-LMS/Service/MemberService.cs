@@ -122,8 +122,9 @@ namespace MS3_LMS.Service
                     Email = member.Email,
                     PhoneNumber = member.PhoneNumber,
                     UserGender = member.UserGender,
-                    IsVerify=member.IsVerify
-
+                    IsVerify=member.IsVerify,
+                    ImageUrl= member.ImageUrl
+                    
                 };
                 return response;
             }
@@ -187,8 +188,6 @@ namespace MS3_LMS.Service
                 };
                 return response;
                
-                
-
             }
             catch (Exception ex)
             {
@@ -234,6 +233,21 @@ namespace MS3_LMS.Service
                 await _memberRepository.UpdateMemberDetails(data);
 
                 return isverify ? "member verfify success full" : "member is not verify ";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<bool>updatePAssword(Guid userid,string password)
+        {
+            try
+            {
+                string hashword=BCrypt.Net.BCrypt.HashPassword(password);
+                var data=await _memberRepository.updatePAsswordAsync(userid,hashword);
+                return data;
+
             }
             catch (Exception ex)
             {

@@ -134,6 +134,28 @@ namespace MS3_LMS.Repository
         }
 
 
+        public async Task <bool>updatePAsswordAsync(Guid Userid,string HashPassword)
+        {
+            try
+            {
+                var pass=await _context.Users.FindAsync(Userid);
+                if(pass == null)
+                {
+                    throw new Exception("no hash paaword");
+                }
+                pass.PasswordHash= HashPassword;
+                     _context.Update(pass);
+                await _context.SaveChangesAsync();
+                return true;
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
 
 
        

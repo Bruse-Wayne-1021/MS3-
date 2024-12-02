@@ -30,14 +30,11 @@ namespace MS3_LMS.Models.Request
 
         [Required(ErrorMessage = "Publisher ID is required.")]
         public Guid PublisherId { get; set; }
-
+        
         [Required(ErrorMessage = "Language ID is required.")]
         public Guid LanguageId { get; set; }
-
         [Required(ErrorMessage = "Genre ID is required.")]
         public Guid GenreId { get; set; }
-
-
         public string? Image1Path { get; set; }
         public string? Image2Path { get; set; }
         
