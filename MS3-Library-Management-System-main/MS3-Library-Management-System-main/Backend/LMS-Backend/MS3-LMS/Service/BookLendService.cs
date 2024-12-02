@@ -101,9 +101,11 @@ namespace MS3_LMS.Service
                     CollectDate = data.CollectDate,
                     Title = data.Book.Name,
                     MemberName = data.Member.FirstName,
+                    MemberId=data.MemebID,
                     Lastname = data.Member.FirstName,
                     Nic = data.Member.Nic,
                     Image2Path=data.Book.Image?.Image2Path,
+                    IsVerify=data.Member.IsVerify
                 }).ToList();
                 return response;
             }
@@ -238,18 +240,23 @@ namespace MS3_LMS.Service
                     .Select(s => new BookLendResponse
                     {
                         LendId = s.LendId,
-                        ApprovedDate = s.ApprovedDate ,
-                        CollectDate = s.CollectDate ,
-                        Title = s.Book.Name , 
-                        Image2Path = s.Book.Image.Image2Path 
+                        MemberId=s.MemebID,
+                        ApprovedDate = s.ApprovedDate,
+                        CollectDate = s.CollectDate,
+                        ReturnDate = s.ReturnDate,
+                        Title = s.Book?.Name ?? "N/A", 
+                        BookId=s.Bookid,
+                        Image2Path = s.Book?.Image?.Image2Path ?? "default-image-path.jpg" 
                     })
                     .ToList();
 
                 return response;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw; 
+                
+                Console.WriteLine($"Error occurred: {ex.Message}");
+                throw;
             }
         }
 

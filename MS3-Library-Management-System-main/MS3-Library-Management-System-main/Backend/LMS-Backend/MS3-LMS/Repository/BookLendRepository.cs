@@ -156,8 +156,10 @@ namespace MS3_LMS.Repository
             try
             {
                 var data = await _DbContext.BookLends
+                    .Include(m=>m.Member)
                     .Include(b => b.Book)
                     .ThenInclude(i => i.Image) 
+                    
                     .Where(b => b.MemebID == memberId && b.Status == state)
                     .ToListAsync();
                 return data;

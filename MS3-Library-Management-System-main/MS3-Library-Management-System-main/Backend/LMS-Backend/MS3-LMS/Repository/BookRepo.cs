@@ -38,7 +38,7 @@ namespace MS3_LMS.Repository
                     .Include(i=>i.Image)
                     .Include(l=>l.Language)
                     //.Include(b=>b.BookLends)
-                    //.Include(r=>r.Ratings)
+                   //.Include(r=>r.Ratings)
                     .AsNoTracking()
                     .ToListAsync();
 
@@ -80,8 +80,14 @@ namespace MS3_LMS.Repository
         {
             try
             {
-                   var book=await _context.Books.Include(g=>g.Genre).Include(i=>i.Image)
-                    .Include(p=>p.Publisher).Include(a=>a.Author).Include(l=>l.Language).FirstOrDefaultAsync(b=>b.Bookid==id);
+                   var book=await _context.Books.
+                    Include(g=>g.Genre).
+                    Include(i=>i.Image)
+                    .Include(p=>p.Publisher).
+                    Include(a=>a.Author).
+                    Include(l=>l.Language).
+                    Include(r=>r.Ratings).
+                    FirstOrDefaultAsync(b=>b.Bookid==id);
                    
 
                 if (book == null)
@@ -152,20 +158,28 @@ namespace MS3_LMS.Repository
             }
         }
 
-        //public async Task<IReadOnlyList<Book>>BasedOnBookType(Book.type booktype)
-        //{
-        //    try
-        //    {
-        //        var data = await _context.Set<Book>().AsNoTracking()
-        //            .Where(b => b.BookType == booktype).ToListAsync();
+        public async Task<IReadOnlyList<Book>>FilterByAuthor(Guid authorId)
+        {
+            try
+            {
+                var author =  _context.Books.Include(l => l.Language)
+                    .Include(i => i.Image)
+                    .Include(g => g.Genre)
+                    .Include(l => l.Author)
+                    .Include(p => p.Publisher)
+                    .AsNoTracking().AsQueryable();
+                if (authorId != Guid.Empty)
+                {
+                    author = author.Where(b => b.Author.AuthorId == authorId);
+                }
+                return await author.ToListAsync();
+            }
+            catch(Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+        }
 
-        //        return data;
-        //    }
-        //    catch(Exception Ex)
-        //    {
-        //        throw new Exception("Can not Filter ");
-        //    }
-        //}
 
         
 

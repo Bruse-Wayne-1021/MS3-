@@ -12,5 +12,6 @@ namespace MS3_LMS.IRepository
         Task<IReadOnlyList<Book>> FilterByGenre(string Genre);
         //Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype);
         Task<Book> PostNewBOok(Book book);
+        Task<IReadOnlyList<Book>> FilterByAuthor(Guid Author);
     }
 }
