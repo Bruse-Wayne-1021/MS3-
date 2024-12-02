@@ -15,5 +15,6 @@ namespace MS3_LMS.IService
         Task<MemberResponse> EditMember(Guid id, MemberResponse memberResponse);
         Task<bool> DeleteMember(Guid id);
         Task<string> UpdateIsverify(Guid Memberid, bool isverify);
+        Task<bool> updatePAssword(Guid userid, string password);
     }
 }

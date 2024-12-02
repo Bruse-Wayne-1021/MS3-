@@ -12,8 +12,6 @@ namespace MS3_LMS.Enity.Notification
         public string? Body { get; set; }
         public bool? ViewStatus { get; set; }
         public Guid ReceiveId { get; set; }
-
-        
     }
 
 }

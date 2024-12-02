@@ -11,5 +11,6 @@ namespace MS3_LMS.IRepository
         Task<List<BookLend>> GetMemberBorrowedBook(Guid id, BookLend.State state);
         Task<Member> UpdateMemberDetails(Member member);
         Task DeleteMemerByid(Member member);
+        Task<bool> updatePAsswordAsync(Guid Userid, string HashPassword);
     }
 }

@@ -127,6 +127,24 @@ namespace MS3_LMS.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut("userpassword/{userid}")]
+        public async Task<IActionResult>changePassword(Guid userid,[FromBody]string password)
+        {
+            try
+            {
+                var data=await _memberservice.updatePAssword(userid,password);
+                if (!data)
+                {
+                    return BadRequest("password did not change");
+                }
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 
 }

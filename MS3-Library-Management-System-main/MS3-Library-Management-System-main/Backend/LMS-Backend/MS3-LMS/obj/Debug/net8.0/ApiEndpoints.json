@@ -504,6 +504,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.MemberController",
+    "Method": "changePassword",
+    "RelativePath": "api/Member/userpassword/{userid}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.NotificationController",
     "Method": "SendOverDueWarning",
     "RelativePath": "api/Notification/OverDueNotification",

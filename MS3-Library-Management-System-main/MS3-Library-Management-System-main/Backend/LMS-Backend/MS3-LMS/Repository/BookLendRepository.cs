@@ -138,7 +138,7 @@ namespace MS3_LMS.Repository
             {
                 var today = DateTime.Now;
 
-                var data = await _DbContext.BookLends.Where(b => b.CollectDate.HasValue && EF.Functions.DateDiffDay(b.CollectDate, today) == 6)
+                var data = await _DbContext.BookLends.Where(b => b.CollectDate.HasValue && EF.Functions.DateDiffDay(b.CollectDate, today) > 6)
                     .Include(I => I.Book)
                     .Include(b => b.Member)
                     .ToListAsync();
