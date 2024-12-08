@@ -1,5 +1,7 @@
 ﻿using MS3_LMS.Enity.Book;
+using MS3_LMS.Models.Request;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 
 namespace MS3_LMS.IService
 {
@@ -12,8 +14,11 @@ namespace MS3_LMS.IService
         Task<IReadOnlyList<Book>> FilterByLanguage(string Language);
         Task<IReadOnlyList<Book>> FilterByGenre(string Genre);
         //Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype);
-         Task<Book> CreateBook(Book book);
+        Task<Book> CreateBook(Book book);
         Task<IReadOnlyList<Book>> FilterByAuthor(Guid author);
+
+        Task<List<Book>> GetEnumBAsedBooks(Book.type type);
+        Task<BookResponse> UpdateBook(Guid id, BookResponse bookResponse);
 
     }
 }

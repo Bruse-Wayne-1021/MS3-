@@ -71,7 +71,11 @@ namespace MS3_LMS
 
 
             var builders = WebApplication.CreateBuilder(args);
-             builders.Logging.ClearProviders();
+            builder.Services.Configure<IISServerOptions>(options =>
+            {
+                options.MaxRequestBodySize = 50 * 1024 * 1024; // 50 MB
+            });
+            builders.Logging.ClearProviders();
             builders.Logging.AddConsole();
             builders.Logging.AddDebug();
 

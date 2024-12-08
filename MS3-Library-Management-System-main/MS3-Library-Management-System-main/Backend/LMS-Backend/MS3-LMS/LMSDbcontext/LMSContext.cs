@@ -18,6 +18,7 @@ namespace MS3_LMS.LMSDbcontext
         public DbSet<Language> Languages { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Rating> Rating { get; set; }
+        public DbSet<BookPdf> BookPdf { get; set; }
 
         public DbSet<BookLend> BookLends { get; set; }
         public DbSet<Payment>Payments { get; set; }
@@ -67,6 +68,7 @@ namespace MS3_LMS.LMSDbcontext
                 .HasOne(m => m.User)
                 .WithOne(u => u.Member)
                 .HasForeignKey<Member>(m => m.UserId);
+
 
             
             modelBuilder.Entity<User>()

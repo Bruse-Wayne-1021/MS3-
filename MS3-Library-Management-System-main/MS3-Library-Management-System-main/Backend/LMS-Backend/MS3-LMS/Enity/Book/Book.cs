@@ -18,15 +18,15 @@ namespace MS3_LMS.Enity.Book
             EBook,
             Both
         };
-        //public type BookType { get; set; }
+        public type BookType { get; set; }
 
+        public string FilePath { get; set; }
         //public string URL { get; set; }
         public int Quantity { get; set; }
         public Guid AuthorId { get; set; }
         public Guid PublisherId { get; set; }
         public Guid LanguageId { get; set; }
         public Guid GenreId { get; set; }
-
         public  Author? Author { get; set; }
         public  Publisher? Publisher { get; set; }
         public  Language? Language { get; set; }
@@ -35,7 +35,11 @@ namespace MS3_LMS.Enity.Book
        
 
         public  ICollection<Rating>? Ratings { get; set; }
-       // public  ICollection<BookLend>? BookLends { get; set; }
+        public string TextContent { get; set; }
+
+        // public  ICollection<BookLend>? BookLends { get; set; }
+
+
     }
 
 }

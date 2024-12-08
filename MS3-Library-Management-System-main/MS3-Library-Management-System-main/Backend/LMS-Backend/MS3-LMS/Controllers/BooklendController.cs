@@ -19,23 +19,26 @@ namespace MS3_LMS.Controllers
             _bookLendService = bookLendService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> BooklendRequest(BookLendRequest bookLendRequest)
+        [HttpPost("borrow")]
+        public async Task<IActionResult> BorrowBook([FromBody] BookLendRequest request)
         {
             try
             {
-                var data = await _bookLendService.BookRequest(bookLendRequest);
-                if (data == null)
-                {
-                    return BadRequest();
-                }
-                return Ok(data);
+                var bookLend = await _bookLendService.BookRequest(request);
+                return Ok(new { success = true, message = "Book borrowed successfully.", data = bookLend });
+            }
+            catch (InvalidOperationException ex)
+            {
+                
+                return BadRequest(new { success = false, message = ex.Message });
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                
+                return StatusCode(500, new { success = false, message = "An unexpected error occurred.", details = ex.Message });
             }
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAllRequest()
         {

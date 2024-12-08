@@ -2,6 +2,7 @@
 using MS3_LMS.Enity.Book;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
+using MS3_LMS.Migrations;
 
 namespace MS3_LMS.Repository
 {
@@ -40,7 +41,10 @@ namespace MS3_LMS.Repository
                     //.Include(b=>b.BookLends)
                    //.Include(r=>r.Ratings)
                     .AsNoTracking()
+                    .Where(b=>b.BookType==Book.type.Manual)
                     .ToListAsync();
+
+               
 
                 return books;
             }
@@ -180,8 +184,45 @@ namespace MS3_LMS.Repository
             }
         }
 
+        public async Task<List<Book>>GetEnumBasedBooks(Book.type type)
+        {
+            try
+            {
+                var books = await _context.Books.Include(l => l.Language)
+                    .Include(i => i.Image)
+                    .Include(g => g.Genre)
+                    .Include(l => l.Author)
+                    .Include(p => p.Publisher)
+                    .Where(a => a.BookType == type)
+                    .ToListAsync();
 
-        
+                return books;
+            }
+            catch (Exception Ex)
+            {
+                throw new Exception(Ex.Message);
+            }
+        }
+
+
+        public async Task<Book> UpdateBooks(Book book)
+        {
+            try
+            {
+                _context.Books.Update(book);
+                await _context.SaveChangesAsync();
+                return book; 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while updating the book: {ex.Message}", ex);
+            }
+        }
+
+
+
+
+
 
 
     }
