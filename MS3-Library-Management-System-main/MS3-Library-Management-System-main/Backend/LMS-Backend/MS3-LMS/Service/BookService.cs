@@ -119,7 +119,7 @@ namespace MS3_LMS.Service
                 book.GenreId = bookResponse.GenreId;
                 book.PublisherId = bookResponse.PublisherId;
                 book.LanguageId = bookResponse.LanguageId;
-                book.Image.Image1Path= bookResponse.Image1Path;
+
                 book.Image.Image2Path= bookResponse.Image2Path;
                 book.IsAvailable = bookResponse.IsAvailable;
                 book.Quantity = bookResponse.Quantity;
@@ -135,7 +135,7 @@ namespace MS3_LMS.Service
                     PublisherId=data.PublisherId,
                     LanguageId=data.LanguageId,
                     Quantity=data.Quantity,
-                    Image1Path=data.Image.Image1Path,
+
                     Image2Path=data.Image.Image2Path,
                     IsAvailable=data.IsAvailable
                 };

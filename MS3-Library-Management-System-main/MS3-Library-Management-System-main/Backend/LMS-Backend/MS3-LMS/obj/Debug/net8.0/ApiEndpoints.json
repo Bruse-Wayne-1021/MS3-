@@ -205,27 +205,6 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooksController",
-    "Method": "PutBook",
-    "RelativePath": "api/Books/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "bookResponse",
-        "Type": "MS3_LMS.Models.ResponeModel.BookResponse",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.BooksController",
     "Method": "DeleteBook",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "DELETE",
@@ -316,6 +295,48 @@
         "Name": "Language",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "PutBook",
+    "RelativePath": "api/Books/UpdateBook{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "bookResponse",
+        "Type": "MS3_LMS.Models.ResponeModel.BookResponse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "UpdateBookCopies",
+    "RelativePath": "api/Books/UpdateBookCopies/{BookId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BookId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "decrementBy",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

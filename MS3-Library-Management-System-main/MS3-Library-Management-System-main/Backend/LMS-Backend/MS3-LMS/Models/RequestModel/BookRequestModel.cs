@@ -37,7 +37,7 @@ namespace MS3_LMS.Models.Request
         public Guid LanguageId { get; set; }
         [Required(ErrorMessage = "Genre ID is required.")]
         public Guid GenreId { get; set; }
-        public string? Image1Path { get; set; }
+      
         public string? Image2Path { get; set; }
         
         public DateTime PublishDate { get; set; }

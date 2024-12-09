@@ -62,7 +62,8 @@ namespace MS3_LMS.Controllers
 
         // PUT: api/Books/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPut("UpdateBook{id}")]
+        
         public async Task<IActionResult> PutBook(Guid id,BookResponse bookResponse)
         {
             try
@@ -260,7 +261,7 @@ namespace MS3_LMS.Controllers
                 {
                     ID = Guid.NewGuid(),
                     Image2Path = request.Image2Path,
-                    Image1Path = request.Image1Path,
+
                     Bookid = newBook.Bookid
                 });
             }
@@ -296,6 +297,28 @@ namespace MS3_LMS.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = "Can't get Books ", details = ex.Message });
+            }
+        }
+
+
+        [HttpPut("UpdateBookCopies/{BookId}")]
+        public async Task<IActionResult> UpdateBookCopies(Guid BookId, [FromBody] int decrementBy)
+        {
+            try
+            {
+                var data = await _context.Books.FindAsync(BookId);
+                if(data == null)
+                {
+                    return BadRequest("Book Not Found");
+                }
+                data.Quantity=decrementBy;
+                _context.Books.Update(data);
+                _context.SaveChanges();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
 
