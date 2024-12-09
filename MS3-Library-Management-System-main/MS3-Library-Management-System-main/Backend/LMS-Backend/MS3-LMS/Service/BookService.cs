@@ -1,7 +1,9 @@
 ﻿using MS3_LMS.Enity.Book;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
+using MS3_LMS.Models.Request;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 using MS3_LMS.Repository;
 
 namespace MS3_LMS.Service
@@ -88,5 +90,63 @@ namespace MS3_LMS.Service
         {
             return await _bookRepository.FilterByAuthor(author);
         }
+
+        public async Task<List<Book>>GetEnumBAsedBooks(Book.type type)
+        {
+            try
+            {
+                var data = await _bookRepository.GetEnumBasedBooks(type);
+                return data;
+            }
+            catch (Exception ex)
+            {
+               throw new Exception(ex .Message);
+            }
+        }
+
+        public async Task<BookResponse> UpdateBook(Guid id, BookResponse bookResponse)
+        {
+            try
+            {
+                var book = await _bookRepository.GetBookByid(id);
+                if (book == null)
+                {
+                    throw new Exception("Book not found");
+                }
+                book.Name = bookResponse.Name;
+                book.PageCount = bookResponse.PageCount;
+                book.AuthorId = bookResponse.AuthorId;
+                book.GenreId = bookResponse.GenreId;
+                book.PublisherId = bookResponse.PublisherId;
+                book.LanguageId = bookResponse.LanguageId;
+
+                book.Image.Image2Path= bookResponse.Image2Path;
+                book.IsAvailable = bookResponse.IsAvailable;
+                book.Quantity = bookResponse.Quantity;
+
+                var data=await _bookRepository.UpdateBooks(book);
+
+                var response = new BookResponse
+                {
+                    Name=data.Name,
+                    PageCount=data.PageCount,
+                    AuthorId=data.AuthorId, 
+                    GenreId=data.GenreId,
+                    PublisherId=data.PublisherId,
+                    LanguageId=data.LanguageId,
+                    Quantity=data.Quantity,
+
+                    Image2Path=data.Image.Image2Path,
+                    IsAvailable=data.IsAvailable
+                };
+                return response;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

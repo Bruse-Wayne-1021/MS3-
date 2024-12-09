@@ -59,22 +59,6 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooklendController",
-    "Method": "BooklendRequest",
-    "RelativePath": "api/Booklend",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "bookLendRequest",
-        "Type": "MS3_LMS.Models.RequestModel.BookLendRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.BooklendController",
     "Method": "GetAllRequest",
     "RelativePath": "api/Booklend",
     "HttpMethod": "GET",
@@ -115,6 +99,22 @@
       {
         "Name": "state",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooklendController",
+    "Method": "BorrowBook",
+    "RelativePath": "api/Booklend/borrow",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MS3_LMS.Models.RequestModel.BookLendRequest",
         "IsRequired": true
       }
     ],
@@ -179,22 +179,6 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooksController",
-    "Method": "CreateBook",
-    "RelativePath": "api/Books",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "MS3_LMS.Models.Request.CreateBookRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.BooksController",
     "Method": "GetBookByid",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "GET",
@@ -221,27 +205,6 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooksController",
-    "Method": "PutBook",
-    "RelativePath": "api/Books/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "book",
-        "Type": "MS3_LMS.Enity.Book.Book",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MS3_LMS.Controllers.BooksController",
     "Method": "DeleteBook",
     "RelativePath": "api/Books/{id}",
     "HttpMethod": "DELETE",
@@ -258,6 +221,22 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "CreateBookWithExtract",
+    "RelativePath": "api/Books/create-with-extract",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MS3_LMS.Models.Request.CreateBookRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
     "Method": "FilterBookByGenre",
     "RelativePath": "api/Books/Genre",
     "HttpMethod": "GET",
@@ -266,6 +245,22 @@
     "Parameters": [
       {
         "Name": "Genre",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "GetByBookType",
+    "RelativePath": "api/Books/Get-multipletypeBooks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -300,6 +295,48 @@
         "Name": "Language",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "PutBook",
+    "RelativePath": "api/Books/UpdateBook{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "bookResponse",
+        "Type": "MS3_LMS.Models.ResponeModel.BookResponse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.BooksController",
+    "Method": "UpdateBookCopies",
+    "RelativePath": "api/Books/UpdateBookCopies/{BookId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BookId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "decrementBy",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -546,6 +583,22 @@
         "Name": "MemberID",
         "Type": "System.Guid",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.PdfController",
+    "Method": "ExtractText",
+    "RelativePath": "api/Pdf/extract",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MS3_LMS.Controllers.PdfController\u002BFilePathRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

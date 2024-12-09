@@ -10,7 +10,9 @@ using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
 using MS3_LMS.Models.Request;
 using MS3_LMS.Models.RequestModel;
+using MS3_LMS.Models.ResponeModel;
 using NuGet.Packaging.Signing;
+using UglyToad.PdfPig;
 
 namespace MS3_LMS.Controllers
 {
@@ -28,8 +30,6 @@ namespace MS3_LMS.Controllers
             _context = context;
             _bookService = bookService;
             _logger = logger;
-           
-
         }
 
         // GET: api/Books
@@ -62,33 +62,19 @@ namespace MS3_LMS.Controllers
 
         // PUT: api/Books/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutBook(Guid id, Book book)
+        [HttpPut("UpdateBook{id}")]
+        
+        public async Task<IActionResult> PutBook(Guid id,BookResponse bookResponse)
         {
-            if (id != book.Bookid)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(book).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                var data=await _bookService.UpdateBook(id, bookResponse);
+                return Ok(data);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception ex)
             {
-                if (!BookExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                throw new Exception();
             }
-
-            return NoContent();
         }
 
         // POST: api/Books
@@ -199,26 +185,56 @@ namespace MS3_LMS.Controllers
         //    return Ok(data);
         //}
 
-        [HttpPost]
-        public async Task<IActionResult> CreateBook([FromBody] CreateBookRequest request)
+        [HttpPost("create-with-extract")]
+        public async Task<IActionResult> CreateBookWithExtract([FromBody] CreateBookRequest request)
         {
-           
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var publisher=await _context.Publishers.FindAsync(request.PublisherId);
+            var publisher = await _context.Publishers.FindAsync(request.PublisherId);
             if (publisher == null)
             {
-                return  NotFound(new {message="Publisher not found"});
+                return NotFound(new { message = "Publisher not found" });
             }
 
-            if(publisher.PublishDate!=request.PublishDate)
+            if (publisher.PublishDate != request.PublishDate)
             {
                 publisher.PublishDate = request.PublishDate;
             }
-         
+
+            string extractedText = string.Empty;
+            if (request.BookType == Book.type.EBook || request.BookType == Book.type.Both)
+            {
+                if (string.IsNullOrEmpty(request.FilePath))
+                {
+                    return BadRequest("File path is required for eBooks.");
+                }
+
+                try
+                {
+                    if (!System.IO.File.Exists(request.FilePath))
+                    {
+                        return NotFound(new { message = "The specified file does not exist." });
+                    }
+
+                    using var stream = System.IO.File.OpenRead(request.FilePath);
+                    using var pdfDocument = PdfDocument.Open(stream);
+
+                    var textContent = new List<string>();
+                    foreach (var page in pdfDocument.GetPages())
+                    {
+                        textContent.Add(page.Text);
+                    }
+
+                    extractedText = string.Join("\n", textContent);
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, new { message = "Error extracting text from PDF.", details = ex.Message });
+                }
+            }
 
             var newBook = new Book
             {
@@ -229,67 +245,82 @@ namespace MS3_LMS.Controllers
                 PageCount = request.PageCount,
                 IsAvailable = request.IsAvailable,
                 Quantity = request.Quantity,
+                BookType = request.BookType,
                 AuthorId = request.AuthorId,
                 PublisherId = request.PublisherId,
                 LanguageId = request.LanguageId,
-                GenreId = request.GenreId
+                GenreId = request.GenreId,
+                FilePath = request.FilePath,
+                TextContent = extractedText
             };
 
-           
             var images = new List<Image>();
-
-            //if (!string.IsNullOrEmpty(request.Image1Path))
-            //{
-            //    images.Add(new Image
-            //    {
-            //        ID = Guid.NewGuid(),
-            //        Image1Path = request.Image1Path,
-            //        Bookid = newBook.Bookid
-            //    });
-            //}
-
-
-
-
             if (!string.IsNullOrEmpty(request.Image2Path))
             {
                 images.Add(new Image
                 {
                     ID = Guid.NewGuid(),
-                    Image2Path = request.Image2Path, 
-                    Image1Path= request.Image1Path,
+                    Image2Path = request.Image2Path,
+
                     Bookid = newBook.Bookid
                 });
             }
 
             try
             {
-                
                 await _context.Books.AddAsync(newBook);
-
 
                 if (images.Any())
                 {
                     await _context.Images.AddRangeAsync(images);
                 }
 
-               
                 await _context.SaveChangesAsync();
 
                 return Ok(new { message = "Book created successfully", book = newBook });
             }
             catch (Exception ex)
             {
-               
                 return StatusCode(500, new { message = "Error creating the book", details = ex.Message });
             }
         }
 
 
+        [HttpGet("Get-multipletypeBooks")]
+        public async Task<IActionResult>GetByBookType(Book.type type)
+        {
+            try
+            {
+                var response = await _bookService.GetEnumBAsedBooks(type);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "Can't get Books ", details = ex.Message });
+            }
+        }
 
 
-
-
+        [HttpPut("UpdateBookCopies/{BookId}")]
+        public async Task<IActionResult> UpdateBookCopies(Guid BookId, [FromBody] int decrementBy)
+        {
+            try
+            {
+                var data = await _context.Books.FindAsync(BookId);
+                if(data == null)
+                {
+                    return BadRequest("Book Not Found");
+                }
+                data.Quantity=decrementBy;
+                _context.Books.Update(data);
+                _context.SaveChanges();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }

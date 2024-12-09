@@ -35,6 +35,19 @@ namespace MS3_LMS.Service
         {
             try
             {
+
+                var borrowedBooks = await _bookLendRepository.getBorrowedBooks(bookLendRequest.MemebID);
+                if (borrowedBooks >=2)
+                {
+                    throw new Exception("You can only borrow up to two books at a time.");
+                }
+
+                var hasBooks = await _bookLendRepository.HAsBorrowedBook(bookLendRequest.MemebID, bookLendRequest.Bookid);
+                if (hasBooks)
+                {
+                    throw new Exception("You cannot borrow the same book  more than once.");
+                }
+
                 var request = new BookLend
                 {
                     Status=bookLendRequest.State,

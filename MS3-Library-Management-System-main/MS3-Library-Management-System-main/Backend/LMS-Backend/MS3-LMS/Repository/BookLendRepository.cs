@@ -8,6 +8,7 @@ using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
 using MS3_LMS.Models.RequestModel;
 using NuGet.Protocol.Plugins;
+using System.Net;
 
 namespace MS3_LMS.Repository
 {
@@ -20,6 +21,32 @@ namespace MS3_LMS.Repository
         {
             _DbContext = dbContext;
             _Logger = logger;
+        }
+
+        public Task<bool> HAsBorrowedBook(Guid memberid, Guid bookid)
+        {
+            try
+            {
+                return _DbContext.BookLends
+              .AnyAsync(bl => bl.MemebID == memberid && bl.Bookid == bookid && bl.Status == BookLend.State.Waiting);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public Task<int> getBorrowedBooks(Guid MemberID)
+        {
+            try
+            {
+                return _DbContext.BookLends
+              .CountAsync(b => b.MemebID == MemberID && b.Status == BookLend.State.Waiting);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<BookLend>RequestBook(BookLend bookLend)

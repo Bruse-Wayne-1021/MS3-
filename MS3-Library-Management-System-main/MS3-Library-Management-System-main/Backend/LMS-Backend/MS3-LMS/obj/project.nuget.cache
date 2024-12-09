@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uLMtvtH2RzY=",
+  "dgSpecHash": "h5nh0Czv6sc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
   "expectedPackageFiles": [
@@ -127,6 +127,7 @@
     "C:\\Users\\Sajilan\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\Sajilan\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\Sajilan\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\Sajilan\\.nuget\\packages\\pdfpig\\0.1.9\\pdfpig.0.1.9.nupkg.sha512",
     "C:\\Users\\Sajilan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Sajilan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Sajilan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

@@ -13,5 +13,8 @@ namespace MS3_LMS.IRepository
         //Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype);
         Task<Book> PostNewBOok(Book book);
         Task<IReadOnlyList<Book>> FilterByAuthor(Guid Author);
+
+        Task<List<Book>> GetEnumBasedBooks(Book.type type);
+         Task<Book> UpdateBooks(Book book);
     }
 }

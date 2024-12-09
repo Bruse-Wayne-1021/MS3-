@@ -522,3 +522,10 @@ C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Mana
 C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\obj\Debug\net8.0\MS3-LMS.pdb
 C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\obj\Debug\net8.0\MS3-LMS.genruntimeconfig.cache
 C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\obj\Debug\net8.0\ref\MS3-LMS.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Core.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.DocumentLayoutAnalysis.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Fonts.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Package.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Tokenization.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Tokens.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.dll
