@@ -7,5 +7,6 @@ namespace MS3_LMS.IService
     {
         Task<Subscription> NewSubcription(SubcriptionRequest subcriptionRequest);
         Task<bool> CheckIsActive(Guid memberId);
+        Task<List<Subscription>> GetSubCription();
     }
 }

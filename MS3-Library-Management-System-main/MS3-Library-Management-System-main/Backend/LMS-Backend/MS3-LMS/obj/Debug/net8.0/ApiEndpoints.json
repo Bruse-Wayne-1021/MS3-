@@ -679,6 +679,16 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.SubcriptionController",
+    "Method": "AllSubscrip",
+    "RelativePath": "api/Subcription/allSubscription",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.SubcriptionController",
     "Method": "IsActive",
     "RelativePath": "api/Subcription/IsActive/{memberId}",
     "HttpMethod": "GET",
