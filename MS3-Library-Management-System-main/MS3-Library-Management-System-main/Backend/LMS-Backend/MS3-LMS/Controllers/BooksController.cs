@@ -204,37 +204,37 @@ namespace MS3_LMS.Controllers
                 publisher.PublishDate = request.PublishDate;
             }
 
-            string extractedText = string.Empty;
-            if (request.BookType == Book.type.EBook || request.BookType == Book.type.Both)
-            {
-                if (string.IsNullOrEmpty(request.FilePath))
-                {
-                    return BadRequest("File path is required for eBooks.");
-                }
+            //string extractedText = string.Empty;
+            //if (request.BookType == Book.type.EBook || request.BookType == Book.type.Both)
+            //{
+            //    if (string.IsNullOrEmpty(request.FilePath))
+            //    {
+            //        return BadRequest("File path is required for eBooks.");
+            //    }
 
-                try
-                {
-                    if (!System.IO.File.Exists(request.FilePath))
-                    {
-                        return NotFound(new { message = "The specified file does not exist." });
-                    }
+            //    try
+            //    {
+            //        if (!System.IO.File.Exists(request.FilePath))
+            //        {
+            //            return NotFound(new { message = "The specified file does not exist." });
+            //        }
 
-                    using var stream = System.IO.File.OpenRead(request.FilePath);
-                    using var pdfDocument = PdfDocument.Open(stream);
+            //        using var stream = System.IO.File.OpenRead(request.FilePath);
+            //        using var pdfDocument = PdfDocument.Open(stream);
 
-                    var textContent = new List<string>();
-                    foreach (var page in pdfDocument.GetPages())
-                    {
-                        textContent.Add(page.Text);
-                    }
+            //        var textContent = new List<string>();
+            //        foreach (var page in pdfDocument.GetPages())
+            //        {
+            //            textContent.Add(page.Text);
+            //        }
 
-                    extractedText = string.Join("\n", textContent);
-                }
-                catch (Exception ex)
-                {
-                    return StatusCode(500, new { message = "Error extracting text from PDF.", details = ex.Message });
-                }
-            }
+            //        extractedText = string.Join("\n", textContent);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        return StatusCode(500, new { message = "Error extracting text from PDF.", details = ex.Message });
+            //    }
+            //}
 
             var newBook = new Book
             {
@@ -251,7 +251,7 @@ namespace MS3_LMS.Controllers
                 LanguageId = request.LanguageId,
                 GenreId = request.GenreId,
                 FilePath = request.FilePath,
-                TextContent = extractedText
+               
             };
 
             var images = new List<Image>();

@@ -505,7 +505,7 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.MemberController",
-    "Method": "NewMember",
+    "Method": "CreateNewMember",
     "RelativePath": "api/Member/new-member",
     "HttpMethod": "POST",
     "IsController": true,
@@ -588,6 +588,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.OTPController",
+    "Method": "SendOtpAsync",
+    "RelativePath": "api/OTP/SendOtp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MS3_LMS.Controllers.SendOtpRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.OTPController",
+    "Method": "VerifyOtp",
+    "RelativePath": "api/OTP/verify-otp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MS3_LMS.Models.RequestModel.OtprequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.PdfController",
     "Method": "ExtractText",
     "RelativePath": "api/Pdf/extract",
@@ -640,6 +672,38 @@
       {
         "Name": "ratingRequestModel",
         "Type": "MS3_LMS.Models.RequestModel.RatingRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.SubcriptionController",
+    "Method": "IsActive",
+    "RelativePath": "api/Subcription/IsActive/{memberId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "memberId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.SubcriptionController",
+    "Method": "NewSubcription",
+    "RelativePath": "api/Subcription/NewSubcription",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "subcriptionRequest",
+        "Type": "MS3_LMS.Models.RequestModel.SubcriptionRequest",
         "IsRequired": true
       }
     ],

@@ -47,8 +47,6 @@ namespace MS3_LMS.Repository
             {
                 throw new Exception(ex.Message);
             }
-
-
         }
 
         public async Task<List<Role>> GetAllAdmin()

@@ -18,7 +18,7 @@ namespace MS3_LMS.LMSDbcontext
         public DbSet<Language> Languages { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Rating> Rating { get; set; }
-        public DbSet<BookPdf> BookPdf { get; set; }
+        
 
         public DbSet<BookLend> BookLends { get; set; }
         public DbSet<Payment>Payments { get; set; }
@@ -142,7 +142,7 @@ namespace MS3_LMS.LMSDbcontext
             modelBuilder.Entity<Language>().HasData(
                 new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "English" }, 
                 new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "Tamil" },
-                new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "Singalam" }
+                new Language { LanguageId = Guid.NewGuid(), TypeOfLanguage = "Singala" }
                 );
 
             modelBuilder.Entity<Genre>().HasData(

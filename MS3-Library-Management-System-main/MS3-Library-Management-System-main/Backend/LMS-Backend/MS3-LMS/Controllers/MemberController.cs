@@ -36,22 +36,12 @@ namespace MS3_LMS.Controllers
         
         [HttpPost]
         [Route("new-member")]
-        public async Task<IActionResult> NewMember([FromBody] MemberRequestModel memberRequestModel)
+        public async Task<ActionResult> CreateNewMember(MemberRequestModel memberRequestModel)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            await _memberservice.NewMemeber(memberRequestModel);
 
-            try
-            {
-                await _memberservice.NewMemeber(memberRequestModel);
-                return Ok("Member and user created successfully, with default role assigned");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
-            }
+
+            return CreatedAtAction(nameof(CreateNewMember), new { id = memberRequestModel.Nic }, memberRequestModel);
         }
 
 
