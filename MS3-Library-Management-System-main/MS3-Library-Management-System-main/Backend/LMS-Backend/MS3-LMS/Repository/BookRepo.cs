@@ -2,7 +2,7 @@
 using MS3_LMS.Enity.Book;
 using MS3_LMS.IRepository;
 using MS3_LMS.LMSDbcontext;
-using MS3_LMS.Migrations;
+
 
 namespace MS3_LMS.Repository
 {

@@ -118,7 +118,8 @@ namespace MS3_LMS.Service
                     Lastname = data.Member.FirstName,
                     Nic = data.Member.Nic,
                     Image2Path=data.Book.Image?.Image2Path,
-                    IsVerify=data.Member.IsVerify
+                    IsVerify=data.Member.IsVerify,
+                    BookId=data.Bookid
                 }).ToList();
                 return response;
             }

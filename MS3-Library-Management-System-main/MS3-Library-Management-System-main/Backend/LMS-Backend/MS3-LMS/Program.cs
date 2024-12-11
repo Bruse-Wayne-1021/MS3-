@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Build.Execution;
 using Microsoft.CodeAnalysis.Host;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using MS3_LMS.IRepository;
 using MS3_LMS.IService;
 using MS3_LMS.LMSDbcontext;
+using MS3_LMS.Models.RequestModel;
 using MS3_LMS.Repository;
 using MS3_LMS.Service;
 using System.Text;
@@ -25,6 +27,8 @@ namespace MS3_LMS
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+
 
             builder.Services.AddDbContext<LMSContext>(opt => opt
             .UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
@@ -80,7 +84,11 @@ namespace MS3_LMS
             builders.Logging.AddDebug();
 
             //var app= builder.Build();
-            
+
+            builder.Services.Configure<EmailConfig>(builder.Configuration.GetSection("EmailConfig"));
+            builder.Services.AddTransient<EmailService>();
+
+
 
             builder.Services.AddScoped<IBookRepository,BookRepo>();
             builder.Services.AddScoped<IBookService,BookService>();
@@ -105,9 +113,15 @@ namespace MS3_LMS
             builder.Services.AddScoped<IImageService, ImageService>();
             builder.Services.AddScoped<IRatingRepository, RatingRepository>();
             builder.Services.AddScoped<IRatingService, RatingService>();
+            builder.Services.AddTransient<OTPService>();
+             builder. Services.AddTransient<EmailService>();
+            builder.Services.AddScoped<ISubcriptionRepository,SubcriptionRepository>();
+            builder.Services.AddScoped<ISubcriptionService,SubcriptionService>();
+            builder.Services.AddScoped<IPaymentRepository,PaymentRepository>();
 
 
-            
+            builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<EmailConfig>>().Value);
+
             var app = builder.Build();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

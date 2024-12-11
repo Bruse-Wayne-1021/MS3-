@@ -6,5 +6,6 @@ namespace MS3_LMS.Models.ResponeModel
     {
        
         public string Token { get; set; }
+        public string Message { get; set; }
     }
 }

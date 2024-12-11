@@ -17,13 +17,20 @@ namespace MS3_LMS.Service
         private readonly IUserRepository _userRepository;
         private readonly IRoleRepository _roleRepository;
         private readonly IRoleService _roleService;
+        private readonly OTPService _otpService;
 
-        public MemberService(IMemberRepository memberRepository, IUserRepository userRepository, IRoleRepository roleRepository, IRoleService roleService)
+
+        public MemberService(IMemberRepository
+            memberRepository, IUserRepository userRepository, IRoleRepository roleRepository, 
+            IRoleService roleService,
+            OTPService oTPService
+            )
         {
             _memberRepository = memberRepository;
             _userRepository = userRepository;
             _roleRepository = roleRepository;
             _roleService = roleService;
+            _otpService = oTPService;
         }
 
         public async Task CreateNewUser(MemberRequestModel memberRequestModel)
@@ -48,15 +55,18 @@ namespace MS3_LMS.Service
 
         public async Task NewMemeber(MemberRequestModel memberRequestModel)
         {
+            
             var user = new User
             {
                 Email = memberRequestModel.Email,
                 IsConfirmEmail = false,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(memberRequestModel.Password)
-
             };
+
+            
             await _userRepository.createUser(user);
 
+            
             var member = new Member
             {
                 Nic = memberRequestModel.Nic,
@@ -67,12 +77,23 @@ namespace MS3_LMS.Service
                 IsVerify = false,
                 UserGender = memberRequestModel.UserGender,
                 ImageUrl = memberRequestModel.ImageUrl,
-                UserId=user.UserId
+                UserId = user.UserId 
             };
+
+
             await _userRepository.createMemeber(member);
 
+            
             await _roleService.AssignDefaultRole(user.UserId);
+
+            var otpsent = await _otpService.GenerateAndSendOtpAsync(user.UserId, user.Email);
+            if (!otpsent)
+            {
+                throw new Exception();
+            }
         }
+
+
 
 
         public async Task<List<MemberResponse>> GetAllMembers()

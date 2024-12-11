@@ -35,7 +35,7 @@ namespace MS3_LMS.Enity.Book
        
 
         public  ICollection<Rating>? Ratings { get; set; }
-        public string TextContent { get; set; }
+        
 
         // public  ICollection<BookLend>? BookLends { get; set; }
 

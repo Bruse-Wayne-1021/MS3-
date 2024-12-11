@@ -36,24 +36,42 @@ namespace MS3_LMS.Repository
         }
 
 
-        public async Task<User> LoginAsync(string email, string password)
+        public async Task<User?> LoginAsync(string email, string password)
         {
             try
             {
-                var user = await _Context.Users.Include(s => s.UserRoles).ThenInclude(r => r.Role).FirstOrDefaultAsync(u => u.Email == email);
+                
+                var user = await _Context.Users
+                    .Include(s => s.UserRoles)
+                    .ThenInclude(r => r.Role)
+                    .FirstOrDefaultAsync(u => u.Email == email);
 
-                if (user == null || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+                
+                if (user == null)
+                {
+                    return null;
+                }
+
+                
+                if (user.IsConfirmEmail != true)
+                {
+                    throw new InvalidOperationException("Email not confirmed. Please verify your email.");
+                }
+
+               
+                if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
                 {
                     return null;
                 }
 
                 return user;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
+
 
         public async Task<Member>GetMemberByUSerId(Guid UserId)
         {

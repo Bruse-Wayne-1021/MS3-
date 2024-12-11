@@ -71,31 +71,41 @@ namespace MS3_LMS.Service
 
         }
 
-        public async Task<LoginResponseModel>login(string Email,string pasword)
+        public async Task<LoginResponseModel> Login(string email, string password)
         {
             try
             {
-                var user = await _userRepository.LoginAsync(Email, pasword);
+                
+                var user = await _userRepository.LoginAsync(email, password);
+
                 if (user == null)
                 {
-                    throw new UnauthorizedAccessException("Invalid Email and Password");
+                    throw new UnauthorizedAccessException("Invalid Email or Password.");
                 }
 
+              
                 var roles = user.UserRoles.Select(ur => ur.Role.UserAType).ToList();
-                var token=createToken(user,roles);
+
+               
+                var token = createToken(user, roles);
 
                 return new LoginResponseModel
                 {
-                  
-                    Token= token
+                    Token = token
                 };
-
             }
-            catch(Exception ex)
+            catch (InvalidOperationException ex)
             {
+                
                 throw new Exception(ex.Message);
             }
+            catch (Exception ex)
+            {
+               
+                throw new Exception("An error occurred during login: " + ex.Message);
+            }
         }
+
 
 
 

@@ -26,13 +26,17 @@ namespace MS3_LMS.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginRequestModel model)
         {
-            var data=await _Userservice.login(model.Email, model.Password);
+            var data=await _Userservice.Login(model.Email, model.Password);
             return Ok(data);
         }
 
 
+
        
     }
+
+
+
 
     
     

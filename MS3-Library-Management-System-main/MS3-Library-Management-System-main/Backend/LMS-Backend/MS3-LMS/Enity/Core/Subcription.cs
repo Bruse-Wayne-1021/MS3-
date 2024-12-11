@@ -7,17 +7,16 @@ namespace MS3_LMS.Enity.Core
     {
         [Key]
         public Guid SubId { get; set; }
-        public enum Type
+        public enum SubcriptionType
         {
             Month,
             Year
         };
-        public Type SubType { get; set; }
-        public int Count { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsCancel { get; set; }
-        public  Guid MemebID { get; set; }
+        public SubcriptionType SubType { get; set; }
 
+        public bool IsActive { get; set; } = false;
+        public bool IsCancel { get; set; } = false;
+        public  Guid MemebID { get; set; }
         public  Member? Member { get; set; }
 
         public ICollection<Payment> Payment { get; set; }

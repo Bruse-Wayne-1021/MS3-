@@ -529,3 +529,8 @@ C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Mana
 C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Tokenization.dll
 C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.Tokens.dll
 C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\UglyToad.PdfPig.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\MailKit.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Sajilan\Desktop\MS3\MS3-Library-Management-System-main\MS3-Library-Management-System-main\Backend\LMS-Backend\MS3-LMS\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
