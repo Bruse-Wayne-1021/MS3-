@@ -69,5 +69,19 @@ namespace MS3_LMS.Service
         }
 
 
+        public async Task<List<Subscription>> GetSubCription()
+        {
+            try
+            {
+                var data = await _subcriptionRepository.GetAllSubcription();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+        }
+
+
     }
 }

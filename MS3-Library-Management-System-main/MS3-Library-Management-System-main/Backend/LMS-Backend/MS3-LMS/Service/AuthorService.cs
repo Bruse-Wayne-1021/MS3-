@@ -14,9 +14,7 @@ namespace MS3_LMS.Service
         {
             _aothorRepository = aothorRepository;
         }
-
-
-
+            
         public async Task PostNewAuthor(AuthorRequestModel authorRequestModel)
         {
             try
@@ -58,6 +56,7 @@ namespace MS3_LMS.Service
                 throw new Exception(ex.Message);
             }
         }
+
 
         public async Task<List<AuthorBooksResponse>>GetAuthorsBooksById(Guid id)
         {

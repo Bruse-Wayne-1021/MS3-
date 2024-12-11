@@ -43,5 +43,18 @@ namespace MS3_LMS.Repository
             }
         }
 
+        public async Task<List<Subscription>> GetAllSubcription()
+        {
+            try
+            {
+                var data=await _context.Subscriptions.Include(m=>m.Member).Include(p=>p.Payment).AsNoTracking().ToListAsync();
+                return data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
+            }
+        }
+        
     }
 }

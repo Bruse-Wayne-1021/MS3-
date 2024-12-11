@@ -52,5 +52,19 @@ namespace MS3_LMS.Controllers
                 return StatusCode(500, new { Error = "An error occurred while checking the subscription status.", Details = ex.Message });
             }
         }
+
+        [HttpGet("allSubscription")]
+        public async Task<IActionResult> AllSubscrip()
+        {
+            try
+            {
+                var data = await _subcriptionService.GetSubCription();
+                return Ok(data);
+            }
+            catch(Exception ex)
+            {
+                throw new Exception();
+            }
+        }
     }
 }

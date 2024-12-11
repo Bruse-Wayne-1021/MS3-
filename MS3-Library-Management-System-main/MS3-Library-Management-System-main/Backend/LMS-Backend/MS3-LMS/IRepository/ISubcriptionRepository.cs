@@ -6,5 +6,6 @@ namespace MS3_LMS.IRepository
     {
         Task<MS3_LMS.Enity.Core.Subscription> NewSubcription(Subscription subscription);
         Task<Subscription> CheckSubIsActive(Guid memberid);
+         Task<List<Subscription>> GetAllSubcription();
     }
 }
