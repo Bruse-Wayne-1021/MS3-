@@ -9,12 +9,12 @@ namespace MS3_LMS.IService
     {
         Task CreateNewUser(MemberRequestModel memberRequestModel);
         Task NewMemeber(MemberRequestModel memberRequestModel);
-        Task<MemberResponse> GetMemberByNic(Guid Nic);
+        Task<MemberResponse> GetMemberByNic(Guid  Nic);
         Task<List<MemberResponse>> GetAllMembers();
-        Task<List<BookLendResponse>> GetRecordsById(Guid id, BookLend.State state);
-        Task<MemberResponse> EditMember(Guid id, MemberResponse memberResponse);
-        Task<bool> DeleteMember(Guid id);
-        Task<string> UpdateIsverify(Guid Memberid, bool isverify);
-        Task<bool> updatePAssword(Guid userid, string password);
+        Task<List<BookLendResponse>> GetRecordsById(Guid id, BookLend.State  state);
+        Task<MemberResponse> EditMember(Guid id, MemberResponse  memberResponse);
+        Task<bool> DeleteMember(Guid  id);
+        Task<string> UpdateIsverify(Guid  Memberid, bool  isverify);
+        Task<bool> updatePAssword(Guid  userid, string  password);
     }
 }

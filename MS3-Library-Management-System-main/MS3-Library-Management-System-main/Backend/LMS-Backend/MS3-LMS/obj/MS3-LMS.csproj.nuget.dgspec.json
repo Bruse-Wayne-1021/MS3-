@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj": {}
+    "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj": {
+    "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
+        "projectUniqueName": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
         "projectName": "MS3-LMS",
-        "projectPath": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
-        "packagesPath": "C:\\Users\\Sajilan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\obj\\",
+        "projectPath": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\MS3-LMS.csproj",
+        "packagesPath": "C:\\Users\\Iworld\\.nuget\\packages\\",
+        "outputPath": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Sajilan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Iworld\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
