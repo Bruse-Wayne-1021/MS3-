@@ -12,7 +12,6 @@ namespace MS3_LMS.Enity.User
         public bool? IsConfirmEmail { get; set; }
         public string? PasswordHash { get; set; }
 
-        
         public  Member? Member { get; set; }
         public  ICollection<OTP>? OTPs { get; set; }
         public  ICollection<UserRole>? UserRoles { get; set; }

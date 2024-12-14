@@ -25,7 +25,6 @@ namespace MS3_LMS.Enity.User
         public string? ImageUrl { get; set; }
         public bool? IsVerify { get; set; }
         public Guid UserId { get; set; }
-
         public  User? User { get; set; }
         public  Restriction? Restriction { get; set; }
         public  ICollection<Rating>? Ratings { get; set; }
