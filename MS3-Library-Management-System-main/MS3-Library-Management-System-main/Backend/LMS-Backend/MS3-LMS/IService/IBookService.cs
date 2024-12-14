@@ -16,9 +16,8 @@ namespace MS3_LMS.IService
         //Task<IReadOnlyList<Book>> BasedOnBookType(Book.type booktype);
         Task<Book> CreateBook(Book book);
         Task<IReadOnlyList<Book>> FilterByAuthor(Guid author);
-
         Task<List<Book>> GetEnumBAsedBooks(Book.type type);
-        Task<BookResponse> UpdateBook(Guid id, BookResponse bookResponse);
+        Task<BookResponse> UpdateBook(Guid  id,  BookResponse bookResponse);
 
     }
 }

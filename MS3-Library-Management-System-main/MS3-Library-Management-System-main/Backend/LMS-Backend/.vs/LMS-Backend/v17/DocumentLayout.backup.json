@@ -11,16 +11,28 @@
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\user\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\enity\\book\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\enity\\book\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\enity\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\enity\\book\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\iservice\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\iservice\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\enity\\book\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\enity\\book\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\enity\\core\\subcription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -135,10 +147,6 @@
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\models\\requestmodel\\bookrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\iservice\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\models\\responemodel\\loginresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\models\\responemodel\\loginresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -218,10 +226,6 @@
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\controllers\\pdfcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\iservice\\imemberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\models\\requestmodel\\memberidrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\models\\requestmodel\\memberidrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -263,10 +267,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\service\\genreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\service\\genreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|solutionrelative:ms3-lms\\iservice\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD7BFD15-473F-405B-BC03-EBFBF93B4BCF}|MS3-LMS\\MS3-LMS.csproj|e:\\backend\\ms3-library-management-backend\\ms3-library-management-system-main\\ms3-library-management-system-main\\backend\\lms-backend\\ms3-lms\\iservice\\iauthoraservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -510,59 +510,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Subcription.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Subcription.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Subcription.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Subcription.cs",
-              "RelativeToolTip": "MS3-LMS\\Enity\\Core\\Subcription.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T08:02:45.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SubcriptionRepository.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\SubcriptionRepository.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\Repository\\SubcriptionRepository.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\SubcriptionRepository.cs",
-              "RelativeToolTip": "MS3-LMS\\Repository\\SubcriptionRepository.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:25:42.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Author.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Author.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Author.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Author.cs",
-              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Author.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T07:58:57.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Genre.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Genre.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Genre.cs",
-              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Genre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T08:02:12.41Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -571,22 +520,9 @@
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Book.cs",
               "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Book.cs",
               "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Book.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAUwAsAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwBkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T07:58:24.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Member.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Member.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\Member.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Member.cs",
-              "RelativeToolTip": "MS3-LMS\\Enity\\User\\Member.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T08:04:11.373Z",
               "EditorCaption": ""
             },
             {
@@ -597,7 +533,7 @@
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\User.cs",
               "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\User.cs",
               "RelativeToolTip": "MS3-LMS\\Enity\\User\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T08:04:21.111Z",
               "EditorCaption": ""
@@ -605,6 +541,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IBookService.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\IService\\IBookService.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IBookService.cs",
+              "RelativeToolTip": "MS3-LMS\\IService\\IBookService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:54:48.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMemberService.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IMemberService.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\IService\\IMemberService.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IMemberService.cs",
+              "RelativeToolTip": "MS3-LMS\\IService\\IMemberService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBEAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T02:45:17.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IUserService.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\IService\\IUserService.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IUserService.cs",
+              "RelativeToolTip": "MS3-LMS\\IService\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T01:56:55.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Author.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Author.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Author.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Author.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:58:57.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Member.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Member.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\Member.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Member.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\User\\Member.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:04:11.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "SubcriptionController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\SubcriptionController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\SubcriptionController.cs",
@@ -617,6 +618,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Genre.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Genre.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Genre.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Book\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:02:12.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SubcriptionRepository.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\SubcriptionRepository.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Repository\\SubcriptionRepository.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\SubcriptionRepository.cs",
+              "RelativeToolTip": "MS3-LMS\\Repository\\SubcriptionRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T08:25:42.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Subcription.cs",
+              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "RelativeToolTip": "MS3-LMS\\Enity\\Core\\Subcription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:02:45.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ISubcriptionService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\ISubcriptionService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\IService\\ISubcriptionService.cs",
@@ -628,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "ISubcriptionRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IRepository\\ISubcriptionRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\IRepository\\ISubcriptionRepository.cs",
@@ -640,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "SubcriptionService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\SubcriptionService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\SubcriptionService.cs",
@@ -652,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "BookRepo.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\BookRepo.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\BookRepo.cs",
@@ -664,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "AuthorService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\AuthorService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\AuthorService.cs",
@@ -676,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Paymemt.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Paymemt.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Paymemt.cs",
@@ -688,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "BooksController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\BooksController.cs",
@@ -700,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "UserController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\UserController.cs",
@@ -712,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "MemberController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\MemberController.cs",
@@ -724,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\RoleRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\RoleRepository.cs",
@@ -736,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "MemberService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\MemberService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\MemberService.cs",
@@ -748,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "BookLendService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\BookLendService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\BookLendService.cs",
@@ -760,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "UserService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\UserService.cs",
@@ -772,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "MemberRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\MemberRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\MemberRepository.cs",
@@ -784,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "SubcriptionRequest.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\SubcriptionRequest.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\SubcriptionRequest.cs",
@@ -808,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "IPaymentRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IRepository\\IPaymentRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\IRepository\\IPaymentRepository.cs",
@@ -820,7 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Program.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Program.cs",
@@ -832,7 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "PaymentRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\PaymentRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\PaymentRepository.cs",
@@ -844,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "LoginController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\LoginController.cs",
@@ -856,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "Restriction.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\Restriction.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\Restriction.cs",
@@ -868,7 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "LoginRequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\LoginRequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\LoginRequestModel.cs",
@@ -880,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\UserRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\UserRepository.cs",
@@ -892,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "LMSContext.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\LMSDbcontext\\LMSContext.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\LMSDbcontext\\LMSContext.cs",
@@ -928,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "BookService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\BookService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\BookService.cs",
@@ -940,19 +977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IUserService.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\IService\\IUserService.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IUserService.cs",
-              "RelativeToolTip": "MS3-LMS\\IService\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T01:56:55.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "BookRequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\BookRequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\BookRequestModel.cs",
@@ -964,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "LoginResponseModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\ResponeModel\\LoginResponseModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\ResponeModel\\LoginResponseModel.cs",
@@ -976,7 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Login.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\Login.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\Login.cs",
@@ -988,7 +1013,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "ImageRequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\ImageRequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\ImageRequestModel.cs",
@@ -1000,7 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "PublisherService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\PublisherService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\PublisherService.cs",
@@ -1012,7 +1037,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "OTPController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\OTPController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\OTPController.cs",
@@ -1024,7 +1049,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "OTPService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\OTPService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\OTPService.cs",
@@ -1036,7 +1061,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "OtprequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\OtprequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\OtprequestModel.cs",
@@ -1048,7 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "RoleService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\RoleService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\RoleService.cs",
@@ -1060,7 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "OTP.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Notification\\OTP.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Notification\\OTP.cs",
@@ -1072,7 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 46,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\appsettings.json",
               "RelativeDocumentMoniker": "MS3-LMS\\appsettings.json",
@@ -1084,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IRepository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\IRepository\\IUserRepository.cs",
@@ -1096,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "20241210130056_last.cs",
               "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Migrations\\20241210130056_last.cs",
               "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Migrations\\20241210130056_last.cs",
@@ -1118,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "Role.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\Role.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\Role.cs",
@@ -1130,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "MemberRequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\MemberRequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\MemberRequestModel.cs",
@@ -1142,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "UserRequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\UserRequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\UserRequestModel.cs",
@@ -1154,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 51,
               "Title": "RatingRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\RatingRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\RatingRepository.cs",
@@ -1166,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 52,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IRoleService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\IService\\IRoleService.cs",
@@ -1178,7 +1203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 53,
               "Title": "UserRole.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\User\\UserRole.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\User\\UserRole.cs",
@@ -1190,7 +1215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 54,
               "Title": "Author.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\Author.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\Author.cs",
@@ -1202,7 +1227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 55,
               "Title": "PdfController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\PdfController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\PdfController.cs",
@@ -1214,19 +1239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "IMemberService.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IMemberService.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\IService\\IMemberService.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IMemberService.cs",
-              "RelativeToolTip": "MS3-LMS\\IService\\IMemberService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T02:45:17.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "MemberIDRequestModel.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\MemberIDRequestModel.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\MemberIDRequestModel.cs",
@@ -1238,7 +1251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "EmailService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\EmailService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\EmailService.cs",
@@ -1250,7 +1263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "EmailConfig.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\RequestModel\\EmailConfig.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\RequestModel\\EmailConfig.cs",
@@ -1262,7 +1275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "BookLend.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Core\\BookLend.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Core\\BookLend.cs",
@@ -1274,7 +1287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "Notification.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Notification\\Notification.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Notification\\Notification.cs",
@@ -1286,7 +1299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "20241210071513_otp.cs",
               "DocumentMoniker": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Migrations\\20241210071513_otp.cs",
               "ToolTip": "C:\\Users\\Sajilan\\Desktop\\MS3\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Migrations\\20241210071513_otp.cs",
@@ -1296,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "BookLendRepository.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Repository\\BookLendRepository.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Repository\\BookLendRepository.cs",
@@ -1308,7 +1321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "Image.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Enity\\Book\\Image.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Enity\\Book\\Image.cs",
@@ -1320,7 +1333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "BookResponse.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Models\\ResponeModel\\BookResponse.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Models\\ResponeModel\\BookResponse.cs",
@@ -1332,7 +1345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "GenreService.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Service\\GenreService.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Service\\GenreService.cs",
@@ -1344,7 +1357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "GenreController.cs",
               "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\Controllers\\GenreController.cs",
               "RelativeDocumentMoniker": "MS3-LMS\\Controllers\\GenreController.cs",
@@ -1377,18 +1390,6 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAUwCoAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T15:24:05.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IBookService.cs",
-              "RelativeDocumentMoniker": "MS3-LMS\\IService\\IBookService.cs",
-              "ToolTip": "E:\\Backend\\MS3-Library-Management-BackEnd\\MS3-Library-Management-System-main\\MS3-Library-Management-System-main\\Backend\\LMS-Backend\\MS3-LMS\\IService\\IBookService.cs",
-              "RelativeToolTip": "MS3-LMS\\IService\\IBookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:54:48.016Z"
             },
             {
               "$type": "Document",
