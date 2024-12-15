@@ -14,11 +14,11 @@ namespace MS3_LMS.Enity.Core
             PayPal,
             BankTransfer
         }
-        public PaymentType Type { get; set; }
+        public PaymentType  Type { get; set; }
         [Precision(18, 2)]
-        public decimal Amount { get; set; }
-        public Guid SubId { get; set; }
-        public Subscription Subscription { get; set; }
+        public decimal  Amount { get; set; }
+        public Guid  SubId { get; set; }
+        public Subscription  Subscription { get; set; }
     }
 
 }

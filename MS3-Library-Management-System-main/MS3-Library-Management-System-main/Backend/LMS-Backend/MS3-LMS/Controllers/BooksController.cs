@@ -82,61 +82,7 @@ namespace MS3_LMS.Controllers
         //[HttpPost]
         //public async Task<ActionResult> CreateBookAsync(BookRequestModel bookRequestModel)
         //{
-        //    try
-        //    {
-        //        if (bookRequestModel == null)
-        //        {
-        //            _logger.LogError("Received null book request model.");
-        //            return BadRequest(new { Message = "The book request model cannot be null." });
-        //        }
-
-   
-        //        if (string.IsNullOrWhiteSpace(bookRequestModel.Name))
-        //        {
-        //            _logger.LogError("Validation failed: Book name is required.");
-        //            return BadRequest(new { Message = "Validation failed: Book name is required." });
-        //        }
-
-        //        if (string.IsNullOrWhiteSpace(bookRequestModel.ISBN))
-        //        {
-        //            _logger.LogError("Validation failed: ISBN is required.");
-        //            return BadRequest(new { Message = "Validation failed: ISBN is required." });
-        //        }
-
-        //        if (bookRequestModel.AuthorId == Guid.Empty)
-        //        {
-        //            _logger.LogError("Validation failed: AuthorId is required.");
-        //            return BadRequest(new { Message = "Validation failed: AuthorId is required." });
-        //        }
-
-        //        if (bookRequestModel.PublisherId == Guid.Empty)
-        //        {
-        //            _logger.LogError("Validation failed: PublisherId is required.");
-        //            return BadRequest(new { Message = "Validation failed: PublisherId is required." });
-        //        }
-
-        //        if (bookRequestModel.LanguageId == Guid.Empty)
-        //        {
-        //            _logger.LogError("Validation failed: LanguageId is required.");
-        //            return BadRequest(new { Message = "Validation failed: LanguageId is required." });
-        //        }
-
-        //        if (bookRequestModel.GenreId == Guid.Empty)
-        //        {
-        //            _logger.LogError("Validation failed: GenreId is required.");
-        //            return BadRequest(new { Message = "Validation failed: GenreId is required." });
-        //        }
-
-        //        _logger.LogInformation("Validation passed for book request model.");
-        //        await _bookService.CreateBookAsyn(bookRequestModel);
-
-        //        return Ok(bookRequestModel);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError("Error in CreateBookAsync: {Message}", ex.Message);
-        //        return StatusCode(500, new { Message = "Error creating the book.", Details = ex.Message });
-        //    }
+        //    
         //}
 
 

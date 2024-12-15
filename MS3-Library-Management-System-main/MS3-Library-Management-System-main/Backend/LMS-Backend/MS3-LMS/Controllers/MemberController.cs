@@ -22,14 +22,7 @@ namespace MS3_LMS.Controllers
             _memberservice = memberservice;
         }
 
-        //[HttpPost("NewMember")]
-        //public async Task<ActionResult> CreateNewMember(MemberRequestModel memberRequestModel)
-        //{
-        //    await _memberservice.CreateNewUser(memberRequestModel);
-
-            
-        //    return CreatedAtAction(nameof(CreateNewMember), new { id = memberRequestModel.Nic }, memberRequestModel);
-        //}
+        
         
         [HttpPost]
         [Route("new-member")]

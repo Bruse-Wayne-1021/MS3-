@@ -37,12 +37,12 @@ namespace MS3_LMS.Controllers
             }
             catch (KeyNotFoundException ex)
             {
-                // Return 404 if the user was not found
+                // Return 404 if the user was not Found
                 return NotFound(ex.Message);
             }
             catch (Exception ex)
             {
-                // Log error details (or use a logging framework)
+                // Log error details (or use a Logging Framework)
                 Console.Error.WriteLine($"Error in GetByUserId: {ex.Message}");
                 return StatusCode(500, "An internal server error occurred.");
             }

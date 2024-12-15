@@ -14,19 +14,19 @@ namespace MS3_LMS.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DeleteData(
-                table: "Genres",
-                keyColumn: "GenreId",
-                keyValue: new Guid("114135a4-8115-4e72-9761-a56387f951b5"));
+                table:   "Genres",
+                keyColumn:   "GenreId",
+                keyValue: new    Guid("114135a4-8115-4e72-9761-a56387f951b5"));
 
             migrationBuilder.DeleteData(
                 table: "Genres",
-                keyColumn: "GenreId",
-                keyValue: new Guid("2f5b7c91-dbb1-4f6d-b4c8-8f805038054f"));
+                keyColumn:   "GenreId",
+                keyValue:    new  Guid("2f5b7c91-dbb1-4f6d-b4c8-8f805038054f"));
 
             migrationBuilder.DeleteData(
-                table: "Genres",
+                table:    "Genres",
                 keyColumn: "GenreId",
-                keyValue: new Guid("65474f5f-9ede-4e05-80ee-1502b83f1dc9"));
+                keyValue:    new Guid("65474f5f-9ede-4e05-80ee-1502b83f1dc9"));
 
             migrationBuilder.DeleteData(
                 table: "Genres",

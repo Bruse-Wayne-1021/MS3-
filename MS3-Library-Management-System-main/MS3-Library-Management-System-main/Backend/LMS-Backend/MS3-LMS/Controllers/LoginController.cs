@@ -14,10 +14,10 @@ namespace MS3_LMS.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private readonly IUserService _Userservice;
-        private readonly IConfiguration _configuration;
+        private readonly   IUserService _Userservice;
+        private readonly   IConfiguration _configuration;
 
-        public LoginController(IUserService userservice,IConfiguration configuration)
+        public     LoginController(IUserService userservice,IConfiguration configuration)
         {
             _Userservice = userservice;
             _configuration = configuration;

@@ -10,7 +10,7 @@ namespace MS3_LMS.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly IUserService _userSerVice;
+        private readonly    IUserService _userSerVice;
 
         public AdminController(IUserService userSerVice)
         {
@@ -20,7 +20,7 @@ namespace MS3_LMS.Controllers
         [HttpPost]
         public async Task<IActionResult>DefineAdmin(UserRequestModel userRequestModel)
         {
-            await _userSerVice.NewAdmin(userRequestModel);
+            await   _userSerVice.NewAdmin(userRequestModel);
 
             return CreatedAtAction (nameof(DefineAdmin),new { id=userRequestModel.Email} ,userRequestModel);
         }
