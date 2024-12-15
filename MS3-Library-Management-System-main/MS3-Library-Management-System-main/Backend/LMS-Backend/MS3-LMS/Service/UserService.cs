@@ -145,30 +145,37 @@ namespace MS3_LMS.Service
 
 
 
-        public async Task<MS3_LMS.Models.RequestModel.MemberIDRequestModel>GetByUserID(Guid userId)
+        public async Task<MemberIDRequestModel> GetByUserID(Guid userId)
         {
             try
             {
                 var data = await _userRepository.GetMemberByUSerId(userId);
                 if (data == null)
                 {
-                    throw new Exception("Member Not Found");
+                    throw new KeyNotFoundException("Member Not Found");
                 }
-                var response = new MemberIDRequestModel
+
+                return new MemberIDRequestModel
                 {
-                    MemberID=data.MemebID
-
-
+                    MemberID = data.MemebID
                 };
-                return response;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // Log the error
+                Console.Error.WriteLine($"Error in GetByUserID: {ex.Message}");
+                throw;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                // Log other unexpected errors
+                Console.Error.WriteLine($"Unexpected error in GetByUserID: {ex.Message}");
+                throw new Exception("An unexpected error occurred. Please contact support.");
             }
         }
 
-      
+
+
 
 
 

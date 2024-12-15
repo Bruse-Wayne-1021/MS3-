@@ -33,24 +33,6 @@ namespace MS3_LMS.Repository
                 throw new Exception($"An error occurred while creating the member: {ex.Message}", ex);
             }
         }
-
-        public async Task<Member> GetMemberById(string Nic)
-        {
-            try
-            {
-                var member = await _context.Members.SingleOrDefaultAsync(m=>m.Nic==Nic);
-                if (member == null)
-                {
-                    throw new KeyNotFoundException("Member Not Found");
-                }
-                return member;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
         public async Task<List<Member>> GetAllMembers()
         {
             try
@@ -68,7 +50,7 @@ namespace MS3_LMS.Repository
         {
             try
             {
-                var data = await _context.Members.FindAsync(MemberId);
+                var data = await _context.Members.FirstOrDefaultAsync(f=>f.MemebID==MemberId);
                 if(data == null)
                 {
                     throw new KeyNotFoundException("Member Not Found");

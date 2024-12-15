@@ -678,6 +678,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MS3_LMS.Controllers.RatingController",
+    "Method": "getRating",
+    "RelativePath": "api/Rating/{bookid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookid",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.RatingController",
+    "Method": "DeleteRating",
+    "RelativePath": "api/Rating/deleteRating",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MS3_LMS.Controllers.RatingController",
+    "Method": "GetRatingSummary",
+    "RelativePath": "api/Rating/Summery{bookId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MS3_LMS.Controllers.SubcriptionController",
     "Method": "AllSubscrip",
     "RelativePath": "api/Subcription/allSubscription",
@@ -721,7 +769,7 @@
   },
   {
     "ContainingType": "MS3_LMS.Controllers.UserController",
-    "Method": "GetByUSerId",
+    "Method": "GetByUserId",
     "RelativePath": "api/User/{userID}",
     "HttpMethod": "GET",
     "IsController": true,

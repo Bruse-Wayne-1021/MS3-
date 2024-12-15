@@ -7,8 +7,8 @@ namespace MS3_LMS.IService
 {
     public interface IMemberService
     {
-        Task CreateNewUser(MemberRequestModel memberRequestModel);
-        Task NewMemeber(MemberRequestModel memberRequestModel);
+    
+        Task<MemberResponse> NewMemeber(MemberRequestModel memberRequestModel);
         Task<MemberResponse> GetMemberByNic(Guid Nic);
         Task<List<MemberResponse>> GetAllMembers();
         Task<List<BookLendResponse>> GetRecordsById(Guid id, BookLend.State state);

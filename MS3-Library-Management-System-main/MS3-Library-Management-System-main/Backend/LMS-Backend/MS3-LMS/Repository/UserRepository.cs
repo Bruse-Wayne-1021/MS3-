@@ -17,10 +17,11 @@ namespace MS3_LMS.Repository
             _Context = context;
         }
 
-        public async Task createUser(User user)
+        public async Task<User> createUser(User user)
         {
-            await _Context.Users.AddAsync(user);
+            var data= await _Context.Users.AddAsync(user);
             await _Context.SaveChangesAsync();
+            return data.Entity;
             
         }
         public async Task createMemeber(Member member)
@@ -45,50 +46,52 @@ namespace MS3_LMS.Repository
                     .Include(s => s.UserRoles)
                     .ThenInclude(r => r.Role)
                     .FirstOrDefaultAsync(u => u.Email == email);
-
-                
                 if (user == null)
                 {
                     return null;
                 }
-
-                
-                if (user.IsConfirmEmail != true)
+                if (user.IsConfirmEmail == null || user.IsConfirmEmail == false)
                 {
                     throw new InvalidOperationException("Email not confirmed. Please verify your email.");
                 }
-
-               
-                if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
+                if (string.IsNullOrEmpty(user.PasswordHash) || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
                 {
                     return null;
                 }
-
                 return user;
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException(ex.Message, ex);
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("An error occurred while processing your login. Please try again.", ex);
             }
         }
 
 
-        public async Task<Member>GetMemberByUSerId(Guid UserId)
+        public async Task<Member> GetMemberByUSerId(Guid userId)
         {
             try
             {
-                var data = await _Context.Members.FirstOrDefaultAsync(m=>m.UserId==UserId);
+                var data = await _Context.Members.FirstOrDefaultAsync(m => m.UserId == userId);
+
                 if (data == null)
                 {
-                    throw new Exception();
+                    throw new KeyNotFoundException($"Member with UserId {userId} was not found.");
                 }
+
                 return data;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                // Log the error for debugging
+                Console.Error.WriteLine($"Error in GetMemberByUSerId: {ex.Message}");
+                throw; // Rethrow the original exception
             }
         }
+
 
 
 

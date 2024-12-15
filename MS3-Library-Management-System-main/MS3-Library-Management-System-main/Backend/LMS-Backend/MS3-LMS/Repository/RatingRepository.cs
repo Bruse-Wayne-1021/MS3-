@@ -17,6 +17,11 @@ namespace MS3_LMS.Repository
         {
             try
             {
+                if (rating.StarCount < 1 || rating.StarCount > 5)
+                {
+                    throw new Exception("star count must be between 1 and 5 ");
+                }
+                   
                 var data = await _context.Rating.AddAsync(rating);
                  await _context.SaveChangesAsync();
 

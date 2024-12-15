@@ -22,9 +22,6 @@ namespace MS3_LMS.Controllers
             _memberservice = memberservice;
         }
 
-
-
-
         //[HttpPost("NewMember")]
         //public async Task<ActionResult> CreateNewMember(MemberRequestModel memberRequestModel)
         //{
@@ -38,10 +35,10 @@ namespace MS3_LMS.Controllers
         [Route("new-member")]
         public async Task<ActionResult> CreateNewMember(MemberRequestModel memberRequestModel)
         {
-            await _memberservice.NewMemeber(memberRequestModel);
+             var data= await _memberservice.NewMemeber(memberRequestModel);
+            return Ok(data);
 
-
-            return CreatedAtAction(nameof(CreateNewMember), new { id = memberRequestModel.Nic }, memberRequestModel);
+          
         }
 
 

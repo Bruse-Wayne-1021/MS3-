@@ -4,6 +4,7 @@ namespace MS3_LMS.Models.ResponeModel
 {
     public class MemberResponse
     {
+        public Guid userId { get; set; }
         public string Nic { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
@@ -14,5 +15,6 @@ namespace MS3_LMS.Models.ResponeModel
         
         public Gender UserGender { get; set; }
         public string? ImageUrl { get; set; }
+        public DateTime? RegisterDate { get; set; }
     }
 }

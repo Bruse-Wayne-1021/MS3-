@@ -18,7 +18,7 @@ namespace MS3_LMS.Controllers
         }
 
         [HttpGet("{userID}")]
-        public async Task<IActionResult> GetByUSerId(Guid userID)
+        public async Task<IActionResult> GetByUserId(Guid userID)
         {
             if (userID == Guid.Empty)
             {
@@ -35,9 +35,15 @@ namespace MS3_LMS.Controllers
 
                 return Ok(user);
             }
+            catch (KeyNotFoundException ex)
+            {
+                // Return 404 if the user was not found
+                return NotFound(ex.Message);
+            }
             catch (Exception ex)
             {
-               
+                // Log error details (or use a logging framework)
+                Console.Error.WriteLine($"Error in GetByUserId: {ex.Message}");
                 return StatusCode(500, "An internal server error occurred.");
             }
         }
