@@ -11,17 +11,17 @@ namespace MS3_LMS.Enity.User
         [Key]
         public Guid MemebID { get; set; }
         public string Nic { get; set; }
-        public string? FirstName { get; set; }
+        public string?  FirstName { get; set; }
         
-        public string? LastName { get; set; }
-        public string? Email { get; set; }
+        public string?  LastName { get; set; }
+        public string?  Email { get; set; }
         public string? PhoneNumber { get; set; }
         public enum Gender
         {
             Male,
             Female
         };
-        public Gender UserGender { get; set; }
+        public Gender  UserGender { get; set; }
         public string? ImageUrl { get; set; }
         public bool? IsVerify { get; set; }
         public DateTime? RegisterDate { get; set; }

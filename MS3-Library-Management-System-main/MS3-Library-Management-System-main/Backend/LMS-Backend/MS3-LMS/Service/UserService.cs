@@ -23,7 +23,7 @@ namespace MS3_LMS.Service
       
 
 
-        public UserService(IUserRepository userRepository, IRoleRepository roleRepository, IRoleService roleService,IMemberRepository memberRepository, IConfiguration configuration)
+        public UserService(IUserRepository  userRepository, IRoleRepository roleRepository, IRoleService roleService,IMemberRepository memberRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
             _roleRepository = roleRepository;
@@ -32,7 +32,7 @@ namespace MS3_LMS.Service
             _configuration = configuration;
         }
 
-        public async Task NewAdmin(UserRequestModel userRequestModel)
+        public async Task NewAdmin(UserRequestModel  userRequestModel)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace MS3_LMS.Service
                 {
                     Email = userRequestModel.Email,
                     IsConfirmEmail = true,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRequestModel.password),
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRequestModel. password),
                 
                 };
                 await _userRepository.CreteAdmin(admin);
@@ -64,7 +64,7 @@ namespace MS3_LMS.Service
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(ex. Message);
             }
 
 

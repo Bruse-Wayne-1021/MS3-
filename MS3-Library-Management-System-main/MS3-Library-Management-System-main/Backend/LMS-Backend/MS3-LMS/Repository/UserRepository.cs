@@ -17,7 +17,7 @@ namespace MS3_LMS.Repository
             _Context = context;
         }
 
-        public async Task<User> createUser(User user)
+        public async Task<User> createUser(User user)  
         {
             var data= await _Context.Users.AddAsync(user);
             await _Context.SaveChangesAsync();

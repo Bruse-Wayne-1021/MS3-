@@ -11,7 +11,7 @@ namespace MS3_LMS.Repository
 {
     public class MemberRepository : IMemberRepository
     {
-        private readonly LMSContext _context;
+        private readonly LMSContext _context; 
 
 
         public MemberRepository(LMSContext context)
@@ -20,14 +20,14 @@ namespace MS3_LMS.Repository
         }
 
 
-        public async Task CreateNewUser(Member member)
+        public async Task CreateNewUser(Member member) 
         {
             try
             {
                 await _context.Members.AddAsync(member);
                 await _context.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch (Exception ex)   
             {
 
                 throw new Exception($"An error occurred while creating the member: {ex.Message}", ex);
