@@ -14,5 +14,6 @@ namespace MS3_LMS.Models.RequestModel
         public string? ImageUrl { get; set; }
         public bool? IsVerify { get; set; }
         public Guid UserId { get; set; }
+        public DateTime? RegisterDate {  get; set; }
     }
 }

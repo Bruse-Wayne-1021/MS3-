@@ -33,42 +33,39 @@ namespace MS3_LMS.Service
             _otpService = oTPService;
         }
 
-        public async Task CreateNewUser(MemberRequestModel memberRequestModel)
+        //public async Task CreateNewUser(MemberRequestModel memberRequestModel)
+        //{
+        //    var member = new Member
+        //    {
+        //        MemebID = Guid.NewGuid(),
+        //        Nic = memberRequestModel.Nic,
+        //        FirstName = memberRequestModel.FirstName,
+        //        LastName = memberRequestModel.LastName,
+        //        Email = memberRequestModel.Email,
+        //        UserGender = memberRequestModel.UserGender,
+        //        ImageUrl = memberRequestModel.ImageUrl,
+        //        IsVerify = false,
+        //        //UserId = Guid.NewGuid(),
+        //        //PhoneNumber = memberRequestModel.PhoneNumber,
+        //    };
+
+        //    await _memberRepository.CreateNewUser(member);
+        //}
+
+
+        public async Task<MemberResponse> NewMemeber(MemberRequestModel memberRequestModel)
         {
-            var member = new Member
-            {
-                MemebID = Guid.NewGuid(),
-                Nic = memberRequestModel.Nic,
-                FirstName = memberRequestModel.FirstName,
-                LastName = memberRequestModel.LastName,
-                Email = memberRequestModel.Email,
-                UserGender = memberRequestModel.UserGender,
-                ImageUrl = memberRequestModel.ImageUrl,
-                IsVerify = false,
-                //UserId = Guid.NewGuid(),
-                //PhoneNumber = memberRequestModel.PhoneNumber,
-            };
 
-            await _memberRepository.CreateNewUser(member);
-        }
-
-
-        public async Task NewMemeber(MemberRequestModel memberRequestModel)
-        {
-            
             var user = new User
             {
+                UserId = Guid.NewGuid(),
                 Email = memberRequestModel.Email,
                 IsConfirmEmail = false,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(memberRequestModel.Password)
-            };
-
-            
-            await _userRepository.createUser(user);
-
-            
+            }; 
+             await _userRepository.createUser(user);
             var member = new Member
-            {
+            {   
                 Nic = memberRequestModel.Nic,
                 FirstName = memberRequestModel.FirstName,
                 LastName = memberRequestModel.LastName,
@@ -77,13 +74,10 @@ namespace MS3_LMS.Service
                 IsVerify = false,
                 UserGender = memberRequestModel.UserGender,
                 ImageUrl = memberRequestModel.ImageUrl,
-                UserId = user.UserId 
+                UserId = user.UserId ,
+                RegisterDate= memberRequestModel.RegisterDate,
             };
-
-
-            await _userRepository.createMemeber(member);
-
-            
+               await _userRepository.createMemeber(member);
             await _roleService.AssignDefaultRole(user.UserId);
 
             var otpsent = await _otpService.GenerateAndSendOtpAsync(user.UserId, user.Email);
@@ -91,6 +85,23 @@ namespace MS3_LMS.Service
             {
                 throw new Exception();
             }
+
+            var response = new MemberResponse
+            {
+                userId = user.UserId,
+                Nic = member.Nic,
+                FirstName = member.FirstName,
+                LastName = member.LastName,
+                Email = member.Email,
+                PhoneNumber = member.PhoneNumber,
+                MemberID = member.MemebID,
+                IsVerify = member.IsVerify,
+                UserGender = member.UserGender,
+                ImageUrl = member.ImageUrl,
+                RegisterDate=member.RegisterDate
+            };
+
+            return response;
         }
 
 
@@ -111,7 +122,10 @@ namespace MS3_LMS.Service
                     Email = member.Email,
                     PhoneNumber = member.PhoneNumber,
                     UserGender = member.UserGender,
-                    IsVerify=member.IsVerify 
+                    IsVerify=member.IsVerify ,
+                    ImageUrl=member.ImageUrl,
+                    RegisterDate=member.RegisterDate ,
+                    MemberID=member.MemebID,
                     
                 }).ToList();
 
@@ -144,7 +158,8 @@ namespace MS3_LMS.Service
                     PhoneNumber = member.PhoneNumber,
                     UserGender = member.UserGender,
                     IsVerify=member.IsVerify,
-                    ImageUrl= member.ImageUrl
+                    ImageUrl=member.ImageUrl,
+                    userId=member.UserId
                     
                 };
                 return response;

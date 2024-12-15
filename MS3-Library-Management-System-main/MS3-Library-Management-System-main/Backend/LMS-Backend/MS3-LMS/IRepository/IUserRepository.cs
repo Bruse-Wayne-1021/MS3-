@@ -5,7 +5,7 @@ namespace MS3_LMS.IRepository
     public interface IUserRepository
     {
         Task createMemeber(Member member);
-        Task createUser(User user);
+        Task<User> createUser(User user);
         Task CreteAdmin(User user);
         Task<User> LoginAsync(string email, string password);
         Task<Member> GetMemberByUSerId(Guid UserId);

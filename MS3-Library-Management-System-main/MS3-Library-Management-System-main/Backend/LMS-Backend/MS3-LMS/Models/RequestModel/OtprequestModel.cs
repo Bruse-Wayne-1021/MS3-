@@ -6,7 +6,6 @@ namespace MS3_LMS.Models.RequestModel
     {
         [Required]
         public Guid UserId { get; set; }
-
         [Required]
         public string OTPCode { get; set; }
     }
