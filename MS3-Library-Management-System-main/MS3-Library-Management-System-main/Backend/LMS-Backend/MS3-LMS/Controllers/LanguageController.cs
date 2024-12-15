@@ -17,7 +17,7 @@ namespace MS3_LMS.Controllers
         }
 
         [HttpGet("AllLanguage")]
-        public async Task<IActionResult> GetAllLanguage()
+        public async Task<IActionResult> GetAllLanguage()     
         {
             try
             {

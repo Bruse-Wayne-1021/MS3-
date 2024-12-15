@@ -14,7 +14,7 @@ namespace MS3_LMS.Controllers
         public ImageController(IImageService imageService)
         {
             _imageService = imageService;
-        }
+        }   
 
         [HttpPost("AddNewImage")]
         public async Task<IActionResult>NewImage(ImageRequestModel imageRequestModel)

@@ -5,6 +5,6 @@ namespace MS3_LMS.IRepository
 {
     public interface IImageRepository
     {
-        Task<Image> AddBookImage(Image image);
+        Task<Image> AddBookImage(Image image);   
     }
 }

@@ -16,7 +16,7 @@ namespace MS3_LMS.Controllers
         public SubcriptionController(ISubcriptionService subcriptionService)
         {
             _subcriptionService = subcriptionService;
-        }
+        }   
 
         [HttpPost]
         [Route("NewSubcription")]

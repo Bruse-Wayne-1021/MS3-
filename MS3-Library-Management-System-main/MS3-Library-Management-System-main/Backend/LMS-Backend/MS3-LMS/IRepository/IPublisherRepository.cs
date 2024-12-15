@@ -8,3 +8,4 @@ namespace MS3_LMS.IRepository
         Task<List<MS3_LMS.Enity.Book.Publisher>> GetAllpublisger();
     }
 }
+  

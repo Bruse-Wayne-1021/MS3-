@@ -15,7 +15,7 @@ namespace MS3_LMS.Enity.Core
         public SubcriptionType SubType { get; set; }
 
         public bool IsActive { get; set; } = false;
-        public bool IsCancel { get; set; } = false;
+        public bool IsCancel { get; set; } = false;  
         public  Guid MemebID { get; set; }
         public  Member? Member { get; set; }
 

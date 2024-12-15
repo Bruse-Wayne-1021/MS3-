@@ -9,11 +9,11 @@ namespace MS3_LMS.IRepository
         Task<List<BookLend>> GetEnumBaseRecords(BookLend.State state);
         Task<BookLend> UpdateState(BookLend bookLend);
         Task<BookLend> updatedate(Guid Id, DateTime date, string datetype);
-        Task<List<BookLend>> GetDueDateBooks();
+        Task<List<BookLend>> GetDueDateBooks();   
         Task<List<BookLend>> GetDetailsByMembe(Guid memberId, BookLend.State state);
         Task<int> getBorrowedBooks(Guid MemberID);
         Task<bool> HAsBorrowedBook(Guid memberid, Guid bookid);
-
+          
 
     }
 }

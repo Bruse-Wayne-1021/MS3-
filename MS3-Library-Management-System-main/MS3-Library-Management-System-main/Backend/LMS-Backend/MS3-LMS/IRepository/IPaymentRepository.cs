@@ -4,6 +4,6 @@ namespace MS3_LMS.IRepository
 {
     public interface IPaymentRepository
     {
-        Task<Payment> CreateNewPayment(Payment payment);
+        Task<Payment> CreateNewPayment(Payment payment);   
     }
 }

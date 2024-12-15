@@ -19,6 +19,6 @@ namespace MS3_LMS.Enity.Core
         public decimal  Amount { get; set; }
         public Guid  SubId { get; set; }
         public Subscription  Subscription { get; set; }
-    }
+      
 
 }
