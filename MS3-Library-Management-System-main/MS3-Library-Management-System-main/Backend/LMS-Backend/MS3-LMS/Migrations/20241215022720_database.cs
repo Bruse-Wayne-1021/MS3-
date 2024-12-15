@@ -11,7 +11,7 @@ namespace MS3_LMS.Migrations
     public partial class database : Migration
     {
         /// <inheritdoc />
-        protected override void Up(MigrationBuilder migrationBuilder)
+        protected override void Up(MigrationBuilder migrationBuilder)  
         {
             migrationBuilder.DeleteData(
                 table: "Genres",
